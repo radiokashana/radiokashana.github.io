@@ -3,13 +3,28 @@
 	<title>radiokashana.org</title>
 	<link href="http://www.radiokashana.org//atom.xml" rel="self"/>
 	<link href="http://www.radiokashana.org/"/>
-	<updated>2015-04-01T08:28:22.512Z</updated>
+	<updated>2015-04-01T08:40:03.115Z</updated>
 	<id>http://www.radiokashana.org/</id>
 	<author>
 		<name>Rafael Murua</name>
 		<email>rafael.murua@radiokashana.org</email>
 	</author>
 	<entry>
+		<title>A little bit of test</title>
+		<link href="http://www.radiokashana.org/posts/2015-04-01-a-little-bit-of-test.html"/>
+		<updated>2015-04-01T00:00:00.000Z</updated>
+		<id>http://www.radiokashana.org/</id>
+		<content type="html">&lt;h2 id=&quot;a-new-post-era&quot;&gt;A New Post-Era&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://google.com/&quot; title=&quot;Add more traffic to google&quot;&gt;Google&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now What?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ain&#39;t that kewl...&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;item&lt;/li&gt;
+&lt;li&gt;item&lt;/li&gt;
+&lt;li&gt;item&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+	</entry><entry>
 		<title>Winter Wolf Ecology Workshop 2014</title>
 		<link href="http://www.radiokashana.org/posts/winter-wolf-ecology-workshop-2014.html"/>
 		<updated>2014-02-01T00:00:00.000Z</updated>
