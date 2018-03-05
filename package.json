@@ -20,18 +20,37 @@
 		"build": "gatsby build",
 		"develop": "gatsby develop -H 0.0.0.0",
 		"format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-		"test": "xo"
+		"test": "xo && jest"
 	},
 	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-jest": "^22.4.1",
 		"eslint-config-xo-react": "^0.16.0",
+		"eslint-plugin-jest": "^21.13.0",
 		"eslint-plugin-react": "^7.7.0",
 		"gatsby-plugin-react-next": "^1.0.10",
+		"jest": "^22.4.2",
 		"prettier": "^1.11.1",
+		"react-test-renderer": "^16.2.0",
+		"regenerator-runtime": "^0.11.1",
 		"tachyons": "^4.9.1",
 		"xo": "^0.20.3"
 	},
+	"babel": {
+		"env": {
+			"test": {
+				"presets": [
+					"es2015",
+					"react"
+				]
+			}
+		}
+	},
 	"xo": {
-		"extends": "xo-react",
+		"extends": [
+			"xo-react",
+			"plugin:jest/recommended"
+		],
 		"semicolon": false,
 		"rules": {
 			"comma-dangle": [
@@ -56,7 +75,9 @@
 					"peerDependencies": true
 				}
 			],
-			"react/prop-types": ["off"],
+			"react/prop-types": [
+				"off"
+			],
 			"react/no-unknown-property": [
 				"error",
 				{
@@ -66,5 +87,27 @@
 				}
 			]
 		}
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.jsx?$": "babel-jest"
+		},
+		"testRegex": "(\\.test|spec)\\.(js|jsx)$",
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/.cache/"
+		],
+		"modulePaths": [
+			"src"
+		],
+		"moduleFileExtensions": [
+			"jsx",
+			"js"
+		],
+		"coverageReporters": [
+			"lcov",
+			"text",
+			"html"
+		]
 	}
 }
