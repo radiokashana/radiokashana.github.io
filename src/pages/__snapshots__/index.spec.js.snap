@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h1>
+    Hi people
+  </h1>
+  <p>
+    Welcome to your new Gatsby site.
+  </p>
+  <p
+    class="red"
+  >
+    Now go build something great.
+  </p>
+  <MockedLink
+    to="/page-2/"
+  >
+    Go to page 2
+  </MockedLink>
+</div>
+`;
