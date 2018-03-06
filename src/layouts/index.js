@@ -2,30 +2,25 @@ import React from "react"
 import Helmet from "react-helmet"
 
 import Header from "../components/Header"
-import "./index.css"
-import "tachyons/css/tachyons.css"
+import Header2 from "../components/header2"
+import Footer from "../components/footer"
 
-const TemplateWrapper = ({children}) => (
+import "./index.css"
+
+export default ({location, children}) =>
 	<div>
 		<Helmet
-			title="Gatsby Default Starter"
+			title="Radio Kashana - Tu radio de verdad"
 			meta={[
-				{name: "description", content: "Sample"},
-				{name: "keywords", content: "sample, something"},
+				{name: "description", content: "Tu radio de verdad"},
+				{name: "keywords", content: "radio, kashana, santa rosal&iacute;a"},
 			]}
 		/>
-		<Header/>
-		<div
-			style={{
-				margin: "0 auto",
-				maxWidth: 960,
-				padding: "0px 1.0875rem 1.45rem",
-				paddingTop: 0,
-			}}
-		>
+		{
+			location.pathname === "/index2" ? <Header2/> : <Header/>
+		}
+		<main className="center w-80-l">
 			{children()}
-		</div>
+		</main>
+		<Footer/>
 	</div>
-)
-
-export default TemplateWrapper
