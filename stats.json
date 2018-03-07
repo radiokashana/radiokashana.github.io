@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "component---src-pages-news-1-js": [
-      "component---src-pages-news-1-js-b3a50b7c08dd8b347763.js",
-      "component---src-pages-news-1-js-b3a50b7c08dd8b347763.js.map"
+      "component---src-pages-news-1-js-9c3d2eafc93f3944d264.js",
+      "component---src-pages-news-1-js-9c3d2eafc93f3944d264.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-fb4cf208d7788bc1f1d7.js",
-      "component---src-pages-index-js-fb4cf208d7788bc1f1d7.js.map"
+      "component---src-pages-index-js-19f63d2ea4ac89578ea0.js",
+      "component---src-pages-index-js-19f63d2ea4ac89578ea0.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-ab238587300b771098ad.js",
-      "component---src-layouts-index-js-ab238587300b771098ad.js.map"
+      "component---src-layouts-index-js-454c775f7c3aba18258f.js",
+      "component---src-layouts-index-js-454c775f7c3aba18258f.js.map"
     ],
     "path---page-2": [
       "path---page-2-a0e39f21c11f6a62c5ab.js",
@@ -57,8 +57,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-2-js": [
-      "component---src-pages-index-2-js-fb4cf208d7788bc1f1d7.js",
-      "component---src-pages-index-2-js-fb4cf208d7788bc1f1d7.js.map"
+      "component---src-pages-index-2-js-19f63d2ea4ac89578ea0.js",
+      "component---src-pages-index-2-js-19f63d2ea4ac89578ea0.js.map"
     ]
   }
 }
