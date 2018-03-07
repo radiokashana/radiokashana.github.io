@@ -1,0 +1,64 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-news-1-js": [
+      "component---src-pages-news-1-js-b3a50b7c08dd8b347763.js",
+      "component---src-pages-news-1-js-b3a50b7c08dd8b347763.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-fb4cf208d7788bc1f1d7.js",
+      "component---src-pages-index-js-fb4cf208d7788bc1f1d7.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-ab238587300b771098ad.js",
+      "component---src-layouts-index-js-ab238587300b771098ad.js.map"
+    ],
+    "path---page-2": [
+      "path---page-2-a0e39f21c11f6a62c5ab.js",
+      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---news-1": [
+      "path---news-1-a0e39f21c11f6a62c5ab.js",
+      "path---news-1-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-e0f69a473cc2b6f0118a.js",
+      "component---src-pages-404-js-e0f69a473cc2b6f0118a.js.map"
+    ],
+    "commons": [
+      "commons-4bdd9e7482b305852321.js",
+      "commons-4bdd9e7482b305852321.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index-2": [
+      "path---index-2-a0e39f21c11f6a62c5ab.js",
+      "path---index-2-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-page-2-js": [
+      "component---src-pages-page-2-js-894dc78491afe303c624.js",
+      "component---src-pages-page-2-js-894dc78491afe303c624.js.map"
+    ],
+    "app": [
+      "app-b09881774f05066b984a.js",
+      "app-b09881774f05066b984a.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-index-2-js": [
+      "component---src-pages-index-2-js-fb4cf208d7788bc1f1d7.js",
+      "component---src-pages-index-2-js-fb4cf208d7788bc1f1d7.js.map"
+    ]
+  }
+}
