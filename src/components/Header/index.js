@@ -10,8 +10,8 @@ export default () =>
 				<h1>RADIO KASHANA</h1>
 				<p>Tu radio de verdad</p>
 			</div>
-			<img id="logo" src="logo-plain.svg" alt="logo" />
+			<img id="logo" src="/logo-plain.svg" alt="logo" />
 		</div>
-		<img src="kashana.png" />
+		<img src="/kashana.png" />
 		<Menu/>
 	</header>

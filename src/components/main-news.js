@@ -8,20 +8,20 @@ export default () =>
 			href="/news-1"
 			title="Noticia en Santa Rosal&iacute;a 1"
 			author="Rafael M&uacute;rua"
-			img={{ src: "1.png", alt: "news-1" }}/>
+			img={{ src: "/1.png", alt: "news-1" }}/>
 		<MainNew
 			href="/news-1"
 			title="Noticia en Santa Rosal&iacute;a 1"
 			author="Rafael M&uacute;rua"
-			img={{ src: "1.png", alt: "news-1" }}/>
+			img={{ src: "/1.png", alt: "news-1" }}/>
 		<MainNew
 			href="/news-1"
 			title="Noticia en Santa Rosal&iacute;a 1"
 			author="Rafael M&uacute;rua"
-			img={{ src: "1.png", alt: "news-1" }}/>
+			img={{ src: "/1.png", alt: "news-1" }}/>
 		<MainNew
 			href="/news-1"
 			title="Noticia en Santa Rosal&iacute;a 1"
 			author="Rafael M&uacute;rua"
-			img={{ src: "1.png", alt: "news-1" }}/>
+			img={{ src: "/1.png", alt: "news-1" }}/>
 	</section>
