@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import Header2 from "../components/header2"
 import Footer from "../components/footer"
 
-import "./index.css"
+import "./index.scss"
 
 export default ({location, children}) =>
 	<div>

@@ -1,5 +1,5 @@
-@import "tachyons/src/_colors";
-@import "tachyons";
+@import "~tachyons-colors";
+@import "~tachyons";
 
 .bl--mid-gray {
 	border-left: 1px solid var(--mid-gray);
@@ -23,13 +23,13 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	background: linear-gradient(transparent 50%, white);
+	background: linear-gradient(transparent 50%, var(--white));
 }
 
 #main-news article {
 	font-family: Adelle, Georgia, serif;
 	padding: 10px;
-	background: linear-gradient(135deg, #417711b3, #dc4225b3);
+	background: linear-gradient(135deg, rgba(65, 119, 17, 0.65), rgba(220, 66, 37, 0.65));
 	color: white;
 }
 
