@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - '8'
+cache: yarn
+branches:
+  only:
+  - develop
+before_script:
+  - git remote set-url origin "https://${GH_TOKEN}@github.com/radiokashana/radiokashana.github.io.git"
+  - git config --global user.email "yorch.veintemil@gmail.com"
+  - git config --global user.name "Travis-CI"
+script:
+  - yarn deploy
+env:
+  global:
+    secure: "L9i3ih9zr32bIs/mlBdyXz3P82EVgkunVPv1ZRdyD6Oky5KodT8USWZMlgcyl83KYg8BOn5iVBOcEf2evQI3hE50L7k1QBRyT4eGnV6jRyVnhb7wZRacQz9BzItx7cFtLzD0B3G5Sj7GGTapxpX+WVfOK4OEnhoCcdBGf23yF8w="
