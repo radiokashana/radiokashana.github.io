@@ -3,7 +3,7 @@ import React from "react"
 import FooterMenuItem from "./footer-menu-item"
 
 export default () =>
-	<footer className="white w-100 tc bg-near-black">
+	<footer className="white w-100 tc bg-near-black cl">
 		<nav>
 			<ul className="dib list ma0 pa0 f6">
 				<FooterMenuItem href="#">Zoom 95</FooterMenuItem>

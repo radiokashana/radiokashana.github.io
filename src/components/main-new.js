@@ -3,7 +3,7 @@ import React from "react"
 import Link from "gatsby-link"
 
 export default ({href, title, date, img}) => (
-	<Link className="w-100 w-50-ns link" to={href}>
+	<Link className="w-100 w-50-ns link fl" to={href}>
 		<article className="relative h-one-third-ar-4-3">
 			<h2>{title}</h2>
 			<p>{date}</p>
