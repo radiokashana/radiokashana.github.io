@@ -16,7 +16,7 @@ export default ({location, children}) =>
 			]}
 		/>
 		<Header/>
-		<main className="center w-two-thirds-l">
+		<main className="center-ns mw-100 ml2 mr2 w-two-thirds-ns georgia">
 			{children()}
 		</main>
 		<Footer/>

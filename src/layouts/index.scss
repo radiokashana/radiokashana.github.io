@@ -29,8 +29,16 @@
 #main-news article {
 	font-family: Adelle, Georgia, serif;
 	padding: 10px;
-	background: linear-gradient(135deg, rgba(65, 119, 17, 0.65), rgba(220, 66, 37, 0.65));
 	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
 }
 
 .h-one-third-ar-16-9 {

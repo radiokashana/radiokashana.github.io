@@ -26,6 +26,7 @@ export default ({ data: { allMarkdownRemark: { edges } } }) => {
 		.slice(4)
 		.map(edge =>
 			<NewThumb
+				key={edge.node.id}
 				href={edge.node.fields.slug}
 				title={edge.node.frontmatter.title}
 				img={{ src: edge.node.frontmatter.image, alt: "" }}
