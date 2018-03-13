@@ -1,0 +1,18 @@
+---
+backend:
+    name: github
+    repo: radiokashana/radiokashana.github.io
+    branch: develop
+
+media_folder: static
+
+collections:
+    - name: noticia
+      label: Noticia
+      folder: noticias
+      create: true
+      fields:
+        - { name: "title", label: "T&iacute;tulo" }
+        - { name: "date", label: "Fecha", widget: "date" }
+        - { label: "Imagen", name: "image", widget: "image" }
+        - { label: "Contenido", name: "body", widget: "markdown" }
