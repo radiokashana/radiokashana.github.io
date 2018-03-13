@@ -4,16 +4,17 @@ backend:
     repo: radiokashana/radiokashana.github.io
     branch: develop
 
-media_folder: static
+media_folder: static/img
+public_folder: /img
 
 collections:
     - name: noticia
       label: Noticia
-      folder: noticias
+      folder: "src/pages/noticias"
       create: true
-			slug: "{{slug}}"
+      slug: "{{slug}}"
       fields:
         - { label: "Titulo", name: "title" }
-				- { label: "Fecha": name: "date", widget: "datetime" }
+        - { label: "Fecha", name: "date", widget: "datetime" }
         - { label: "Imagen", name: "image", widget: "image" }
         - { label: "Contenido", name: "body", widget: "markdown" }

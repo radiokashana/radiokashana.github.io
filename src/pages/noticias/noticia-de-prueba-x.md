@@ -1,7 +1,7 @@
 ---
 title: Noticia de prueba X
 date: '2018-03-12'
-image: /screen shot 2015-12-23 at 11.20.10 am.png
+image: /img/screen shot 2015-12-23 at 11.20.10 am.png
 ---
 Probando probando
 
@@ -87,6 +87,6 @@ Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
 Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
 Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
 
-![santa rocksalia](/santa-rocksalia.png)
+![santa rocksalia](/img/santa-rocksalia.png)
 
 Con informacion veredicta!

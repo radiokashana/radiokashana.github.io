@@ -55,7 +55,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 	const { createNodeField } = boundActionCreators
 
 	if (node.internal.type === "MarkdownRemark") {
-		const value = `noticias${createFilePath({ node, getNode})}`
+		const value = createFilePath({ node, getNode})
 
 		createNodeField({
 			name: "slug",

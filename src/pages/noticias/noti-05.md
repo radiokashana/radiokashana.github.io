@@ -1,7 +1,7 @@
 ---
 title: Noti 05
 date: '2018-03-05'
-image: /kshana 2 redi.jpg
+image: /img/kshana 2 redi.jpg
 ---
 Desde 2016 el Gobierno Municipal de Mulegé y la Secretaría de Turismo de B.C.S., iniciaron los trabajos para incorporar a Santa Rosalía al programa de Pueblos Mágicos de México, y actualmente la cabecera municipal se encuentra en la tercera fase en el proceso de incorporación, así lo informó la Directora de Turismo en este municipio, Elia Cardona López.
 

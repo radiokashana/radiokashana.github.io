@@ -2,7 +2,6 @@ import React from "react"
 import Helmet from "react-helmet"
 
 import Header from "../components/Header"
-import Header2 from "../components/header2"
 import Footer from "../components/footer"
 
 import "./index.scss"
@@ -16,9 +15,7 @@ export default ({location, children}) =>
 				{name: "keywords", content: "radio, kashana, santa rosal&iacute;a"},
 			]}
 		/>
-		{
-			location.pathname === "/index2" ? <Header2/> : <Header/>
-		}
+		<Header/>
 		<main className="center w-two-thirds-l">
 			{children()}
 		</main>
