@@ -11,8 +11,9 @@ collections:
       label: Noticia
       folder: noticias
       create: true
+			slug: "{{slug}}"
       fields:
-        - { name: "title", label: "T&iacute;tulo" }
-        - { name: "date", label: "Fecha", widget: "date" }
+        - { label: "Titulo", name: "title" }
+				- { label: "Fecha": name: "date", widget: "datetime" }
         - { label: "Imagen", name: "image", widget: "image" }
         - { label: "Contenido", name: "body", widget: "markdown" }

@@ -6,12 +6,20 @@ module.exports = {
 		"gatsby-plugin-netlify-cms",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-react-next",
+		"gatsby-transformer-remark",
 		{
 			resolve: "gatsby-plugin-postcss-sass",
 			options: {
 				postCssPlugins: [
 					require("postcss-import")()
 				],
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				path: `${__dirname}/noticias`,
+				name: "markdown-pages",
 			},
 		},
 	],

@@ -1,7 +1,7 @@
 ---
 title: Noticia de prueba X
 date: '2018-03-12'
-image: /static/screen shot 2015-12-23 at 11.20.10 am.png
+image: /screen shot 2015-12-23 at 11.20.10 am.png
 ---
 Probando probando
 
@@ -18,6 +18,75 @@ Vamos viendo como funcionan los features
 2. si
 3. funciona
 
-![santa rocksalia](/static/santa-rocksalia.png)
+Le faltan mas pru ebas a esta onda, mas info, mas chilo.
+
+No se que mas le pueda poner.
+
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+Lorem ipsum dolor sit amet bla bla bla bla bla bla bla bla bla
+
+![santa rocksalia](/santa-rocksalia.png)
 
 Con informacion veredicta!

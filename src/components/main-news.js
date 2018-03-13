@@ -2,26 +2,7 @@ import React from "react"
 
 import MainNew from "./main-new"
 
-export default () =>
+export default ({ children }) =>
 	<section className="flex flex-column flex-row-ns flex-wrap" id="main-news">
-		<MainNew
-			href="/news-1"
-			title="Noticia en Santa Rosal&iacute;a 1"
-			author="Rafael M&uacute;rua"
-			img={{ src: "/1.png", alt: "news-1" }}/>
-		<MainNew
-			href="/news-1"
-			title="Noticia en Santa Rosal&iacute;a 1"
-			author="Rafael M&uacute;rua"
-			img={{ src: "/1.png", alt: "news-1" }}/>
-		<MainNew
-			href="/news-1"
-			title="Noticia en Santa Rosal&iacute;a 1"
-			author="Rafael M&uacute;rua"
-			img={{ src: "/1.png", alt: "news-1" }}/>
-		<MainNew
-			href="/news-1"
-			title="Noticia en Santa Rosal&iacute;a 1"
-			author="Rafael M&uacute;rua"
-			img={{ src: "/1.png", alt: "news-1" }}/>
+		{ children }
 	</section>
