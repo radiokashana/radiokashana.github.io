@@ -38,7 +38,13 @@
 }
 
 .h-one-third-ar-4-3 {
-	height: calc(100vw / 3 * 3 / 4);
+	height: calc(100vw * 3 / 4);
+}
+
+@media screen and (min-width: 30em) {
+	.h-one-third-ar-4-3 {
+		height: calc(100vw / 3 * 3 / 4);
+	}
 }
 
 .z--1 {

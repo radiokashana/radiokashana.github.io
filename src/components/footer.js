@@ -3,7 +3,7 @@ import React from "react"
 import FooterMenuItem from "./footer-menu-item"
 
 export default () =>
-	<footer className="w-100 tc bg-near-black">
+	<footer className="white w-100 tc bg-near-black">
 		<nav>
 			<ul className="dib list ma0 pa0 f6">
 				<FooterMenuItem href="#">Zoom 95</FooterMenuItem>
@@ -13,5 +13,6 @@ export default () =>
 				<FooterMenuItem href="#">&iquest;Qu&eacute; es una radio comunitaria?</FooterMenuItem>
 			</ul>
 		</nav>
-		<h3 className="white">Santa Rosal&iacute;a, Baja California Sur. Cel. 615 155 8484 rafael@radiokashana.org</h3>
+		<h3 className="ma0">Santa Rosal&iacute;a, Baja California Sur.</h3>
+		<h3 className="ma0">Cel. 615 155 8484 rafael@radiokashana.org</h3>
 	</footer>

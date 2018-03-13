@@ -19,7 +19,7 @@ export default ({location, children}) =>
 		{
 			location.pathname === "/index2" ? <Header2/> : <Header/>
 		}
-		<main className="center w-80-l">
+		<main className="center w-two-thirds-l">
 			{children()}
 		</main>
 		<Footer/>
