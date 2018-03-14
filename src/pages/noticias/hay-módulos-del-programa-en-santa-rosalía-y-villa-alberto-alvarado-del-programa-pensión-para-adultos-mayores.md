@@ -1,7 +1,7 @@
 ---
 title: >-
-  Hay módulos del Programa en Santa Rosalía y Villa Alberto Alvarado del
-  Programa Pensión para Adultos Mayores 
+  Hay módulos en Santa Rosalía y Villa Alberto Alvarado del Programa Pensión
+  para Adultos Mayores 
 date: '2018-03-13T14:57:59-07:00'
 image: /img/susana aguilar.jpg
 ---
