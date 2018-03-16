@@ -1,5 +1,5 @@
 ---
-title: 'Entrega Ayuntamiento uniformes a Policías '
+title: 'Ayuntamiento  entrega uniformes a Policías '
 date: '2018-03-16T11:48:15-07:00'
 image: /img/foto 1-entrega en santa rosalía.jpg
 ---
