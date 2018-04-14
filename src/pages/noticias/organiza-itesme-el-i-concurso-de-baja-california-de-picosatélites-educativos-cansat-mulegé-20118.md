@@ -1,7 +1,7 @@
 ---
 title: >-
   Organiza ITESME el I Concurso de Baja California de PicoSatélites Educativos
-  CanSat Mulegé 20118
+  CanSat Mulegé 2018
 date: '2018-04-13T17:49:52-06:00'
 image: /img/30184704_1832470946804092_1546000429_n.jpg
 ---
@@ -21,4 +21,4 @@ Se tiene programada la demostración de los prototipos para mañana a las 9:00 a
 
 Más tarde informaremos por este medio el lugar y horario convenido.
 
-Rubén Núñez Sández
+_Rubén Núñez Sández_
