@@ -2,7 +2,7 @@
 title: >-
   Pedro Osuna López se compromete a gestionar obras carreteras para la zona
   Pacífico-Norte
-date: '2018-05-09T15:00:00-06:00'
+date: '2018-05-10T00:00:00-06:00'
 image: /img/foto 3 (1).jpeg
 ---
 En reuniones de trabajo con los representantes de las cooperativas en Bahía Tortugas, Bahía Asunción, Punta Abreojos y La Bocana, Pedro Osuna López, candidato a Diputado Local por el Distrito XIV, hizo el compromiso que una vez en el Congreso del Estado, gestionará obras de pavimentación para los tramos carreteros de Bahía Tortugas-Punta Eugenia y Bahía Asunción-Punta Prieta-San Hipólito.
