@@ -19,7 +19,7 @@ Patricia Ávila fue Delegada Interina de Bahía Tortugas 10 meses durante el 201
 
 **Laura Romo** solo ha laborado en el sector privado.
 
-Al cierre de esta publicación la candidata del Partido BCS Coherente no ha contestado nuestras interreogantes.
+Al cierre de esta publicación la candidata **Olga Martínez** no ha contestado nuestras interreogantes. Tampoco encontramos antecedentes en el servicio público o su carrera política. 
 
 Edith Aguilar y Felipe Prado tienen las carreras políticas más extensas entre las seis candidaturas. Se han desempeñado en cargos pagados con el dinero del pueblo mulegino, sudcaliforniano, y mexicano 13 años ella, él 19 años y contando.
 
@@ -37,5 +37,8 @@ Es así como les ofrezco para su interpretación algunos hechos de la reciente h
 
 \
 \
-**José Rafael Murúa Manríquez**\
-Licenciado en Periodismo, Director General de Radiokashana y Ondas en la Playa A.C.
+**José Rafael Murúa Manríquez
+**\
+Licenciado en Periodismo
+Director General de Radiokashana y 
+Ondas en la Playa A.C.
