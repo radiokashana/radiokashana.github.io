@@ -7,7 +7,7 @@ Una carrera extensa en el servicio público o en la política generalmente se in
 
 Tras la presente contienda electoral contrataremos por tres años a quien administrará el presupuesto de todos los muleginos. La experiencia es un factor a calificar, sin embargo, en cualquier entrevista de trabajo se califica además su desempeño durante los años laborados. 
 
-Comparo la carrera política de las seis personas que solicitan el empleo de Presidente Municipal de Mulegé, contando los años en que el presupuesto público haya sido la fuente de su sustento.
+Comparo la carrera política de las seis personas que solicitan el empleo de Presidente Municipal de Mulegé, contando los años en que el presupuesto público haya sido una fuente de su sustento.
 
 **Edith Aguilar** fue Secretaria Particular de Presidencia Municipal de 2005 al 2008. Coordinadora de Becas del ITESME de 2008 a 2010. Diputada local en esta entidad de 2011 a 2015. En 2015 tomó el cargo de Secretaria General del XV Ayuntamiento de Mulegé.
 
