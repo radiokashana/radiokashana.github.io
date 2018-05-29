@@ -39,6 +39,6 @@ Es así como les ofrezco para su interpretación algunos hechos de la reciente h
 \
 **José Rafael Murúa Manríquez
 **\
-Licenciado en Periodismo
+Licenciado en Periodismo\
 Director General de Radiokashana y 
 Ondas en la Playa A.C.
