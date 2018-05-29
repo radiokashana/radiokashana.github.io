@@ -13,7 +13,7 @@ Comparo la carrera política de las seis personas que solicitan el empleo de Pre
 
 Patricia Ávila fue Delegada Interina de Bahía Tortugas 10 meses durante el 2015.
 
-**Liliana Lyle** fue Directora de la extensión universitaria de la UABCS en Guerrero Negro desde su fundación en 1995 hasta 2018, sin embargo, la autonomía del cargo y el origen de sus honorarios lo deslinda de ser considerado en este análisis.
+**Liliana Lyle** se ha desempeñado desde 1995 en el sector académico.
 
 **Felipe Prado** fue recaudador de rentas del Estado en Vizcaíno de 1988 a 1999. En 2002 fue Delegado Municipal en el mismo lugar hasta 2005. Fue Diputado local de 2008 a 2011. Desde 2016 es Presidente del PANAL Estatal. 
 
