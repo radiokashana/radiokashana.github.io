@@ -1,5 +1,5 @@
 ---
-title: Inauguración del primer Estatal de Sótbol Femenil en Heroica Mulegé
+title: Inauguración del primer Estatal de Sóftbol Femenil en Heroica Mulegé
 date: '2018-05-28T10:30:41-06:00'
 image: /img/foto 1 (17).jpg
 ---
