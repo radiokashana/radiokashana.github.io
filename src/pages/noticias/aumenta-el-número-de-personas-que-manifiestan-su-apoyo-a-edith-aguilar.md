@@ -1,5 +1,5 @@
 ---
-title: Aumenta el número de personas que manifiestan su apoyo a Edith Aguilar
+title: Sigue creciendo respaldo al proyecto Edith Aguilar en Mulegé
 date: '2018-06-06T18:03:10-06:00'
 image: /img/edith 060618.jpeg
 ---
