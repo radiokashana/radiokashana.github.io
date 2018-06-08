@@ -1,7 +1,7 @@
 ---
 title: >-
-  El senador Ricardo Barroso Agramont manifestó su solidaridad con pescadores
-  ribereños afectados por  creación de refugio marino en el Golfo de Ulloa
+  El senador Barroso con pescadores ribereños afectados por  creación de refugio
+  marino en el Golfo de Ulloa
 date: '2018-06-08T16:31:33-06:00'
 image: /img/boletin actividades pesqueras.jpg
 ---
