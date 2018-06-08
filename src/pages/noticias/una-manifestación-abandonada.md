@@ -22,3 +22,10 @@ Las intenciones que declaró tener el señor Navarrete, de ir a marchar a Vizca�
 A los manifestantes los ha atendido el Secretario General del XV Ayuntamiento mulegino desde el primer día. Esta familia conforma una manifestación abandonada por los organizadores, por el partido que les ayudó a propagar su mensaje a través de una candidata, que también ya los abandonó. A punta de insultos, calumnias y denostaciones, mientras el rayo del Sol castiga a Mario y su familia, la generación espontánea de analistas políticos de facebook con flagrante militancia activa, exigen a la prensa imparcialidad y objetividad al informar.
 
 Manifestación abandonada, como abandonó el sentido de la congruencia a quienes osan sermonear a la ciudadanía desde un clima acondicionado a 18 grados Celcius, por dejar solo a este señor que no cumplió con sus obligaciones tributarias y exige derechos, y de paso busca a embarrar a quien se le olvida nombrar.
+
+
+
+\*\*José Rafael Murúa Manríquez \*\* \
+Licenciado en Periodismo\
+Director General de Radiokashana y \
+Ondas en la Playa A.C.
