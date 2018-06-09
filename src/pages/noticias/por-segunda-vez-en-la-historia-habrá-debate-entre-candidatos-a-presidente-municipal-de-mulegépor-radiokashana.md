@@ -1,7 +1,7 @@
 ---
 title: >-
   Por segunda vez en la historia habrá Debate entre Candidatos a Presidente
-  Municipal de Mulegépor Radiokashana
+  Municipal de Mulegé por Radiokashana
 date: '2018-06-07T12:29:25-06:00'
 image: '/img/micro, pc y cerebro.jpg'
 ---
