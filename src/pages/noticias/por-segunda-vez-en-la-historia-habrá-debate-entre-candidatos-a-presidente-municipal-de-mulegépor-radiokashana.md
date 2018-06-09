@@ -15,35 +15,59 @@ Aclarando lo anterior compartimos a continuación el formato que seguiremos, inc
 
 Moderará el debate la Lic. Maribel Gonzalez Parra y será transmitido en vivo por internet en la página de Radiokashana en Facebook y en www.radiokashana.org para todo el municipio, y simultáneamente por la 93.3 de FM para Santa Rosalía.
 
- Este ejercicio democrático tendrá el siguiente formato:
+ Este ejercicio democrático tendrá el siguiente formato:
 
-Se sorteará mediante tómbola el orden de la participación de los candidatos para cada una de las 5 etapas que conformarán el debate:
+Se sorteará mediante tómbola el orden de la participación de los candidatos para cada una de las 5 etapas que conformarán el debate:
 
-a) Presentación b) En materia de Gobierno y Régimen Interior c) En materia de Obra Pública y Desarrollo Urbano d) En materia de Servicios Públicos e) Conclusión
+a) Presentación
+ b) En materia de Gobierno y Régimen Interior c) En materia de Obra Pública y Desarrollo Urbano
+ d) En materia de Servicios Públicos
+ e) Conclusión
 
-a) Presentación 2 minutos cada candidato para presentarse.
+a) Presentación
+ 2 minutos cada candidato para presentarse.
 
-2 minutos tendrá cada candidato para exponer sus principales propuestas para la administración del XVI Ayuntamiento de Mulegé. 
+2 minutos tendrá cada candidato para exponer sus principales propuestas para la administración del XVI Ayuntamiento de Mulegé.
 
-El moderador identificará coincidencias y controversias entre las propuestas de los candidatos, señalando las primeras y estructurando el debate de cada una de las segundas, otorgando en cada caso:
+El moderador identificará coincidencias y controversias entre las propuestas de los candidatos, señalando las primeras y estructurando el debate de cada una de las segundas, otorgando en cada caso:
 
-2 minutos a cada candidato involucrado para argumentar. 2 minutos a cada uno para replicar. 1 minuto para la contrarréplica. 1 minuto para la conclusión.
+2 minutos a cada candidato involucrado para argumentar
+. 2 minutos a cada uno para replicar
+. 1 minuto para la contrarréplica.
+ 1 minuto para la conclusión.
 
-b) En materia de Gobierno y Régimen Interior.
+b) En materia de Gobierno y Régimen Interior
+.
 
-1. Presente a grandes rasgos su “Plan de Desarrollo Municipal” (3 minutos para cada candidato). \
-1 minuto de réplica para cada candidato. 1 minuto de contrarréplica para cada candidato. 2. ¿Cuál es su postura sobre el cobro de la licencia de construcción que Minera y Metalúrgica del Boleo se niega a pagar? (3 minutos para cada candidato). 1 minuto de réplica para cada candidato. 1 minuto de contrarréplica para cada candidato.
+1. Presente a grandes rasgos su “Plan de Desarrollo Municipal” (3 minutos para cada
+    candidato).
+    \
+   1 minuto de réplica para cada candidato.
+    1 minuto de contrarréplica para cada candidato.
+2. ¿Cuál es su postura sobre el cobro de la licencia de construcción que Minera y Metalúrgica del Boleo se niega a pagar? (3 minutos para cada candidato).
+   1 minuto de réplica para cada candidato.
+   1 minuto de contrarréplica para cada candidato.
 
-c) En materia de obra pública y desarrollo urbano 3. Tema libre (2 minutos para cada candidato).
+c) En materia de obra pública y desarrollo urbano
 
-1 minuto de réplica para cada candidato. 1 minuto de contrarréplica para cada candidato.
+3. Tema libre (2 minutos para cada candidato).
 
-d) En materia de servicios públicos
+1 minuto de réplica para cada candidato.
+ 1 minuto de contrarréplica para cada candidato.
+
+d) En materia de servicios públicos
 
 4. Cuál es su opinión sobre el estado de la seguridad pública municipal y cómo planea garantizarla en su gobierno (3 minutos para cada candidato).
 
-1 minuto de réplica para cada candidato. 1 minuto de contrarréplica para cada candidato. 5. ¿Cómo garantizar el servicio de agua potable, drenaje, alcantarillado, tratamiento y la adecuada disposición de sus aguas residuales para los muleginos? (2 minutos para cada candidato). 1 minuto de réplica para cada candidato. 1 minuto de contrarréplica para cada candidato.
+1 minuto de réplica para cada candidato.
+ 1 minuto de contrarréplica para cada candidato.
 
-e) Conclusión.
+5. ¿Cómo garantizar el servicio de agua potable, drenaje, alcantarillado, tratamiento y la adecuada disposición de sus aguas residuales para los muleginos? (2 minutos para cada candidato).
+   1 minuto de réplica para cada candidato.
+   1 minuto de contrarréplica para cada candidato.
 
-2 minutos para cada candidato para concluir. 1 minuto de réplicas para cada candidato. 1 minuto de contrarréplica para cada candidato.
+e) Conclusión.
+
+2 minutos para cada candidato para concluir.
+ 1 minuto de réplicas para cada candidato.
+ 1 minuto de contrarréplica para cada candidato.
