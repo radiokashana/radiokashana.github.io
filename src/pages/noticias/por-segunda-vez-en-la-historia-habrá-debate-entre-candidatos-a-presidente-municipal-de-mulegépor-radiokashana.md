@@ -68,3 +68,17 @@ e) Conclusión.2 minutos para cada candidato para concluir.
 
  1 minuto de réplicas para cada candidato.
  1 minuto de contrarréplica para cada candidato.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+Edith Aguilar Villavicencio PAN – PRD - PRS - PH
+
+Patricia Ávila – MC
+
+Liliana Lyle MORENA - PES
+
+José Felipe Prado Bautista PANAL
+
+Laura Romo  PRI – PVEM
+
+Olga Martínez PBCSC
