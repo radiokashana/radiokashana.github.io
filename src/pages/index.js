@@ -4,10 +4,14 @@ import Link from "gatsby-link"
 import MainNews from "../components/main-news"
 import MainNew from "../components/main-new"
 import Ads from "../components/ads"
+import Embed from "../components/embed"
 import NewThumbList from "../components/new-thumb-list"
 import NewThumb from "../components/new-thumb"
 
-export default ({ data: { allMarkdownRemark: { edges } } }) => {
+export default ({ data }) => {
+	const { edges } = data.allMarkdownRemark
+	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
+
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
 
@@ -39,6 +43,8 @@ export default ({ data: { allMarkdownRemark: { edges } } }) => {
 				{ mainNews }
 			</MainNews>
 			<Ads/>
+			<Embed html={ facebookLiveEmbedHtml }/>
+			<Ads/>
 			<NewThumbList>
 				{ oldNews }
 			</NewThumbList>
@@ -61,6 +67,13 @@ export const pageQuery = graphql`
 						date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
 						image
 					}
+				}
+			}
+		}
+		allDataJson {
+			edges {
+				node {
+					facebookLiveEmbedHtml
 				}
 			}
 		}
