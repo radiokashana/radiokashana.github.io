@@ -1,3 +1,3 @@
 {
-  "facebookLiveEmbedHtml": "rtmp://live-api.facebook.com:80/rtmp/"
+  "facebookLiveEmbedHtml": "<iframe src=\"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fradiokashana%2Fvideos%2F1519033728225684%2F&width=400\" width=\"400\" height=\"400\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\"></iframe>"
 }
