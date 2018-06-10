@@ -53,6 +53,11 @@
 	.h-one-third-ar-4-3 {
 		height: calc(100vw / 3 * 3 / 4);
 	}
+
+	iframe {
+		height: 400px;
+		width: 400px;
+	}
 }
 
 .z--1 {
@@ -65,4 +70,9 @@
 
 .bg-left-dark-red-bottom-near-black {
 	background: linear-gradient(to bottom, var(--gray) 0%, var(--near-black) 100%)
+}
+
+iframe {
+	height: 225px;
+	width: 100%;
 }
