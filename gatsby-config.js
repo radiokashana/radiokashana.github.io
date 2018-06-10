@@ -6,7 +6,6 @@ module.exports = {
 		"gatsby-plugin-netlify-cms",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-react-next",
-		"gatsby-transformer-remark",
 		{
 			resolve: "gatsby-plugin-postcss-sass",
 			options: {
@@ -15,11 +14,19 @@ module.exports = {
 				],
 			},
 		},
+		"gatsby-transformer-remark",
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
 				path: `${__dirname}/src/pages`,
 				name: "pages",
+			},
+		},
+		"gatsby-transformer-json",
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				path: `${__dirname}/_data/`,
 			},
 		},
 	],
