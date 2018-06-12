@@ -13,13 +13,13 @@ Bosquejo del prototipo del borrador de un plan de participar en la política, la
 
 Las viejas costumbres crearon leyes. Las viejas leyes electorales crearon entes incompetentes al adaptarse a la norma nueva, suponiendo que saben que hay otra ya.
 
-Como en sus más impunes épocas de militancia en el PRI del siglo pasado, los estrategas del Partido de la Nueva Alianza en Mulegé, están convencidos de que si el "jefe" dice que las gallinas vuelan, por sus huevos en caída libre cegarán a todo transeunte un día. Lo que diga el que nada dice será oficial y nada más que su verdad reinará "recorred las calles en moto turqueza y predicad que las gallinas vuelan y ya no son más temerosas, solo es que dudan si su miedo es oficial". 
+Como en sus más impunes épocas de militancia en el PRI del siglo pasado, los estrategas del Partido de la Nueva Alianza en Mulegé, están convencidos de que si el "jefe" dice que las gallinas vuelan, por sus huevos en caída libre cegarán a todo transeunte un día. Lo que diga el que nada dice será oficial y nada más que su verdad reinará "recorred las calles en moto turqueza y predicad que las gallinas vuelan y ya no son más temerosas, solo es que dudan si su miedo a las alturas es oficial". 
 
-Y ahí van los de la artítrica talacha. 
+¡Y ahí van los de la artítrica talacha! 
 
 Por ellos es que si alguno de nuestros respetables lectores demanda información de un servidor o este medio comunitario, también a su servicio, les solicitamos de la manera más atenta se comuniquen a través de los contactos que proporcionamos en nuestros medios de información y comunicación, a través de una carta al editor, o agendando una cita. \
 \
-El trabajo que realizamos es valorado por un sector de la población al cuál nos debemos, al que tiene criterio propio y busca seguirlo construyendo, al que ve en la política mucho más que un importante pretexto para dar rienda suelta a su conducta violenta reprimida. A quien busca hacer historia, no repetirla. Por ellos no dedicaré más tiempo a convencer de lo oficial de nuestros eventos y de lo profesional de nuestros métodos a quienes no logran comprenderlo. Toda nuestra energía a quienes saben de esto.
+El trabajo que realizamos es valorado por un sector de la población al cuál nos debemos, al que tiene criterio propio y busca seguirlo construyendo, al que ve en la política mucho más que un importante pretexto para dar rienda suelta a su conducta violenta reprimida. A quien busca hacer historia, no repetirla. Por ellos no dedicaré más tiempo a convencer de lo oficial de nuestros eventos y de lo profesional de nuestros métodos a quienes no logran comprenderlo. Toda nuestra energía a quienes saben de esto. Con todo respeto. 
 
 \*\*José Rafael Murúa Manríquez\*\*\
 Licenciado en Periodismo\
