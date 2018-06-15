@@ -1,7 +1,5 @@
 ---
-title: >-
-  Edith Aguilar, Pancho Pelayo, Tano Pérez, Pedro Osuna y José Luis Pérpuli
-  hacen campaña en el Bonfil y en Ranchería
+title: 'La fuerza de este proyecto ya no la detiene nadie: Edith Aguilar'
 date: '2018-06-14T21:20:41-06:00'
 image: /img/foto 1 (13).jpeg
 ---
