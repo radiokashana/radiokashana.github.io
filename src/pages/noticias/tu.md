@@ -9,16 +9,14 @@ El paso de la tormenta tropical Bud por territorio sudcaliforniano dejó un
  de saldo blanco durante esta contingencia y sólo afectaciones menores en
  infraestructura hidráulica y carretera.
 
-El Ejecutivo estatal, quien estuvo acompañado por el alcalde de La Paz,
- Armando Martínez Vega, hizo un público reconocimiento a todas las
- instituciones que con forman el Consejo y también a la sociedad civil porque
- en todo momento mostraron disposición, coordinación y solidaridad para
- hacer frente a esa amenaza meteorológica, por lo que a partir de hoy se
- normalizan todas las actividades.
+> El Ejecutivo estatal, quien estuvo acompañado por el alcalde de La Paz,
+>  Armando Martínez Vega, hizo un público reconocimiento a todas las
+>  instituciones que con forman el Consejo y también a la sociedad civil porque
+>  en todo momento mostraron disposición, coordinación y solidaridad para
+>  hacer frente a esa amenaza meteorológica, por lo que a partir de hoy se
+>  normalizan todas las actividades.
 
-```
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fradiokashana%2Fvideos%2F1465324363596621%2F&show_text=0&width=560" width="560" height="348" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-```
 
 A manera de prevención, el Consejo permanecerá atento de lo que ocurre
  en los municipios del norte de la entidad, en donde se dio a conocer,
