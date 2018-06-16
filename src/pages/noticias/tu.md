@@ -24,11 +24,15 @@ A manera de prevención, el Consejo permanecerá atento de lo que ocurre
  en los municipios del norte de la entidad, en donde se dio a conocer,
  también se han registrado lluvias.
 
+# <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fradiokashana%2Fvideos%2F1465324363596621%2F&show_text=0&width=560" width="560" height="348" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
 Al reporte de las 10:00 horas de este viernes, Bud se localizaba a 85
  kilómetros al este-noreste de San Evaristo, sobre el Golfo de California, a
  100 kilómetros al oeste-suroeste de Topolobampo, Sinaloa, con un
  desplazamiento de 19 kilómetros por hora y vientos sostenidos de 55
  kilómetros por hora y rachas de 75 kilómetros por hora.
+
+[www.radiokashana.org ](<este sitio >)
 
 Las mayores precipitaciones se registraron en Cabo San Lucas un
  acumulado de 77.6 milímetros, San José del Cabo 158.2 milímetros,
