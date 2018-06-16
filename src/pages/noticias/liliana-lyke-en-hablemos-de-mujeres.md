@@ -1,5 +1,5 @@
 ---
-title: Liliana Lyke en Hablemos de Mujeres
+title: Liliana Lyle en Hablemos de Mujeres
 date: '2018-06-15T19:48:01-06:00'
 image: /img/liliana l.jpg
 ---
