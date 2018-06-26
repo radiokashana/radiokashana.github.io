@@ -1,5 +1,5 @@
 ---
-title: BCS es primer lugar en producción agrícola por hectárea
+title: BCS es primer lugar nacional en producción agrícola por hectárea
 date: '2018-06-25T16:46:57-06:00'
 image: /img/verduras.jpg
 ---
