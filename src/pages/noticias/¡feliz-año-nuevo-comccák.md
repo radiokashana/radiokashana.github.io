@@ -1,5 +1,5 @@
 ---
-title: ¡Feliz año nuevo Comccák!
+title: ¡Feliz año nuevo Comcaák!
 date: '2018-07-01T18:33:53-06:00'
 image: /img/comcaák.jpg
 ---
