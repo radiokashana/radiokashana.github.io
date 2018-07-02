@@ -3,7 +3,7 @@ title: Votó en Mulegé más de la mitad del padrón electoral
 date: '2018-07-02T06:30:24-06:00'
 image: /img/votando.jpg
 ---
-En el corte de las 6:48 horas el Programa de Resultados Electorales Preliminares (PREP) del Instituto Estatal Electoral (IEE) han sido contabilizadas 863 actas de las 978 que se esperan, que representan el 88.24 % del total. 
+En el corte de las 7:16 horas el Programa de Resultados Electorales Preliminares (PREP) del Instituto Estatal Electoral (IEE) han sido contabilizadas 887 actas de las 978 que se esperan, que representan el  90 % del total. 
 
 Se han contado 20 mil 955 votos, más de la mitad de los 41 mil muleginos que conformamos el padrón electoral de este municipio. Una gran participación de la cuál nos debemos sentir orgullosos.
 
@@ -19,7 +19,10 @@ Jose Luis Pérpulli arrasó en la elección para Diputado del Distrito XIII, el 
 
 Un aspecto más que devela esta elección es que el principal cómplice de un fraude electoral es el abstencionismo. 
 
-\*\*José Rafael Murúa Manríquez\*\* \
-Licenciado en Periodismo \
-Director General de Radiokashana y \
+\*\*José Rafael Murúa Manríquez\*\* 
+\
+Licenciado en Periodismo 
+\
+Director General de Radiokashana y 
+\
 Ondas en la Playa A.C.
