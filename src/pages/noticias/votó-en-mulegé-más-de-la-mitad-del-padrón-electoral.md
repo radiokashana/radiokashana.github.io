@@ -11,9 +11,9 @@ Por primera vez en nuestra historia votamos por Presidente de la República y po
 
 ¿Cómo afectaría a las elecciones locales? Hasta hoy lo podemos saber. \
 \
-5631 votos registra hasta el momento Liliana Lyle, candidata de Morena y PES, solo 1000 votos debajo de Edith Aguilar, que está  500 votos detrás de Felipe Prado solamente. Con 7158 votos y el 12% de las actas contabilizadas , Prado Bautista es el virtual ganador.
+5631 votos registra hasta el momento Liliana Lyle, candidata de Morena y PES, solo 1000 votos debajo de Edith Aguilar, que está  500 votos detrás de Felipe Prado solamente. Con 7158 votos y el 10% de las actas por contabilizar, Prado Bautista es el virtual ganador.
 
-Puede seguir el resto del PREP en nuestro sitio y redes sociales. Al parecer tanto a nivel Federal como en el local la tercera fue la vencida. No obstante la participación ciudadana fue muy significativa y las diferencias mínimas.
+Puede seguir el resto del PREP en nuestro sitio y redes sociales. A nivel Federal y en el local la tercera fue la vencida. No obstante la participación ciudadana fue muy significativa y las diferencias mínimas en esta jornada.
 
 Jose Luis Pérpulli arrasó en la elección para Diputado del Distrito XIII, el de nuestra localidad, con la candidata de MORENA alcanzó 2974 sufragios a su favor, la candidata del PANAL 2586 , y Luis Sández Aguilar 1995. El Presidente electo de la nación reflejó claramente su arrastre en las elecciones al nivel más local de Santa Rosalía y Mulegé.
 
