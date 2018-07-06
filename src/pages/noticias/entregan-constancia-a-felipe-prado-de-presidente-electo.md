@@ -1,5 +1,5 @@
 ---
-title: 'Entregan constancia a Felipe Prado '
+title: Entregan constancia a Felipe Prado
 date: '2018-07-05T20:13:35-06:00'
 image: /img/resultado elección 2018 editada.jpg
 ---
