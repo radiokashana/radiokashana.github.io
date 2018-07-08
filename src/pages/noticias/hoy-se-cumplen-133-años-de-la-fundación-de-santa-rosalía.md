@@ -3,7 +3,11 @@ title: Hoy se cumplen 133 años de la fundación de Santa Rosalía
 date: '2018-07-07T18:32:44-06:00'
 image: /img/img_0321.jpg
 ---
-El 7 de julio de 1885 inicia la concesión que la casa Rothschild obtiene de once fundos mineros en el territorio de B.C. Sur. La población del arroyo del distrito minero llegaba en ese año a 250 trabajadores, hombres solos; la mayoría Yaquis, 80 franceses y cinco nativos de Guaymas. No había fuerza de trabajo en condiciones de ser contratada por  los banqueros de la Casa Rothschild.
+Hoy se cumplen 133 años de la fundación de Santa Rosalía
+
+
+
+El 7 de julio de 1885 inicia la concesión que la casa Rothschild obtiene de once fundos mineros en el territorio de B.C. Sur. La población del arroyo del distrito minero llegaba en ese año a 250 trabajadores, hombres solos; la mayoría Yaquis, 80 franceses y cinco nativos de Guaymas. No había fuerza de trabajo en condiciones de ser contratada por los banqueros de la Casa Rothschild.
 
 
 
@@ -15,7 +19,7 @@ En el arroyo o cañón de Providencia surgió la población de Santa Rosalía, q
 
 
 
-Conocemos esta historia gracias a la tesis de Licenciatura en Historia de Juan Manuel Romero Gil, que hoy es el Jefe del Departamento de Historia en la Universidad de Sonora, su Alma Máter.
+Conocemos esta historia gracias a la tesis de Licenciatura en Historia "EL BOLEO: SANTA ROSALÍA, BAJA CALIFORNIA SUR, 1885-1954 Un pueblo que se negó a morir", de Juan Manuel Romero Gil, que hoy es el Jefe del Departamento de Historia en la Universidad de Sonora, su Alma Máter.
 
 
 
@@ -27,13 +31,16 @@ Carecemos de un trabajo historiográfico sobre nuestra ciudad después del éxod
 
 
 
-Es por ello que en Ondas en la Playa A.C. iniciamos el programa social "Becario por la Historia". En coordinación con el Insituto Estatal para la Educación de los Adultos Mulegé, facilitamos la conclusión del bachillerato en línea de un joven con dificultades sociales para lograrlo, pero con una imaginación sociológica muy desarrollada. A cambio, nuestro becario ayuda en la logística del proceso de radiodifusión, periodismos, y multimedia que hacemos; posteriormente cursará la Licenciatura en Historia becado por nosotros, con la condición de plasmar la economía de nuestra localidad en su tesis de Licenciatura.
+Es por ello que en Ondas en la Playa A.C. iniciamos el programa social "Becario por la Historia". En coordinación con el Insituto Estatal para la Educación de los Adultos (IEEA Mulegé), facilitamos la conclusión del bachillerato en línea de un joven con dificultades sociales para lograrlo, pero con una imaginación sociológica muy desarrollada. A cambio, nuestro becario ayuda en la logística del proceso de radiodifusión, periodismos, y multimedia que hacemos; posteriormente cursará la Licenciatura en Historia becado por nosotros, con la condición de plasmar la economía de nuestra localidad en su tesis de Licenciatura.
 
 
 
-Cabe señalar que nuestro becario ha tenido dificultades sociales, receintemente ha concluido un proceso jurídico en su contra. Sabemos que se han creado comentarios denigrantes hacia nuestro equipo porque aceptamos la ayuda voluntaria de conciudadanos que no han llevado una vida inmaculada para la moral y otras normas. Solamente tenemos que argumentar que nos gusta pensar que con nuestra señal en FM podemos llegar a cambiar, para bien, ciertos aspectos de nuestra vida en sociedad, pero nos gusta más ver los cambios tangibles detrás de nuestra señal, ser una alternativa pacífica para abandonar una vida criminal, en cualquiera de los diversos y homogéneos bandos del conflicto cotidiano. \
+Cabe señalar que nuestro becario ha tenido dificultades sociales, receintemente ha concluido un proceso jurídico en su contra. Sabemos que se han creado comentarios denigrantes hacia nuestro equipo porque aceptamos la ayuda voluntaria de conciudadanos que no han llevado una vida inmaculada para la moral y otras normas. Solamente tenemos que argumentar que nos gusta pensar que con nuestra señal en FM podemos llegar a cambiar, para bien, ciertos aspectos de nuestra vida en sociedad, pero nos gusta más ver los cambios tangibles detrás de nuestra señal, ser una alternativa pacífica para abandonar una vida criminal, en cualquiera de los diversos y homogéneos bandos del conflicto cotidiano que vive nuestra comunidad. \
 \
-\*\*José Rafael Murúa Manríquez\*\* \
-Licenciado en Periodismo \
-Director General de Radiokashana y \
+\*\*José Rafael Murúa Manríquez\*\*
+ \
+Licenciado en Periodismo
+ \
+Director General de Radiokashana y
+ \
 Ondas en la Playa A.C.
