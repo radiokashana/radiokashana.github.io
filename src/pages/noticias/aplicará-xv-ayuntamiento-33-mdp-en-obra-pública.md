@@ -1,0 +1,16 @@
+---
+title: Aplicará XV Ayuntamiento 33 MDP en obra pública
+date: '2018-08-07T15:15:05-06:00'
+image: /img/obras públicas.jpeg
+---
+Este lunes 6 de agosto, durante la Trigésima Sexta Sesión Ordinaria de Cabildo, se dio a conocer que  tras meses de gestión ante instancias federales y estatales por parte de la Presidenta Municipal, Cecilia López González, el pasado 26 de junio fue aprobado en la segunda sesión ordinaria del Comité de Desarrollo Regional para las Obras Mineras en BCS, un paquete de obras a ejecutarse en las comunidades de Guerrero Negro, Punta Abreojos, y Santa Rosalía, a través de los recursos del Fondo Minero con una inversión que supera los 33 millones de pesos.
+
+En Santa Rosalía se culminará la reconstrucción con carpeta asfáltica del acceso norte, con una inversión de 7 millones 130 mil 563 pesos; también se realizará el reencarpetado asfaltico del acceso a la Colonia Magisterial, con un monto de 1 millón 496 mil 128 pesos.
+
+Cecilia López González informó que dentro del paquete de obras autorizadas y que serán ejecutadas en breve, se encuentra el reencarpetado asfaltico del acceso a Guerrero Negro, con una inversión de 5 millones 458 mil 594 pesos; la pavimentación con concreto hidráulico de la calle Paseo de la Salina y Sal Glauber en Colonia Infonavit, de Guerrero Negro, con una inversión de 11 millones 630 mil 320 pesos; la pavimentación con concreto asfaltico, banquetas, guarniciones y alumbrado público, del acceso a Punta Abreojos, con una inversión de 7 millones 773 mil 163 pesos.
+
+Además se informó que están en proceso de autorización dos obras más para Santa Rosalía, que corresponden a la pavimentación con carpeta asfáltica, construcción de banquetas, guarniciones y alumbrado público para las calles Acacias y Las Flores en Colonia Mesa México, y la reconstrucción con carpeta asfáltica del tramo carretero municipalizado del acceso sur, con lo que se cumpliría en su totalidad el compromiso por parte de la Alcaldesa de rehabilitar los accesos norte y sur de Santa Rosalía, accesos que durante más de 10 años permanecieron en el olvido.
+
+Es importante mencionar que dichas obras son propuestas y gestionadas por parte del Gobierno Municipal, la Alcaldesa Cecilia López González a través de la Dirección de Obras Públicas, fueron los encargados de integrar un expediente sustentado en el impacto social y beneficio que generarán dichas obras para la población, presentarlas ante SEDATU en la Ciudad de México y ante el Comité de Desarrollo Regional en la Ciudad de La Paz, un proceso largo y de mucha normatividad y requisitos que deben cumplirse para lograr la aprobación de todas las instancias.
+
+Por ello, durante la sesión de Cabildo la Presidenta Municipal, Cecilia López González, realizó la proposición para celebrar contrato de ejecución y coordinación de los recursos del programa Fondo Minero correspondientes a este paquete de obras, por parte del H. XV Ayuntamiento de Mulegé con la Junta Estatal de Caminos, acción que garantizará la correcta aplicación de los recursos en dichas obras y la conservación de la calidad de las mismas, propuesta que fue aprobada por mayoría de votos por el cuerpo de regidores.
