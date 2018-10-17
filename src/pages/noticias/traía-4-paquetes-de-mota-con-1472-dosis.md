@@ -1,5 +1,5 @@
 ---
-title: Traía 4 paquetes de "mota" con 1472 dosis
+title: Traía 4 paquetes de mota con 1472 dosis
 date: '2018-10-17T04:41:36-06:00'
 image: /img/jorge _n_ re 659.png
 ---
