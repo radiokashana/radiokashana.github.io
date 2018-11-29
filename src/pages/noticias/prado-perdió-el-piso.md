@@ -3,7 +3,7 @@ title: Prado perdió el piso
 date: '2018-11-29T12:40:18-07:00'
 image: /img/heil filiptler.jpg
 ---
-El presidente Municipal de Mulegé encaró a un empleado y aliado hasta ese momento, de manera violenta, agresiva, y prepotente\
+El presidente Municipal de Mulegé encaró de manera violenta, agresiva, y prepotente a un empleado y aliado hasta ese momento. \
 \
 Paúl Avilés exigió a Felipe Prado que cumpliera con los acuerdos establecidos con su partido, no sin antes recibir las groserías y evasiones de Felipe Prado y su séquito.\
 \
