@@ -7,7 +7,7 @@ El presidente Municipal de Mulegé encaró de manera violenta, agresiva, y prepo
 \
 Paúl Avilés exigió a Felipe Prado que cumpliera con los acuerdos establecidos con su partido, no sin antes recibir las groserías y evasiones de Felipe Prado y su séquito.\
 \
-Lo grave es que Paúl Avilés también es un ciudadano, con Prado van muchos ciudadanos a quienes les vió la cara para pedirles el voto y ahora se las esconde. Los hace dar vueltas aunque vengan de lejos, los cita y nunca llega, no da la cara para decirles que no puede cumplir lo que les prometió si ganaba. 
+Lo grave es que Paúl Avilés también es un ciudadano, como muchos que con Prado van, a quienes les vió la cara para pedirles el voto y ahora se las esconde. Los hace dar vueltas aunque vengan de lejos, los cita y nunca llega, no da la cara para decirles que no puede cumplir lo que les prometió si ganaba. 
 
 Se le olvidó todo al presidente municipal de Mulegé, promesas y acuerdos.  
 
@@ -24,8 +24,7 @@ Y quien escribe para él perdió la cordura hace mucho, la congruencia no la con
 \
 Como lacayos de su majestad imperial rey de reyes lord of lords Felipe I, publicaron que "el joven funcionario quizás por inexperto tuvo la osadía de encarar en uno de los pasillos de la presidencia a José Felipe Prado Bautista". 
 
-¡Qué oso escribir que es una osadía encarar al presidente municipal! Es labrar tu nombre en el osar municipal, donde se guardan los huesos.\
- La gorda nómina del Ayuntamiento no necesita un pseudo periodista más, menos a un auxiliar de conserje.
+¡Qué oso escribir que es una osadía encarar al presidente municipal! Es labrar tu nombre en el osar municipal, donde se guardan los huesos. La gorda nómina del Ayuntamiento no necesita un pseudo periodista más, menos a un auxiliar de conserje.
 
 La osadía la cometió Felipe. El lema de López Obrador como pie de página en la renuncia de Paúl nos recuerda que el municipio de Mulegé ha perdido oportunidades por los berrinches y la prepotencia de nuestro presidente.
 
