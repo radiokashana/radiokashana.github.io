@@ -1,7 +1,7 @@
 ---
 title: Plaga en palmar de San Ignacio
 date: '2019-06-25T22:53:30-06:00'
-image: /img/ezenario-bcs-649.jpg
+image: /img/palmar.jpg
 ---
 Desde hace meses la zona norte de Baja California Sur se encuentra bajo una amenaza ambiental, detectada por los habitantes de la región y confirmada por especialistas. Expertos han detectado una plaga en el Oasis de San Ignacio, en Mulegé que ha secado hasta ahora más de 2 mil palmas datileras en la zona.
 
