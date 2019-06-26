@@ -1,5 +1,5 @@
 ---
-title: Plaga en el palmar de San Ignacio
+title: Plaga en palmar de San Ignacio
 date: '2019-06-25T22:53:30-06:00'
 image: /img/ezenario-bcs-649.jpg
 ---
