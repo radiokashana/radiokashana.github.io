@@ -5,7 +5,7 @@ image: /img/oceans oasis - snapshot5.jpg
 ---
 El investigador Carlos Lazcano Sahagún propuso que el nombre oficial del Estado de Baja California Sur regrese a su primera denominación y se le llame “California”, ya que fue aquí donde originalmente se dio ese nombre y que el hoy Estado de Baja California cambie su nombre oficial por el de “California Norte”.
 
-![](/img/oceans oasis - snapshot5.jpg)
+![](/img/64723274_2181262591922950_8229357660705652736_n.jpg)
 
 Durante la presentación de su libro “Sobre el nombre California. Huella cartográfica de uno de los nombres más fascinantes de la geografía mundial” en el Centro Cultural Tijuana, organismo de la Secretaría de Cultura, donde tiene lugar la 37 Feria del Libro, Lazcano Sahagún explicó que el nombre llegó a la actual California estadounidense más de 80 años después que a la península, debido a un grave error cartográfico, ya entrada la tercera década del siglo XVII.
 
