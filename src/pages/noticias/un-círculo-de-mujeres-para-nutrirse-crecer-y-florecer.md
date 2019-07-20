@@ -28,4 +28,10 @@ Súmate y se parte de este círculo. Puedes hacerlo en tu casa, con tus hijas, v
 
 Regresé hace cinco años a la tierra salada que me vio nacer y desde entonces  he vuelto a ser despeinada por sus vientos y he escuchado su ulular todas las noches."
 
+Gracias a Beatriz muchas Mujeres encuentran un espacio dónde sentirse abrazadas, comprendidas, valoradas.
+
+Sororidad,  meditación y yoga, son tres herramientas fundamentales en este proyecto donde todas somos diferentes y a la vez una misma.
+
+Patricia Valenzuela
+
 <https://tintanegrasr.blogspot.com/>
