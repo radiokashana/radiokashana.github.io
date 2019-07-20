@@ -3,7 +3,7 @@ title: 'Un círculo de Mujeres para nutrirse, crecer y florecer '
 date: '2019-07-19T20:14:48-06:00'
 image: /img/67152926_490768345061125_5968777310369742848_n.jpg
 ---
-Les presento a Beatriz, ella nos cuenta quién y de qué trata su proyecto con Mujeres aquí, en el municipio de Mulegé. 
+Les presento a Beatriz, ella nos cuenta quién es y de qué trata su proyecto con Mujeres aquí, en el municipio de Mulegé. 
 
 "Nací del vientre de una mujer soñadora, emprendedora y de apariencia independiente. Un vientre cariñoso en el que se tejieron deseos, sentires y emociones; desde donde las historias resonaban y viajaban al manto acuático que me protegían y al chocar en ellas se producía el sonido.           Ahí viví por nueve meses hasta que un día me sincronice con quien me dio la vida y entonces fue que nací un 27 de enero a las 13:00 horas en el hospital de un pueblito donde hace mucha tierra y viento pero que en su nombre lleva algo sagrado, Guerrero Negro, B.C.S.                                                                   Sí que me encanta su nombre.
 
@@ -26,8 +26,6 @@ Estamos representadas por un círculo y este representa el cielo, la Luna , a la
 “Mujeres que Nutren Crece y Florecen”, está hecho para ti, porque todas en algún momento nos hemos cansado de ser el  contenedor social. 
 Súmate y se parte de este círculo. Puedes hacerlo en tu casa, con tus hijas, vecinas, seamos nuestra propia red apoyo, es tiempo de respetarnos y cuidarnos entre nosotras mismas. 
 
-Regresé hace cinco años a la tierra salada que me vio nacer y desde entonces vuelto a ser despeinada por sus vientos y escuchado su ulular todas las noches."
-
-
+Regresé hace cinco años a la tierra salada que me vio nacer y desde entonces  he vuelto a ser despeinada por sus vientos y he escuchado su ulular todas las noches."
 
 <https://tintanegrasr.blogspot.com/>
