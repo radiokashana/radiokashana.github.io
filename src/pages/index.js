@@ -1,6 +1,8 @@
 import React from "react"
 import Link from "gatsby-link"
 
+import IndexLayout from "../layouts/index"
+
 import MainNews from "../components/main-news"
 import MainNew from "../components/main-new"
 import Ads from "../components/ads"

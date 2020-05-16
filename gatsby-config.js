@@ -3,11 +3,11 @@ module.exports = {
 		title: "RadioKashana - Tu Radio de Verdad",
 	},
 	plugins: [
+		"gatsby-plugin-layout",
 		"gatsby-plugin-netlify-cms",
 		"gatsby-plugin-react-helmet",
-		"gatsby-plugin-react-next",
 		{
-			resolve: "gatsby-plugin-postcss-sass",
+			resolve: "gatsby-plugin-sass",
 			options: {
 				postCssPlugins: [
 					require("postcss-import")()
