@@ -10,7 +10,7 @@ import SEO from "../components/SEO"
 const NewTemplate = ({data, location}) =>
 	<IndexLayout customSEO>
 		<SEO
-			title={data.mdx.frontmatter.title.text}
+			title={`${data.mdx.frontmatter.title} - RadioKashana`}
 			pathname={location.pathname}
 			desc={data.mdx.excerpt}
 			node={data.mdx}
