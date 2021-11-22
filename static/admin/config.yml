@@ -2,7 +2,9 @@
 backend:
     name: github
     repo: radiokashana/radiokashana.github.io
-    branch: develop
+    branch: update-gatsby-v4
+
+publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
