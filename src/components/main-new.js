@@ -1,8 +1,8 @@
 import React from "react"
 
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 
-export default ({href, title, date, img}) => (
+const MainNew = ({href, title, date, img}) => (
 	<Link className="w-100 w-50-ns link fl" to={href}>
 		<article className="relative h-one-third-ar-4-3">
 			<h2>{title}</h2>
@@ -15,3 +15,5 @@ export default ({href, title, date, img}) => (
 		</article>
 	</Link>
 )
+
+export default MainNew

@@ -1,8 +1,8 @@
 import React from "react"
 
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 
-export default ({href, title, img, excerpt}) =>
+const NewThumb = ({href, title, img, excerpt}) =>
 	<li className="w-33-l w-50-m pa1 fl">
 		<article>
 			<Link className="link black" to={href}>
@@ -14,3 +14,5 @@ export default ({href, title, img, excerpt}) =>
 			</Link>
 		</article>
 	</li>
+
+export default NewThumb

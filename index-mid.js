@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "gatsby-link"
 
 import { graphql } from "gatsby"
 
@@ -17,7 +16,6 @@ const IndexPage = ({ data, location }) => {
 
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
-
 
 	const mainNews = news
 		.slice(0, 4)
@@ -59,13 +57,12 @@ const IndexPage = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-	query IndexQuery {
+	query IndexQ {
 		allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
 			edges {
 				node {
 					id
 					excerpt(pruneLength: 200)
-					slug
 					fields {
 						slug
 					}

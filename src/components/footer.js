@@ -2,7 +2,7 @@ import React from "react"
 
 import FooterMenuItem from "./footer-menu-item"
 
-export default () =>
+const Footer = () =>
 	<footer className="white w-100 tc bg-near-black cl">
 		<nav>
 			<ul className="dib list ma0 pa0 f6">
@@ -14,3 +14,6 @@ export default () =>
 		<h3 className="ma0">Transmitiendo en la 93.3 FM desde el punto m&aacute;s alto de Santa Rosal&iacute;a, Baja California Sur</h3>
 		<h3 className="ma0">Cel. 615 155 8484 rafael@radiokashana.org</h3>
 	</footer>
+
+
+export default Footer
