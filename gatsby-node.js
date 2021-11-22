@@ -9,10 +9,11 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = ({ actions, graphql }) => {
 	const { createPage } = actions
+	const newTemplate = path.resolve("./src/templates/newTemplate.js")
 
-
+/*
 	const result = await graphql(`
 		query {
 			allMdx(
@@ -41,12 +42,12 @@ exports.createPages = async ({ actions, graphql }) => {
 	result.data.allMdx.edges.forEach(({ node }) => {
 		createPage({
 			path: node.fields.slug,
-			component: path.resolve("src/templates/newTemplate.js"),
+			component: newTemplate,
 			context: { id: node.id, }
 		})
 	})
+	*/
 
-	/*
 	return graphql(`
 		{
 			allMdx(
@@ -82,7 +83,6 @@ exports.createPages = async ({ actions, graphql }) => {
 			})
 		})
 	})
-	*/
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

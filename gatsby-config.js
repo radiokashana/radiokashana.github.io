@@ -69,6 +69,14 @@ module.exports = {
 			},
 			__key: "pages",
 		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "news",
+				path: "./content/",
+			},
+			__key: "news",
+		},
 		"gatsby-transformer-json",
 		{
 			resolve: "gatsby-source-filesystem",

@@ -14,6 +14,7 @@ const NewTemplate = ({data, location}) =>
 			pathname={location.pathname}
 			desc={data.mdx.excerpt}
 			node={data.mdx}
+			banner={data.mdx.frontmatter.image}
 			article
 		/>
 		<article>
