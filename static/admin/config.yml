@@ -2,7 +2,7 @@
 backend:
     name: github
     repo: radiokashana/radiokashana.github.io
-    branch: update-gatsby-v4
+    branch: develop
 
 publish_mode: editorial_workflow
 
