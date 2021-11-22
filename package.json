@@ -1,8 +1,8 @@
 {
-  "name": "radio-kashana",
+  "name": "radiokashana",
   "version": "1.0.0",
   "private": true,
-  "description": "Radio Kashana",
+  "description": "RadioKashana",
   "author": "Jorge Vargas",
   "keywords": [
     "gatsby"
