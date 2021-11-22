@@ -1,5 +1,5 @@
 ---
-title: Abandera alcaldesa instalación de Comité Comunitari
+title: Abandera alcaldesa instalación de Comité Comunitario
 date: '2021-10-23T09:17:44-06:00'
 image: /img/comité.jpeg
 ---

@@ -4,13 +4,15 @@ backend:
     repo: radiokashana/radiokashana.github.io
     branch: develop
 
+publish_mode: editorial_workflow
+
 media_folder: static/img
 public_folder: /img
 
 collections:
     - name: noticia
       label: Noticia
-      folder: "src/pages/noticias"
+      folder: "content/noticias"
       create: true
       slug: "{{slug}}"
       fields:

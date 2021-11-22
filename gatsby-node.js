@@ -9,14 +9,48 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-	const { createPage } = boundActionCreators
+exports.createPages = ({ actions, graphql }) => {
+	const { createPage } = actions
+	const newTemplate = path.resolve("./src/templates/newTemplate.js")
 
-	const newTemplate = path.resolve("src/templates/newTemplate.js")
+/*
+	const result = await graphql(`
+		query {
+			allMdx(
+				sort: { order: DESC, fields: [frontmatter___date] }
+			) {
+				edges {
+					node {
+						id
+						fields {
+							slug
+						}
+						frontmatter {
+							title
+						}
+					}
+				}
+			}
+		}
+	`)
+
+	if (result.errors) {
+		console.error(result.errors)
+		reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+	}
+
+	result.data.allMdx.edges.forEach(({ node }) => {
+		createPage({
+			path: node.fields.slug,
+			component: newTemplate,
+			context: { id: node.id, }
+		})
+	})
+	*/
 
 	return graphql(`
 		{
-			allMarkdownRemark(
+			allMdx(
 				sort: { order: DESC, fields: [frontmatter___date] }
 			) {
 				edges {
@@ -38,7 +72,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 			return Promise.reject(result.errors)
 		}
 
-		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+		result.data.allMdx.edges.forEach(({ node }) => {
 			const id = node.id
 			createPage({
 				path: node.fields.slug,
@@ -51,10 +85,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 	})
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-	const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, getNode, actions }) => {
+	const { createNodeField } = actions
 
-	if (node.internal.type === "MarkdownRemark") {
+	if (node.internal.type === "Mdx") {
 		const value = createFilePath({ node, getNode})
 
 		createNodeField({
@@ -64,3 +98,19 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 		})
 	}
 }
+
+/*
+exports.createSchemaCustomization = ({actions }) => {
+	const { createTypes } = actions
+
+	createTypes(`
+		type Mdx implements Node {
+			frontmatter: MdxFrontmatter!
+		}
+		type MdxFrontmatter {
+			date: Date
+			image: File @fileByRelativePath
+		}
+	`)
+}
+*/

@@ -2,7 +2,7 @@ import React from "react"
 
 import MenuItem from "../menu-item"
 
-export default () =>
+const Menu = () =>
 	<nav className="dib w-100 center bg-top-gray-bottom-near-black">
 		<ul className="center list dib ma0 pa0">
 			<MenuItem href="/">Inicio</MenuItem>
@@ -14,3 +14,5 @@ export default () =>
 			<MenuItem href="/punto-de-vista/">Punto de vista</MenuItem>
 		</ul>
 	</nav>
+
+export default Menu

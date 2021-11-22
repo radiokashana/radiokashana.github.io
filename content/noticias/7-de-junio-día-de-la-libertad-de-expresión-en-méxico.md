@@ -11,8 +11,8 @@ La libre manifestación de las ideas se encuentran asentadas en los artículos 6
 
 Lo que se busca en nuestro país y en el mundo al establecer un día para celebrar la libertad de expresión es hacer conciencia y que los gobiernos respeten su compromiso para garantizarla, señaló la UNESCO.
 
-Felicitaciones a periodistas locales y foráneos en este día por ejercer esta labor en el segundo país más peligroso para hacerlo, recordando a tantos miembros del gremio caídos en el ejercicio del periodismo. 
+Felicitaciones a periodistas locales y foráneos en este día por ejercer esta labor en el segundo país más peligroso para hacerlo, recordando a tantos miembros del gremio caídos en el ejercicio del periodismo.
 
-Y vaya una felicitación póstuma a nuestro querido Rafael "Falo" Murúa, a quien estaremos honrando dándole continuidad a este proyecto de la radio comunitaria en Santa Rosalía: Radio Kashana FM, tu radio de verdad.
+Y vaya una felicitación póstuma a nuestro querido Rafael "Falo" Murúa, a quien estaremos honrando dándole continuidad a este proyecto de la radio comunitaria en Santa Rosalía: RadioKashana FM, tu radio de verdad.
 
 RubenNS
