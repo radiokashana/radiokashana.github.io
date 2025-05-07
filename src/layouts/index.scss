@@ -49,14 +49,13 @@
 	height: calc(100vw * 3 / 4);
 }
 
+.z-999 {
+	z-index: 999;
+}
+
 @media screen and (min-width: 30em) {
 	.h-one-third-ar-4-3 {
 		height: calc(100vw / 3 * 3 / 4);
-	}
-
-	iframe {
-		height: 400px;
-		width: 400px;
 	}
 }
 
@@ -70,6 +69,25 @@
 
 .bg-left-dark-red-bottom-near-black {
 	background: linear-gradient(to bottom, var(--gray) 0%, var(--near-black) 100%)
+}
+
+/* Facebook Live container styling */
+#liveContent {
+	width: 100%;
+	background-color: var(--white);
+}
+
+#liveContent iframe {
+	width: 100%;
+	height: 200px;  /* Adjusted for smaller width */
+	border: none;
+	display: block;
+}
+
+@media screen and (max-width: 30em) {
+	#liveContent iframe {
+		height: 170px;  /* Smaller on mobile */
+	}
 }
 
 iframe {
