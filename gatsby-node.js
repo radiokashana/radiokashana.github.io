@@ -4,113 +4,87 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
 
-const path = require("path")
-const { createFilePath } = require("gatsby-source-filesystem")
+// Schema customization for Gatsby v5
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+
+  // Define the Date type with formatString and locale directives
+  createTypes([
+    schema.buildObjectType({
+      name: "Mdx",
+      fields: {
+        frontmatter: "MdxFrontmatter!",
+      },
+      interfaces: ["Node"],
+    }),
+    schema.buildObjectType({
+      name: "MdxFrontmatter",
+      fields: {
+        title: "String!",
+        date: {
+          type: "Date",
+          extensions: {
+            dateformat: {},
+          },
+        },
+        image: "String",
+      },
+    }),
+  ]);
+};
 
 exports.createPages = ({ actions, graphql }) => {
-	const { createPage } = actions
-	const newTemplate = path.resolve("./src/templates/newTemplate.js")
+  const { createPage } = actions;
+  const newTemplate = path.resolve("./src/templates/newTemplate.js");
 
-/*
-	const result = await graphql(`
-		query {
-			allMdx(
-				sort: { order: DESC, fields: [frontmatter___date] }
-			) {
-				edges {
-					node {
-						id
-						fields {
-							slug
-						}
-						frontmatter {
-							title
-						}
-					}
-				}
-			}
-		}
-	`)
+  return graphql(`
+    {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      console.log(result.errors);
+      return Promise.reject(result.errors);
+    }
 
-	if (result.errors) {
-		console.error(result.errors)
-		reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
-	}
-
-	result.data.allMdx.edges.forEach(({ node }) => {
-		createPage({
-			path: node.fields.slug,
-			component: newTemplate,
-			context: { id: node.id, }
-		})
-	})
-	*/
-
-	return graphql(`
-		{
-			allMdx(
-				sort: { order: DESC, fields: [frontmatter___date] }
-			) {
-				edges {
-					node {
-						id
-						fields {
-							slug
-						}
-						frontmatter {
-							title
-						}
-					}
-				}
-			}
-		}
-	`).then(result => {
-		if (result.errors) {
-			console.log(result.errors)
-			return Promise.reject(result.errors)
-		}
-
-		result.data.allMdx.edges.forEach(({ node }) => {
-			const id = node.id
-			createPage({
-				path: node.fields.slug,
-				component: newTemplate,
-				context: {
-					id,
-				}
-			})
-		})
-	})
-}
+    result.data.allMdx.edges.forEach(({ node }) => {
+      const id = node.id;
+      createPage({
+        path: node.fields.slug,
+        component: newTemplate,
+        context: {
+          id,
+        },
+      });
+    });
+  });
+};
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-	const { createNodeField } = actions
+  const { createNodeField } = actions;
 
-	if (node.internal.type === "Mdx") {
-		const value = createFilePath({ node, getNode})
+  if (node.internal.type === "Mdx") {
+    const value = createFilePath({ node, getNode });
 
-		createNodeField({
-			name: "slug",
-			node,
-			value
-		})
-	}
-}
-
-/*
-exports.createSchemaCustomization = ({actions }) => {
-	const { createTypes } = actions
-
-	createTypes(`
-		type Mdx implements Node {
-			frontmatter: MdxFrontmatter!
-		}
-		type MdxFrontmatter {
-			date: Date
-			image: File @fileByRelativePath
-		}
-	`)
-}
-*/
+    createNodeField({
+      name: "slug",
+      node,
+      value,
+    });
+  }
+};
