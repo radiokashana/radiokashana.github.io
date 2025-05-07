@@ -1,7 +1,5 @@
 import React from "react"
-import Link from "gatsby-link"
-
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import MainNews from "../components/main-news"
@@ -60,12 +58,11 @@ const IndexPage = ({ data, location }) => {
 
 export const pageQuery = graphql`
 	query IndexQuery {
-		allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+		allMdx(sort: { frontmatter: { date: DESC } }) {
 			edges {
 				node {
 					id
 					excerpt(pruneLength: 200)
-					slug
 					fields {
 						slug
 					}

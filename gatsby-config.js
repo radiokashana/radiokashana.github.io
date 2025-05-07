@@ -17,7 +17,7 @@ module.exports = {
 	},
 	plugins: [
 		//"gatsby-plugin-layout",
-		"gatsby-plugin-netlify-cms",
+		"gatsby-plugin-decap-cms",
 		//"gatsby-plugin-postcss",
 		{
 			resolve: "gatsby-plugin-sass",
