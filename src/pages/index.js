@@ -41,15 +41,18 @@ const IndexPage = ({ data, location }) => {
 
 	return (
 		<IndexLayout>
+			{/* Floating Facebook Live embed - now positioned closer to top and bottom-right */}
+			<Embed html={facebookLiveEmbedHtml} />
+			
 			<section>
 				<MainNews>
-					{ mainNews }
+					{mainNews}
 				</MainNews>
 				<Ads/>
-				<Embed html={ facebookLiveEmbedHtml }/>
+				<Ads/>
 				<Ads/>
 				<NewThumbList>
-					{ oldNews }
+					{oldNews}
 				</NewThumbList>
 			</section>
 		</IndexLayout>
