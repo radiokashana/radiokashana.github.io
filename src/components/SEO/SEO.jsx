@@ -26,11 +26,23 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		},
 	} = site
 
+	// Ensure banner has absolute URL with https:// protocol
+	let bannerUrl = banner || defaultBanner
+	if (bannerUrl && !bannerUrl.startsWith('http') && !bannerUrl.startsWith('//')) {
+		// Make sure siteUrl includes the protocol
+		const siteUrlWithProtocol = siteUrl.startsWith('http') ? siteUrl : `https://${siteUrl}`
+		bannerUrl = `${siteUrlWithProtocol}${bannerUrl.startsWith('/') ? '' : '/'}${bannerUrl}`
+	}
+
+	// Ensure URL has https:// protocol
+	const fullUrl = pathname ? `${siteUrl}${pathname}` : siteUrl
+	const urlWithProtocol = fullUrl.startsWith('http') ? fullUrl : `https://${fullUrl}`
+
 	const seo = {
 		title: title || defaultTitle,
 		description: desc || defaultDescription,
-		image: `${siteUrl}${banner || defaultBanner}`,
-		url: `${siteUrl}${pathname || ''}`,
+		image: bannerUrl,
+		url: urlWithProtocol,
 	}
 
 	// schema.org in JSONLD format
@@ -40,10 +52,10 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 	const schemaOrgWebPage = {
 		'@context': 'http://schema.org',
 		'@type': 'WebPage',
-		url: siteUrl,
+		url: seo.url,
 		headline,
 		inLanguage: siteLanguage,
-		mainEntityOfPage: siteUrl,
+		mainEntityOfPage: seo.url,
 		description: defaultDescription,
 		name: defaultTitle,
 		author: {
@@ -67,7 +79,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		dateModified: buildTime,
 		image: {
 			'@type': 'ImageObject',
-			url: `${siteUrl}${defaultBanner}`,
+			url: seo.image,
 		},
 	}
 
@@ -77,7 +89,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		{
 			'@type': 'ListItem',
 			item: {
-				'@id': siteUrl,
+				'@id': seo.url,
 				name: 'Homepage',
 			},
 			position: 1,
@@ -108,13 +120,11 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				name: author,
 				logo: {
 					'@type': 'ImageObject',
-					url: `${siteUrl}${defaultBanner}`,
+					url: seo.image,
 				},
 			},
-			//datePublished: node.first_publication_date,
-			//dateModified: node.last_publication_date,
-			datePublished: node.date,
-			dateModified: node.date,
+			datePublished: node.frontmatter.date,
+			dateModified: node.frontmatter.date,
 			description: seo.description,
 			headline: seo.title,
 			inLanguage: siteLanguage,
@@ -156,6 +166,16 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				{!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
 				{article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
 				<script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+				
+				{/* Basic Open Graph tags - duplicated for Facebook debugger */}
+				<meta property="og:site_name" content="RadioKashana" />
+				<meta property="og:url" content={seo.url} />
+				<meta property="og:type" content={article ? 'article' : 'website'} />
+				<meta property="og:title" content={seo.title} />
+				<meta property="og:description" content={seo.description} />
+				<meta property="og:image" content={seo.image} />
+				<meta property="og:image:width" content="1200" />
+				<meta property="og:image:height" content="630" />
 			</Helmet>
 			<Facebook
 				desc={seo.description}
@@ -164,9 +184,15 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				type={article ? 'article' : 'website'}
 				url={seo.url}
 				locale={ogLanguage}
-				name={facebook}
+				name="RadioKashana"
 			/>
-			<Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
+			<Twitter 
+				title={seo.title} 
+				image={seo.image} 
+				desc={seo.description} 
+				username={twitter} 
+				type="summary_large_image"
+			/>
 		</>
 	)
 }
