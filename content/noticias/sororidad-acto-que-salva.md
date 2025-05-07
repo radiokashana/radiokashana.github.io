@@ -49,6 +49,6 @@ Ellas me hacen fuerte.
 
 Por: Patricia Valenzuela L.
 
-<https://tintanegrasr.blogspot.com/>
+[Tinta Negra](https://tintanegrasr.blogspot.com/)
 
 ##
