@@ -26,29 +26,47 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		},
 	} = site
 
-	// Ensure banner has absolute URL with https:// protocol
-	let bannerUrl = banner || defaultBanner
-	if (bannerUrl && !bannerUrl.startsWith('http') && !bannerUrl.startsWith('//')) {
-		// Make sure siteUrl includes the protocol
-		const siteUrlWithProtocol = siteUrl.startsWith('http') ? siteUrl : `https://${siteUrl}`
-		bannerUrl = `${siteUrlWithProtocol}${bannerUrl.startsWith('/') ? '' : '/'}${bannerUrl}`
+	// Helper function to normalize URLs and prevent double slashes
+	const normalizeUrl = (baseUrl, path) => {
+		// Remove trailing slashes from base URL
+		const cleanBaseUrl = baseUrl.replace(/\/+$/, '')
+		// Remove leading slashes from path
+		const cleanPath = path ? path.replace(/^\/+/, '') : ''
+		// Combine with a single slash separator
+		return cleanPath ? `${cleanBaseUrl}/${cleanPath}` : cleanBaseUrl
 	}
 
-	// Ensure URL has https:// protocol
-	const fullUrl = pathname ? `${siteUrl}${pathname}` : siteUrl
-	const urlWithProtocol = fullUrl.startsWith('http') ? fullUrl : `https://${fullUrl}`
+	// Ensure siteUrl has the correct protocol
+	const siteUrlWithProtocol = siteUrl.startsWith('http') ? siteUrl : `https://${siteUrl}`
+
+	// Process the banner URL (image)
+	let imageUrl = banner || defaultBanner
+	if (imageUrl) {
+		// Create absolute URL with proper encoding
+		imageUrl = normalizeUrl(siteUrlWithProtocol, imageUrl)
+		// Encode spaces and special characters
+		imageUrl = encodeURI(imageUrl)
+	}
+
+	// Process the page URL
+	const pageUrl = pathname ? normalizeUrl(siteUrlWithProtocol, pathname) : siteUrlWithProtocol
+
+	// Debug URLs if in browser environment
+	if (typeof window !== 'undefined') {
+		console.log('Original image path:', banner);
+		console.log('Processed image URL:', imageUrl);
+		console.log('Page URL:', pageUrl);
+	}
 
 	const seo = {
 		title: title || defaultTitle,
 		description: desc || defaultDescription,
-		image: bannerUrl,
-		url: urlWithProtocol,
+		image: imageUrl,
+		url: pageUrl,
 	}
 
 	// schema.org in JSONLD format
 	// https://developers.google.com/search/docs/guides/intro-structured-data
-	// You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
-
 	const schemaOrgWebPage = {
 		'@context': 'http://schema.org',
 		'@type': 'WebPage',
@@ -84,7 +102,6 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 	}
 
 	// Initial breadcrumb list
-
 	const itemListElement = [
 		{
 			'@type': 'ListItem',
@@ -161,7 +178,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				<html lang={siteLanguage} />
 				<meta name="description" content={seo.description} />
 				<meta name="image" content={seo.image} />
-		    {/* <meta name="gatsby-starter" content="Gatsby Starter Prismic" /> */}
+			    {/* <meta name="gatsby-starter" content="Gatsby Starter Prismic" /> */}
 				{/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
 				{!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
 				{article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
