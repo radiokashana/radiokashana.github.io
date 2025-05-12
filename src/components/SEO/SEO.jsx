@@ -26,24 +26,54 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		},
 	} = site
 
+	// Helper function to normalize URLs and prevent double slashes
+	const normalizeUrl = (baseUrl, path) => {
+		// Remove trailing slashes from base URL
+		const cleanBaseUrl = baseUrl.replace(/\/+$/, '')
+		// Remove leading slashes from path
+		const cleanPath = path ? path.replace(/^\/+/, '') : ''
+		// Combine with a single slash separator
+		return cleanPath ? `${cleanBaseUrl}/${cleanPath}` : cleanBaseUrl
+	}
+
+	// Ensure siteUrl has the correct protocol
+	const siteUrlWithProtocol = siteUrl.startsWith('http') ? siteUrl : `https://${siteUrl}`
+
+	// Process the banner URL (image)
+	let imageUrl = banner || defaultBanner
+	if (imageUrl) {
+		// Create absolute URL with proper encoding
+		imageUrl = normalizeUrl(siteUrlWithProtocol, imageUrl)
+		// Encode spaces and special characters
+		imageUrl = encodeURI(imageUrl)
+	}
+
+	// Process the page URL
+	const pageUrl = pathname ? normalizeUrl(siteUrlWithProtocol, pathname) : siteUrlWithProtocol
+
+	// Debug URLs if in browser environment
+	if (typeof window !== 'undefined') {
+		console.log('Original image path:', banner);
+		console.log('Processed image URL:', imageUrl);
+		console.log('Page URL:', pageUrl);
+	}
+
 	const seo = {
 		title: title || defaultTitle,
 		description: desc || defaultDescription,
-		image: `${siteUrl}${banner || defaultBanner}`,
-		url: `${siteUrl}${pathname || ''}`,
+		image: imageUrl,
+		url: pageUrl,
 	}
 
 	// schema.org in JSONLD format
 	// https://developers.google.com/search/docs/guides/intro-structured-data
-	// You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
-
 	const schemaOrgWebPage = {
 		'@context': 'http://schema.org',
 		'@type': 'WebPage',
-		url: siteUrl,
+		url: seo.url,
 		headline,
 		inLanguage: siteLanguage,
-		mainEntityOfPage: siteUrl,
+		mainEntityOfPage: seo.url,
 		description: defaultDescription,
 		name: defaultTitle,
 		author: {
@@ -67,17 +97,16 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		dateModified: buildTime,
 		image: {
 			'@type': 'ImageObject',
-			url: `${siteUrl}${defaultBanner}`,
+			url: seo.image,
 		},
 	}
 
 	// Initial breadcrumb list
-
 	const itemListElement = [
 		{
 			'@type': 'ListItem',
 			item: {
-				'@id': siteUrl,
+				'@id': seo.url,
 				name: 'Homepage',
 			},
 			position: 1,
@@ -108,13 +137,11 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				name: author,
 				logo: {
 					'@type': 'ImageObject',
-					url: `${siteUrl}${defaultBanner}`,
+					url: seo.image,
 				},
 			},
-			//datePublished: node.first_publication_date,
-			//dateModified: node.last_publication_date,
-			datePublished: node.date,
-			dateModified: node.date,
+			datePublished: node.frontmatter.date,
+			dateModified: node.frontmatter.date,
 			description: seo.description,
 			headline: seo.title,
 			inLanguage: siteLanguage,
@@ -151,11 +178,21 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				<html lang={siteLanguage} />
 				<meta name="description" content={seo.description} />
 				<meta name="image" content={seo.image} />
-		    {/* <meta name="gatsby-starter" content="Gatsby Starter Prismic" /> */}
+			    {/* <meta name="gatsby-starter" content="Gatsby Starter Prismic" /> */}
 				{/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
 				{!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
 				{article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
 				<script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+				
+				{/* Basic Open Graph tags - duplicated for Facebook debugger */}
+				<meta property="og:site_name" content="RadioKashana" />
+				<meta property="og:url" content={seo.url} />
+				<meta property="og:type" content={article ? 'article' : 'website'} />
+				<meta property="og:title" content={seo.title} />
+				<meta property="og:description" content={seo.description} />
+				<meta property="og:image" content={seo.image} />
+				<meta property="og:image:width" content="1200" />
+				<meta property="og:image:height" content="630" />
 			</Helmet>
 			<Facebook
 				desc={seo.description}
@@ -164,9 +201,15 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				type={article ? 'article' : 'website'}
 				url={seo.url}
 				locale={ogLanguage}
-				name={facebook}
+				name="RadioKashana"
 			/>
-			<Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
+			<Twitter 
+				title={seo.title} 
+				image={seo.image} 
+				desc={seo.description} 
+				username={twitter} 
+				type="summary_large_image"
+			/>
 		</>
 	)
 }

@@ -23,7 +23,7 @@ const NewTemplate = ({data, location}) => {
 				<p>{frontmatter.date}</p>
 				<section>
 					<aside className="fr w-50 ml4 mb3">
-						<img src={frontmatter.image} alt=""/>
+						<img src={frontmatter.image} alt={frontmatter.title}/>
 					</aside>
 					<main className="w-100 tj">
 						<MDXProvider>

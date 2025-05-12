@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Allow Facebook crawler full access
+User-agent: facebookexternalhit
+Allow: /
+Allow: /img/
+Allow: /static/
+
+# Allow Facebook Sharing Debugger
+User-agent: facebookexternalhit/1.1
+Allow: /
+Allow: /img/
+Allow: /static/
