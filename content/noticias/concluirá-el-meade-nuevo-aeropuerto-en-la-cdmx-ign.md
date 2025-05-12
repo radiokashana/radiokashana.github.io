@@ -1,7 +1,7 @@
 ---
 title: 'Concluirá el Meade Nuevo Aeropuerto en la CDMX: IGN'
 date: '2018-03-16T12:27:28-07:00'
-image: /img/foto perfil isaias  medios 1.jpg
+image: /img/foto-perfil-isaias-medios-1.jpg
 ---
 La construcción del Nuevo Aeropuerto Internacional de la Ciudad de México potenciará a nuestro país como conexión en el mundo, incrementará la competitividad y atraerá la inversión generando miles de empleos, afirmó Isaías González Nava, coordinador de la Campaña de José Antonio Meade en Baja California Sur.
 

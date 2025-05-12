@@ -1,7 +1,7 @@
 ---
 title: Sigue creciendo respaldo al proyecto Edith Aguilar en Mulegé
 date: '2018-06-06T18:03:10-06:00'
-image: /img/edith 060618.jpeg
+image: /img/edith-060618.jpeg
 ---
 En la presente contienda electoral a la presidencia municipal de Mulegé ha sobresalido el respaldo y apoyo hacia la candidata del PAN, PRD, PRS y Humanista: Edith Aguilar Villavicencio. Ha construido por años una carrera estable en el servicio público, que ha marcado la historia de Mulegé y de toda Baja California Sur, llevando a nuestra Entidad con su trabajo legislativo a ser un ejemplo nacional en equidad de género.
 

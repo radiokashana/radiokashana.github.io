@@ -1,7 +1,7 @@
 ---
 title: Con gran éxito celebran el "Día de la Marina" en Santa Rosalía
 date: '2018-06-04T15:50:08-06:00'
-image: /img/foto 1 (18).jpg
+image: /img/foto-1-18.jpg
 ---
 Este pasado viernes primero de junio, en las instalaciones de la Aduana Marítima de Santa Rosalía, el Sector Naval Militar en coordinación con el comité organizador de los festejos del "Día de la Marina", llevaron a cabo una ceremonia conmemorativa, contando con la asistencia de la presidenta del sistema DIF Mulegé, Cecilia Osuna López en representación de la presidenta municipal del H. XV. Ayuntamiento de Mulegé, Cecilia López González, el comandante del sector naval militar contralmirante Gabriel Pablo González Contreras, Cap. de altura Alejandro Lima Hidalgo, el gerente de API, Jorge Suarez Corona, la reina de los festejos 2018 “Frida I”, integrantes de comité  de las fiestas, autoridades militares y civiles, dando inicio la ceremonia cívica, con honores a nuestro lábaro patrio y entonación del himno nacional  mexicano, con la participación de la banda de guerra y escolta por la 16va. zona Militar.
 

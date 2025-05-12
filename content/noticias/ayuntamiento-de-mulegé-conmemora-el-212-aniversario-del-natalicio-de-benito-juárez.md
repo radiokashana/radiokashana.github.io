@@ -3,7 +3,7 @@ title: >-
   Ayuntamiento de Mulegé conmemora el 212 Aniversario del Natalicio de Benito
   Juárez
 date: '2018-03-22T13:00:49-07:00'
-image: /img/foto 1 (7).jpg
+image: /img/foto-1-7.jpg
 ---
 Este miércoles 21 de marzo, en la explanada de la escuela
  primaria Benito Juárez, el H. XV Ayuntamiento de Mulegé a través de la Dirección de

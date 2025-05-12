@@ -1,7 +1,7 @@
 ---
 title: Gobernador y Presidente Municipal visitan comunidades afectadas por Sergio
 date: '2018-10-18T02:47:56-06:00'
-image: /img/principal cmd carretera.jpeg
+image: /img/principal-cmd-carretera.jpeg
 ---
 En el marco de una gira de trabajo por la Zona Pacífico Norte, el gobernador Carlos Mendoza Davis, ratificó ante habitantes de San Ignacio, Punta Abreojos, y La Bocana; el compromiso de mejorar los caminos y vías alimentadoras en la entidad; por ello, dijo, ya se encuentran avanzados los trabajos en tramos afectados tras el paso de la tormenta tropical "Sergio”, como la carretera a Punta Abreojos que comunica a estas localidades, en donde se ejercerá una inversión de 10 millones de pesos.
 

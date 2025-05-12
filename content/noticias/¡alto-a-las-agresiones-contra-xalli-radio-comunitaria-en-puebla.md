@@ -1,7 +1,7 @@
 ---
 title: '¡Alto a las agresiones contra Xalli, Radio Comunitaria en Puebla!'
 date: '2018-06-04T10:10:33-06:00'
-image: /img/radio xalli.jpg
+image: /img/radio-xalli.jpg
 ---
 Al Pueblo de México
 

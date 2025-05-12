@@ -1,7 +1,7 @@
 ---
 title: El disco póstumo de Chuck Berry
 date: '2018-08-21T15:21:17-06:00'
-image: /img/chuck album.jpg
+image: /img/chuck-album.jpg
 ---
 En uno de los libros más completos sobre la historia de la música pop-rock (“Yeah!, Yeah!, Yeah!. La historia del pop moderno”) Bob Stanley dice que el rock and roll vino a salvar las brechas que después de la II Guerra Mundial separaban a las culturas de Gran Bretaña y los Estados Unidos, a los jóvenes de los adultos, a los blancos de los negros.
 

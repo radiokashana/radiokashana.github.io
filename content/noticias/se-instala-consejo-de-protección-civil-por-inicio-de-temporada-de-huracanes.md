@@ -1,7 +1,7 @@
 ---
 title: Se instala Consejo de Protección Civil por inicio de temporada de huracanes
 date: '2018-05-15T11:38:35-06:00'
-image: /img/foto 1 (16).jpg
+image: /img/foto-1-16.jpg
 ---
 Este 15 de mayo da inicio la temporada de Huracanes 2018 en la zona del pacífico, por tal motivo la Presidenta Municipal, Cecilia López González, llevó a cabo el acto de instalación del Consejo de Protección Civil en el municipio de Mulegé.
 

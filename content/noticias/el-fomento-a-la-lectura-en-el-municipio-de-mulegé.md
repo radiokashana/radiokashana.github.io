@@ -1,7 +1,7 @@
 ---
 title: El fomento a la lectura en el municipio de Mulegé
 date: '2018-06-12T16:23:17-06:00'
-image: /img/tinta negra 2.jpg
+image: /img/tinta-negra-2.jpg
 ---
 \-Tinta Negra-
 

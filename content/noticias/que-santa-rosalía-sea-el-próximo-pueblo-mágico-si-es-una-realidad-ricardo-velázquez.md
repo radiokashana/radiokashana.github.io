@@ -3,7 +3,7 @@ title: >-
   Que Santa Rosalía sea el próximo Pueblo Mágico si es una realidad: Ricardo
   Velázquez.
 date: '2021-11-08T12:49:50-07:00'
-image: /img/comisión turismo estado.jpg
+image: /img/comision-turismo-estado.jpg
 ---
 
 

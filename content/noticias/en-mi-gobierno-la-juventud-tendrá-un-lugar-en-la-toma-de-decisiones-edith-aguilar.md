@@ -3,7 +3,7 @@ title: >-
   En mi gobierno, la juventud tendrá un lugar en la toma de decisiones: Edith
   Aguilar
 date: '2018-06-19T10:06:28-06:00'
-image: /img/foto 1 (4).jpeg
+image: /img/foto-1-4.jpeg
 ---
 “Las propuestas de las y los jóvenes las hago mías y me comprometo a luchar hasta el máximo de mi esfuerzo y de mi capacidad para sacarlas adelante, mi gobierno dará un lugar a la juventud en la toma de decisiones como generadores de ideas para construir juntos un mejor Mulegé”, expresó Edith Aguilar Villavicencio, candidata a presidenta municipal, en el marco del foro juvenil “Yo prefiero construir” realizado en Santa Rosalía, acompañada por los candidatos Pedro Osuna López, por el distrito 14 y José Luis Perpulli Drew, por el distrito 13.
 

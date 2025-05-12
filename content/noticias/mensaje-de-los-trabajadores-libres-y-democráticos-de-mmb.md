@@ -1,7 +1,7 @@
 ---
 title: 'Mensaje de los Trabajadores Libres y Democráticos de MMB '
 date: '2018-03-20T21:17:05-07:00'
-image: /img/mineros 2018.jpeg
+image: /img/mineros-2018.jpeg
 ---
 Seguimos de pie por todos los mineros de Boleo, por nuestras familias, sabiendo que conseguiremos mejoras laborales, salariales, y un trato justo por los valores que generamos cada jornada. 
 
@@ -9,7 +9,7 @@ Apreciamos el apoyo invariable del Sindicato de Trabajadores Mineros Metalúrgic
 
 Conoces bien los abusos, las carencias, los malos tratos, sabes que tu trabajo vale mucho más que lo que Boleo nos paga. Piensa bien con quién estaríamos mejor, antes de contestar con palabras de otros, palabras en los medios de información siervos de los poderes. Estás convencido de la respuesta.
 
-![](/img/policías redi.jpg)
+![](/img/policias-redi.jpg)
 
 El sindicato que tenemos hace lo que más le conviene a la empresa: ¡Nada! 
 

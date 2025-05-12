@@ -1,7 +1,7 @@
 ---
 title: Edith Aguilar visita Guerrero Negro y Vizcaíno
 date: '2018-05-02T22:33:39-06:00'
-image: /img/foto 1 (6).jpeg
+image: /img/foto-1-6.jpeg
 ---
 "En Mulegé vamos juntos y vamos más fuertes todas las candidatas y candidatos, en un solo equipo y con un solo objetivo en común, hacer caminar a Mulegé y a Baja California Sur”, expresó, Edith Aguilar Villavicencio, candidata a la Presidencia Municipal de Mulegé, en el marco de una gira de trabajo en Guerrero Negro y Vizcaíno, acompañada por los candidatos a senadores, Lupita Saldaña y Francisco Pelayo; a diputado federal, Tano Pérez; y a diputado local, Pedro Osuna López.
 

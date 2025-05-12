@@ -1,7 +1,7 @@
 ---
 title: Edith Aguilar da a conocer su trayectoria y capacidad en todo Mulegé
 date: '2018-06-04T15:23:48-06:00'
-image: /img/rueda de prensa 030618.jpg
+image: /img/rueda-de-prensa-030618.jpg
 ---
 Edith Aguilar Villavicencio informó que a 27 días de las elecciones ha recorrido todas las delegaciones y subdelegaciones del municipio durante su campaña, recibiendo muy buena respuesta de la ciudadanía al dar a conocer quién es, lo que ha hecho, y lo que es capaz de hacer siendo Presidente Municipal. 
 Lo anterior en rueda de prensa convocada por el Partido Acción Nacional (PAN), realizada en el centro de Santa Rosalía la mañana del domingo 3 de junio del presente. 

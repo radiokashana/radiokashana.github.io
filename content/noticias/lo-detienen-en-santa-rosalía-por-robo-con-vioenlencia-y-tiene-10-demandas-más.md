@@ -1,7 +1,7 @@
 ---
 title: Lo detienen en Santa Rosalía por robo con vioenlencia y tiene 10 demandas más
 date: '2018-10-09T04:01:19-06:00'
-image: /img/vinculamos a proceso greg _n_.png
+image: /img/vinculamos-a-proceso-greg-_n_.png
 ---
 El imputado está relacionado con otras 10 Carpeta de Investigación. Por amenazar a la víctima con arma blanca para despojarla de sus propiedades, Greg “N” quedó en prisión en el CERESO de Santa Rosalía.
 

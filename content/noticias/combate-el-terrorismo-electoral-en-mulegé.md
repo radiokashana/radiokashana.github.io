@@ -1,7 +1,7 @@
 ---
 title: Combate el terrorismo electoral en Mulegé
 date: '2018-07-01T16:30:07-06:00'
-image: /img/terrorismo electoral.jpg
+image: /img/terrorismo-electoral.jpg
 ---
 Infundir el miedo a votar ó a votar por alguien, es la definición de "Terrorismo Electoral", en Mulegé hizo presencia desde las precampañas, hasta este momento que vivimos la jornada electoral, la fiesta de la democracia. También entra en la definición infundir el miedo a ser víctimas de delitos electorales.
 

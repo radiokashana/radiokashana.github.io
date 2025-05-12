@@ -1,7 +1,7 @@
 ---
 title: 'La Vendedora de Libros: Más que una librería -Tinta Negra-'
 date: '2018-08-07T15:42:14-06:00'
-image: /img/tinta negra 2.jpg
+image: /img/tinta-negra-2.jpg
 ---
 Hace doce años que me inicié como lectora. Desde entonces le encontré otro sentido a mis días. Hace escasos doce años descubrí en los libros y su lectura un amor, otro, entre todos los que hoy tengo.  
 

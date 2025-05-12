@@ -1,7 +1,7 @@
 ---
 title: Crucero masivo en Santa Rosalía en apoyo a Edith Aguilar
 date: '2018-06-12T09:24:35-06:00'
-image: /img/foto 1 (12).jpeg
+image: /img/foto-1-12.jpeg
 ---
 Con la camiseta bien puesta y la aceptación de los conductores que circulaban por la glorieta, justamente donde se encuentran la maquinita y las letras que dan identidad a nuestro querido pueblo, promotores al voto de todas las secciones realizaron un crucero en apoyo a la candidata a la presidencia municipal de Mulegé Edith Aguilar Villavicencio y al Diputado por el distrito XIII José Luis “Pepe” Pérpuli Drew, rumbo a la jornada electoral de este 1º de julio.
 

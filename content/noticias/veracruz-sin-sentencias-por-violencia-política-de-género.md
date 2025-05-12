@@ -1,7 +1,7 @@
 ---
 title: Veracruz sin sentencias por violencia política de género
 date: '2018-05-09T21:24:21-06:00'
-image: /img/políticaopleveracruz.jpg
+image: /img/politicaopleveracruz.jpg
 ---
 Amenazas directas o a través de redes sociales, bloqueos a participar en las funciones de sus cargos de elección popular y otras violaciones a sus derechos político-electorales enfrentan las mujeres que en Veracruz deciden participar en la política local.
 

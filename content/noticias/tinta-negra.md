@@ -1,7 +1,7 @@
 ---
 title: Tinta Negra - El arte rupestre como regalo
 date: '2018-05-15T10:21:09-06:00'
-image: /img/tinta negra.jpg
+image: /img/tinta-negra.jpg
 ---
 **El arte rupestre como regalo**
 

@@ -1,7 +1,7 @@
 ---
 title: Gana la elección en Mulegé Felipe Prado
 date: '2018-07-02T11:20:25-06:00'
-image: /img/fpb palacio.jpg
+image: /img/fpb-palacio.jpg
 ---
 Muy reñida estuvo la contienda electoral de ayer domingo 1 de julio en lo que se refiere a la presidencia municipal de Mulegé. Según el Programa de Resultados Electorales Preliminares (PREP) del Instituto Estatal Electoral (IEE), por una diferencia de 750 votos, la Planilla del Partido de la Nueva Alianza ganó la elección, encabezada por Felipe Prado Bautista, dejando en segundo lugar a Edith Aguilar, y en tercero a Liliana Lyle, por 1157 más. 
 

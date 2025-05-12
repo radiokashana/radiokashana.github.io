@@ -1,7 +1,7 @@
 ---
 title: La depresión tropical Bud se aleja de Sudcalifornia
 date: '2018-06-15T19:38:24-06:00'
-image: /img/cmd reunion bud (1).jpg
+image: /img/cmd-reunion-bud-1.jpg
 ---
 El paso de la tormenta tropical Bud por territorio sudcaliforniano dejó un balance positivo, señaló el gobernador Carlos Mendoza Davis luego de la quinta reunión del Consejo Estatal de Protección Civil en donde se informó de saldo blanco durante esta contingencia y sólo afectaciones menores en infraestructura hidráulica y carretera.
 
