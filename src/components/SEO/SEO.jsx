@@ -42,19 +42,36 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 	// Process the banner URL (image)
 	let imageUrl = banner || defaultBanner
 	if (imageUrl) {
-		// Create absolute URL with proper encoding
-		imageUrl = normalizeUrl(siteUrlWithProtocol, imageUrl)
-		// Encode spaces and special characters
-		imageUrl = encodeURI(imageUrl)
+		// First, properly encode the image path part (before normalizing)
+		// Split the path to handle each part separately
+		const parts = imageUrl.split('/')
+		const filename = parts.pop()
+		const path = parts.join('/')
+
+		// Encode the filename correctly, especially for spaces and special characters
+		// Facebook is particularly sensitive to URL format
+		const encodedFilename = encodeURIComponent(filename)
+
+		// Reassemble the path with encoded filename
+		const encodedPath = path ? `${path}/${encodedFilename}` : encodedFilename
+
+		// Create absolute URL with proper slash handling
+		imageUrl = normalizeUrl(siteUrlWithProtocol, encodedPath)
+
+		// Log the encoding process in development
+		if (typeof window !== 'undefined') {
+			console.log('Original image:', banner);
+			console.log('Path parts:', { path, filename });
+			console.log('Encoded filename:', encodedFilename);
+			console.log('Final image URL:', imageUrl);
+		}
 	}
 
 	// Process the page URL
 	const pageUrl = pathname ? normalizeUrl(siteUrlWithProtocol, pathname) : siteUrlWithProtocol
 
-	// Debug URLs if in browser environment
+	// Debug page URL if in browser environment
 	if (typeof window !== 'undefined') {
-		console.log('Original image path:', banner);
-		console.log('Processed image URL:', imageUrl);
 		console.log('Page URL:', pageUrl);
 	}
 

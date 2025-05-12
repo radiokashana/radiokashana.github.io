@@ -2,22 +2,34 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-const Facebook = ({ url, name, type, title, desc, image, locale }) => (
-  <Helmet>
-    {name && <meta property="og:site_name" content={name} />}
-    <meta property="og:locale" content={locale} />
-    <meta property="og:url" content={url} />
-    <meta property="og:type" content={type} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={desc} />
-    <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content={desc} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:secure_url" content={image} />
-    <meta property="og:image:type" content="image/jpeg" />
-  </Helmet>
-)
+const Facebook = ({ url, name, type, title, desc, image, locale }) => {
+  // Get file extension to determine image type
+  let imageType = 'image/jpeg'  // default
+  if (image) {
+    const extension = image.toLowerCase().split('.').pop()
+    if (extension === 'png') imageType = 'image/png'
+    else if (extension === 'gif') imageType = 'image/gif'
+    else if (extension === 'svg') imageType = 'image/svg+xml'
+    else if (extension === 'webp') imageType = 'image/webp'
+  }
+
+  return (
+    <Helmet>
+      {name && <meta property="og:site_name" content={name} />}
+      <meta property="og:locale" content={locale} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={desc} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={desc} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:type" content={imageType} />
+    </Helmet>
+  )
+}
 
 export default Facebook
 
