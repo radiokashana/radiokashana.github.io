@@ -1,7 +1,7 @@
 ---
 title: Disponibilidad suficiente de fármacos en Centros de Salud de Mulegé
 date: '2018-05-25T15:42:50-06:00'
-image: /img/ssa_abastomedicamento_mulegeì02.jpg
+image: /img/ssa_abastomedicamento_mulegei02.jpg
 ---
 La mejora significativa que registra el abasto de medicamento en los centros de salud del municipio de Mulegé ha dado la oportunidad de eficientar el surtimiento de recetas para las familias que radican en comunidades del norte de la entidad y que carecen de seguridad social en IMSS e ISSSTE, o que están afiliados al Seguro Popular.
 

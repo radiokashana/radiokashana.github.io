@@ -1,7 +1,7 @@
 ---
 title: Tinta Negra - Justicia divina VS justicia humana
 date: "2018-06-26T20:11:00-06:00"
-image: /img/tinta negra 2.jpg
+image: /img/tinta-negra-2.jpg
 ---
 
 ¿Quién va ganando en este marcador? ¿Quién, cuando hablamos de acoso y/o abuso sexual en menores de edad dentro de la Iglesia?

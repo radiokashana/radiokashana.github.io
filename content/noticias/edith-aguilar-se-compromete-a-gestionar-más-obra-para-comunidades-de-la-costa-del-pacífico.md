@@ -3,7 +3,7 @@ title: >-
   Edith Aguilar se compromete a gestionar más obra para comunidades de la costa
   del Pacífico
 date: '2018-06-04T18:23:13-06:00'
-image: /img/foto 1 (3).jpeg
+image: /img/foto-1-3.jpeg
 ---
 En su reciente visita a la Zona Pacífico Norte, Edith Aguilar Villavicencio, candidata a Presidenta Municipal de Mulegé, acompañada por el candidato a diputado local por el Distrito 14, Pedro Osuna López, se reunió con diferentes familias y vecinos de las comunidades de Punta Abreojos y La Bocana, asegurando que así como logró aterrizar obras durante su gestión como diputada, así también lo hará como Presidenta Municipal.
 

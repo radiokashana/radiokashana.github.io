@@ -1,7 +1,7 @@
 ---
 title: Tinta Negra - Viajar
 date: '2018-05-28T22:03:30-06:00'
-image: /img/tinta negra 2.jpg
+image: /img/tinta-negra-2.jpg
 ---
 Salir de viaje implica un riesgo en muchos contextos. 
 

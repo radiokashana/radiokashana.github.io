@@ -1,7 +1,7 @@
 ---
 title: La Secretaría de Salud imparte pláticas a estudiantes sobre anticonceptivos
 date: '2018-05-25T15:50:42-06:00'
-image: /img/ssa_informacioìnanticonceptivos02.jpg
+image: /img/ssa_informacioinanticonceptivos02.jpg
 ---
 Como parte de las estrategias desarrolladas para prevenir los embarazos no programados entre los menores de edad, la Secretaría de Salud en el estado imparte pláticas informativas a estudiantes de nivel medio superior sobre los diferentes tipos de anticonceptivos que se ofrecen de manera gratuita en las unidades de atención básica.
 

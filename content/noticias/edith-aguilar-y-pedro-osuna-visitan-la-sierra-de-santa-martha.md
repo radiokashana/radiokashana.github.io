@@ -1,7 +1,7 @@
 ---
 title: Edith Aguilar y Pedro Osuna visitan la Sierra de Santa Martha
 date: '2018-06-08T16:40:55-06:00'
-image: /img/foto 1 (11).jpeg
+image: /img/foto-1-11.jpeg
 ---
 “Así como en campaña estamos trabajando en equipo, así lo haremos también en gobierno, y en compañía de los diputados de cada distrito recorreré cada comunidad para dar atención de manera directa a las familias de la zona rural”, aseguró la aspirante a la alcaldía de Mulegé, Edith Aguilar Villavicencio, en su visita a la Sierra de Santa Martha, acompañada por el candidato a diputado por el Distrito 14, Pedro Osuna López.
 

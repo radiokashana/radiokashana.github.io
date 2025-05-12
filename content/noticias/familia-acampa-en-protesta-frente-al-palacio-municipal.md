@@ -1,7 +1,7 @@
 ---
 title: Familia acampa en protesta frente al Palacio Municipal
 date: '2018-06-04T21:28:25-06:00'
-image: /img/protesta 040618.jpg
+image: /img/protesta-040618.jpg
 ---
 Mario Navarrete, su esposa, y sus dos hijos iniciaron un plantón en la plaza pública "Benito Juárez" de esta localidad la mañana del lunes, mientras instalaban en el kiosko una lona de 10 por 3 metros, aproximadamente, con ayuda de personas a las que la familia dijo haber pagado para tal objetivo.
 

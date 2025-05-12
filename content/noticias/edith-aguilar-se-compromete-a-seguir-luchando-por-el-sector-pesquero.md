@@ -1,7 +1,7 @@
 ---
 title: Edith Aguilar se compromete a seguir luchando por el sector pesquero
 date: '2018-05-28T09:50:36-06:00'
-image: /img/foto 1 (1).jpeg
+image: /img/foto-1-1.jpeg
 ---
 Con la sensibilidad y la sencillez que la caracteriza, la candidata a la alcaldía de Mulegé Edith Aguilar Villavicencio, acompañada por el aspirante a la diputación federal Venustiano “Tano” Pérez, se reunió con pescadores de Santa Rosalía, San Lucas y San Bruno, con quienes ratificaron su compromiso para llevar sus planteamientos hasta el Congreso y juntos lograr mejores condiciones para este importante sector.
 

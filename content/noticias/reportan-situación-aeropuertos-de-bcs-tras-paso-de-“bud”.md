@@ -1,7 +1,7 @@
 ---
 title: 'Reportan situación Aeropuertos de BCS,  tras paso de “Bud”  '
 date: '2018-06-15T19:51:13-06:00'
-image: /img/ailc (1)_large.jpg
+image: /img/ailc-1_large.jpg
 ---
 El Grupo Aeroportuario del Pacífico (GAP) informa sobre el estado del Aeropuerto Internacional de Los Cabos y el Aeropuerto Internacional de La Paz, tras el paso de la Tormenta Tropical "Bud".
 

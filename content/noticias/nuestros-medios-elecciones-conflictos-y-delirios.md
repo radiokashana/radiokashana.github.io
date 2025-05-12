@@ -1,7 +1,7 @@
 ---
 title: 'Nuestros medios, elecciones, conflictos, y delirios'
 date: '2018-04-19T11:51:15-06:00'
-image: '/img/micro, pc y cerebro.jpg'
+image: '/img/micro-pc-y-cerebro.jpg'
 ---
 **Editorial.** Radiokashana FM es el primer proyecto de nuestra organización, radiokashana.org es el segundo. Ambos son medios de comunicación  hechos y derechos, formales ante una ley federal cada uno, diferentes y con similitudes entre sí en muchos aspectos, más el que nos atañe en este mensaje, es el tema electoral.
 

@@ -1,7 +1,7 @@
 ---
 title: Candidato que se defiende mejor callado
 date: '2018-06-11T14:37:00-06:00'
-image: /img/debate de viejas.jpg
+image: /img/debate-de-viejas.jpg
 ---
 Francamente me orilla a compartir estas líneas el discernimiento del momento que compartimos los "jóvenes" habitando este municipio, y el momento que la rancia política quiere que vivamos. 
 

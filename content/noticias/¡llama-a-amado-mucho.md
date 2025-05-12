@@ -1,7 +1,7 @@
 ---
 title: ¡Llama a Amado mucho!
 date: '2018-05-28T14:26:03-06:00'
-image: /img/ea - fp 2x3.jpg
+image: /img/ea-fp-2x3.jpg
 ---
 Una carrera extensa en el servicio público o en la política generalmente se interpreta de dos formas por la ciudadanía: 1. Tiene experiencia en la administración pública 2. Tiene muchos años viviendo a costillas del pueblo. Expertos en la tergiversación y el uso de eufemismos, los inmiscuidos en la política usan los dos, dependiendo de la simpatía que sientan por el sujeto aludido. 
 

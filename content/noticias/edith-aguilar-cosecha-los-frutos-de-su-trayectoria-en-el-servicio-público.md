@@ -1,7 +1,7 @@
 ---
 title: 'Edith Aguilar cosecha los frutos de su trayectoria en el servicio público '
 date: '2018-05-18T16:55:16-06:00'
-image: /img/edith 2.jpg
+image: /img/edith-2.jpg
 ---
 En un recorrido por las comunidades de Santa Águeda y San José de Magdalena, Edith Aguilar Villavicencio, candidata a la Presidencia Municipal de Mulegé, continúa recogiendo muestras de apoyo y respaldo de las familias de estas comunidades, quienes aún están sumamente agradecidas con la gestión de la construcción de sus accesos carreteros. 
 

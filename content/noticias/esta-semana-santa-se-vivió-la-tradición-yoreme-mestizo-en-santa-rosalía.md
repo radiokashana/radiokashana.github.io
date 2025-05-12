@@ -1,7 +1,7 @@
 ---
 title: Esta Semana Santa se vivió la tradición Yoreme-Mestizo en Santa Rosalía
 date: '2018-04-02T16:58:23-06:00'
-image: /img/foto 1 (8).jpg
+image: /img/foto-1-8.jpg
 ---
 Una de las tradiciones más importantes de la cabecera municipal
  de Mulegé, es precisamente la fiesta de los fariseos que anualmente se celebra en cada

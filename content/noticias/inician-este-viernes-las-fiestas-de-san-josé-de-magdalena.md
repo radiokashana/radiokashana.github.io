@@ -1,7 +1,7 @@
 ---
 title: Inician este viernes las Fiestas de San José de Magdalena
 date: '2018-03-13T14:26:32-07:00'
-image: /img/foto 1-subdelegado san josé de magdalena.jpg
+image: /img/foto-1-subdelegado-san-jose-de-magdalena.jpg
 ---
 En coordinación con el H. XV Ayuntamiento de Mulegé del 16 al 19 de marzo con una serie de actividades deportivas, recreativas, artísticas y culturales, se llevarán a cabo las tradicionales fiestas de San José de Magdalena, así lo informó el Subdelegado Municipal de esta comunidad, Emigdio Meza Villavicencio.
 

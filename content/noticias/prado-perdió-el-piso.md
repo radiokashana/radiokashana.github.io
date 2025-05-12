@@ -1,7 +1,7 @@
 ---
 title: Prado perdió el piso
 date: '2018-11-29T12:40:18-07:00'
-image: /img/heil filiptler.jpg
+image: /img/heil-filiptler.jpg
 ---
 El presidente Municipal de Mulegé encaró de manera violenta, agresiva, y prepotente a un empleado y aliado hasta ese momento. Paúl Avilés exigió a Felipe Prado que cumpliera con los acuerdos establecidos con su partido, no sin antes recibir las groserías y evasiones de Felipe Prado y su séquito. Lo grave es que Paúl Avilés también es un ciudadano, como muchos que con Prado van, a quienes les vió la cara para pedirles el voto y ahora se las esconde. Los hace dar vueltas aunque vengan de lejos, los cita y nunca llega, no da la cara para decirles que no puede cumplir lo que les prometió si ganaba.
 

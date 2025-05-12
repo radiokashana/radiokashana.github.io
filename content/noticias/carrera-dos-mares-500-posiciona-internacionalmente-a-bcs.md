@@ -1,7 +1,7 @@
 ---
 title: Carrera "Dos Mares 500" posiciona internacionalmente a BCS
 date: '2018-05-09T03:25:41-06:00'
-image: /img/dos mares_setues1.jpg
+image: /img/dos-mares_setues1.jpg
 ---
 El fin de semana se realizó con éxito la edición número 25 de la Carrera Off-Road “Dos Mares 500”, resultando ganador el estadounidense Gary Magness de “Mango Racing”.
 

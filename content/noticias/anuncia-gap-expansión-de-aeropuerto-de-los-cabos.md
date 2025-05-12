@@ -1,7 +1,7 @@
 ---
 title: Anuncia GAP expansión de Aeropuerto de Los Cabos
 date: '2018-03-16T12:40:13-07:00'
-image: /img/avión.jpg
+image: /img/avion.jpg
 ---
 Las obras de ampliación de la Terminal 2 iniciaron a finales de febrero y en suma a la construcción de un nuevo edificio para el Cuerpo de Rescate y Extinción de Incendios (CREI), obtendrá una inversión plurianual de más de 600 millones de pesos que inició el año pasado y será finalizada en aproximadamente un año y medio, aportando beneficios y comodidad a pasajeros, con el incremento de la capacidad de usuarios y la previsión para el futuro crecimiento.
 

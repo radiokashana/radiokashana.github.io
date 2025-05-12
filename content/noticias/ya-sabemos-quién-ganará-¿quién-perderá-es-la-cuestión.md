@@ -1,7 +1,7 @@
 ---
 title: Ya sabemos quién ganará ¿quién perderá es la cuestión?
 date: '2018-06-28T17:36:43-06:00'
-image: /img/edith cierre.jpg
+image: /img/edith-cierre.jpg
 ---
 Cuarenta y un mil votantes podremos ejercer nuestro derecho a elegir el grupo de personas que gobernarán Mulegé los próximos tres años. El sufragio que emitas este domingo decidirá quiénes conformarán el XVI Ayuntamiento de Mulegé.
 

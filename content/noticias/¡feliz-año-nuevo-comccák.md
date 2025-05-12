@@ -1,7 +1,7 @@
 ---
 title: ¡Feliz año nuevo Comcaák!
 date: '2018-07-01T18:33:53-06:00'
-image: /img/comcaák.jpg
+image: /img/comcaak.jpg
 ---
 Es poco lo que se puede decir de los moradores de la isla del Tiburón que no suene a poesía. Inspirados por los vientos que lo llenan todo de sal, quienes los visitan hablan de ellos y su cultura como un misterio insondable, tan profundo como el mar del que nació la vida.
 

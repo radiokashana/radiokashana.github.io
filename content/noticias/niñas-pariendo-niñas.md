@@ -1,7 +1,7 @@
 ---
 title: Niñas pariendo niñas
 date: "2019-09-11T17:28:10-06:00"
-image: /img/niñas embarazadas.jpg
+image: /img/ninas-embarazadas.jpg
 ---
 
 En el hospital general de Santa Rosalía -donde me desempeño como pediatra- es frecuente que lleguen niñas-adolescentes enviadas de los centros de salud periféricos, para tener a su bebé ya sea por parto o cesárea. La mayoría de ellas viven ya con su pareja que les lleva mínimo 5 a 6 años de edad.

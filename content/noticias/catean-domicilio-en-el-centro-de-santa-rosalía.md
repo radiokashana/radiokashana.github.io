@@ -1,7 +1,7 @@
 ---
 title: Catean domicilio en el centro de Santa Rosalía
 date: '2018-12-11T12:27:31-07:00'
-image: /img/raúl n  778-2018 editada.png
+image: /img/raul-n-778-2018-editada.png
 ---
 Mediante un reporte especial la Procuraduría General de Justicia del Estado de Baja California Sur (PGJE) informó al medio día del 11 de diciembre, que aseguraron a Raúl “N” en un domicilio de la colonia Centro de esta cabecera municipal, con 750 dosis de cristal y 60 de marihuana, una báscula gramera, bolsitas de plástico a granel, pipas son residuos de marihuna y una pistola de municiones, por lo que quedó a disposición del agente del Ministerio Público.  En el lugar, aseguraron a Raúl “N” de 20 años, originario de esta ciudad, quien es inocente hasta que la autoridad judicial haya declarado la responsabilidad de Raúl por los delitos que se le imputan.
 

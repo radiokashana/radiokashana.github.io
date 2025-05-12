@@ -3,7 +3,7 @@ title: >-
   Se conmemora en Santa Rosalía el 132 aniversario de la gesta heroica de los
   mártires de Chicago
 date: '2018-05-02T21:45:04-06:00'
-image: /img/foto 1 (38).jpg
+image: /img/foto-1-38.jpg
 ---
 El H. XV Ayuntamiento de Mulegé a través de la Dirección de Cultura Municipal en coordinación con los diferentes Sindicatos de la localidad, conmemoraron el 132 Aniversario de los Mártires de Chicago, con acto cívico y desfile cívico-obrero encabezado por la Presidenta Municipal, Cecilia López González.
 

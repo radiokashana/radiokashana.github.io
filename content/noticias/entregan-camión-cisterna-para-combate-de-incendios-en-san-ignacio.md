@@ -1,11 +1,11 @@
 ---
 title: Entregan camión cisterna para combate de incendios en San Ignacio
 date: '2018-08-14T05:29:15-06:00'
-image: /img/pipa echando agua.jpg
+image: /img/pipa-echando-agua.jpg
 ---
 Con la finalidad de seguir fortaleciendo el combate y la  prevención de incendios forestales en una de las comunidades que sufren este  problema año con año, la Presidenta Municipal, Cecilia López González, a través de  un gran esfuerzo de gobierno, realizó este martes 7 de agosto la entrega de un  “Camión Cisterna” último modelo con capacidad de 16 mil 275 litros, a la comunidad  de San Ignacio.
 
-![](/img/pipa entrega.jpg)
+![](/img/pipa-entrega.jpg)
 
 “Después de ordenar las finanzas y dar operación a cada delegación, de entregar
  camiones recolectores de basura y patrullas en la mayoría de las comunidades, con

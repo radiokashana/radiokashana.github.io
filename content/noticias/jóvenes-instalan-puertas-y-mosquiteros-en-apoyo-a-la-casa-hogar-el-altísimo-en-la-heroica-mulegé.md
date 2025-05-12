@@ -3,7 +3,7 @@ title: >-
   Jóvenes instalan puertas y mosquiteros en apoyo a la casa hogar "El Altísimo"
   en la Heroica Mulegé
 date: '2018-03-21T00:11:27-07:00'
-image: /img/foto 1-juventud mulegé.jpg
+image: /img/foto-1-juventud-mulege.jpg
 ---
 Como parte de las acciones encaminadas a fomentar la participación de la juventud en programas de ayuda social, favoreciendo a través de su trabajo a mejorar las condiciones de los sectores más vulnerables del municipio, este jueves 15 de marzo el H. XV Ayuntamiento de Mulegé a través de los jóvenes del Instituto Municipal de la Juventud, realizaron la instalación de puertas y mosquiteros así como la donación de despensa para los niños y niñas del albergue “El Altísimo” ubicado en la Heroica Mulegé.
 
