@@ -16,3 +16,7 @@ playwright/.cache/
 tests/**/test-results/
 tests/**/*-actual.png
 tests/**/*-diff.png
+
+**/.claude/settings.local.json
+
+.next

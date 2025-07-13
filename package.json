@@ -4,16 +4,12 @@
 	"private": true,
 	"description": "RadioKashana",
 	"author": "Jorge Vargas",
-	"keywords": [
-		"gatsby"
-	],
 	"scripts": {
-		"develop": "gatsby develop",
-		"start": "gatsby develop",
-		"build": "gatsby build",
-		"serve": "gatsby serve",
-		"clean": "gatsby clean",
-		"format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.{js,jsx}\"",
 		"test": "jest",
 		"test:visual": "playwright test",
 		"test:visual:ui": "playwright test --ui",
@@ -22,34 +18,26 @@
 		"test:visual:external": "playwright test --project=chromium"
 	},
 	"dependencies": {
-		"@mdx-js/mdx": "^3.1.0",
-		"@mdx-js/react": "^2.3.0",
-		"decap-cms-app": "^3.6.4",
-		"gatsby": "^5.14.5",
-		"gatsby-adapter-netlify": "^1.2.0",
-		"gatsby-plugin-decap-cms": "^4.0.4",
-		"gatsby-plugin-image": "^3.14.0",
-		"gatsby-plugin-manifest": "^5.14.0",
-		"gatsby-plugin-mdx": "^5.14.1",
-		"gatsby-plugin-offline": "^6.14.0",
-		"gatsby-plugin-postcss": "^6.14.0",
-		"gatsby-plugin-react-helmet": "^6.14.0",
-		"gatsby-plugin-sass": "^6.14.0",
-		"gatsby-plugin-sharp": "^5.14.0",
-		"gatsby-plugin-sitemap": "^6.14.0",
-		"gatsby-source-filesystem": "^5.14.0",
-		"gatsby-transformer-json": "^5.14.0",
-		"gatsby-transformer-sharp": "^5.14.0",
-		"postcss": "^8.5.6",
-		"postcss-import": "^16.1.1",
+		"next": "^14.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-helmet": "^6.1.0",
-		"sass": "^1.89.2",
-		"tachyons": "^4.12.0",
-		"tachyons-colors": "^5.3.3"
+		"decap-cms-app": "^3.6.4",
+		"gray-matter": "^4.0.3",
+		"next-mdx-remote": "^4.4.1",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-pretty-code": "^0.12.3",
+		"rehype-slug": "^6.0.0",
+		"remark-gfm": "^3.0.1",
+		"feed": "^4.2.2",
+		"tailwindcss": "^3.3.0",
+		"postcss": "^8.5.6",
+		"postcss-import": "^16.1.1",
+		"autoprefixer": "^10.4.15"
 	},
 	"devDependencies": {
-		"@playwright/test": "1.54.1"
+		"@playwright/test": "1.54.1",
+		"prettier": "^3.0.3",
+		"eslint": "^8.49.0",
+		"eslint-config-next": "^14.0.0"
 	}
 }

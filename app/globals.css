@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer components {
+  /* Custom Tachyons-like classes */
+  .center-ns {
+    @apply mx-auto;
+  }
+  
+  .mw-100 {
+    max-width: 100%;
+  }
+
+  .ml2 {
+    @apply ml-2;
+  }
+
+  .mr2 {
+    @apply mr-2;
+  }
+  
+  .w-two-thirds-ns {
+    @apply md:w-2/3;
+  }
+
+  .georgia {
+    @apply font-serif;
+  }
+
+  .dib {
+    @apply inline-block;
+  }
+
+  .center {
+    @apply mx-auto;
+  }
+
+  .tc {
+    @apply text-center;
+  }
+
+  .w-100 {
+    @apply w-full;
+  }
+
+  .list {
+    @apply list-none;
+  }
+
+  .ma0 {
+    @apply m-0;
+  }
+
+  .pa0 {
+    @apply p-0;
+  }
+
+  .fr {
+    @apply float-right;
+  }
+
+  .w-50 {
+    @apply w-1/2;
+  }
+
+  .ml4 {
+    @apply ml-4;
+  }
+
+  .mb3 {
+    @apply mb-3;
+  }
+
+  .tj {
+    @apply text-justify;
+  }
+
+  .f6 {
+    @apply text-xs;
+  }
+
+  .cl {
+    @apply clear-both;
+  }
+
+  .bg-near-black {
+    @apply bg-neutral-900;
+  }
+
+  .white {
+    @apply text-white;
+  }
+  
+  .bg-top-gray-bottom-near-black {
+    background: linear-gradient(to bottom, #555 0%, #111 100%);
+  }
+}
