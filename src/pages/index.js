@@ -15,6 +15,7 @@ const IndexPage = ({ data, location }) => {
 
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
+		.sort((a, b) => new Date(b.node.frontmatter.dateRaw) - new Date(a.node.frontmatter.dateRaw))
 
 
 	const mainNews = news
@@ -72,6 +73,7 @@ export const pageQuery = graphql`
 					frontmatter {
 						title
 						date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
+						dateRaw: date
 						image
 					}
 				}
