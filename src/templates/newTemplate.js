@@ -18,10 +18,10 @@ const NewTemplate = ({data, location}) => {
 				banner={frontmatter.image}
 				article
 			/>
-			<article>
+			<article className="cf">
 				<h2>{frontmatter.title}</h2>
 				<p>{frontmatter.date}</p>
-				<section>
+				<section className="cf">
 					<aside className="fr w-50 ml4 mb3">
 						<img src={frontmatter.image} alt=""/>
 					</aside>
@@ -31,6 +31,7 @@ const NewTemplate = ({data, location}) => {
 						</MDXProvider>
 					</main>
 				</section>
+				<div className="cf"></div>
 			</article>
 		</IndexLayout>
 	)
