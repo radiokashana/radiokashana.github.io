@@ -6,10 +6,10 @@ import Header from "../components/Header"
 import Footer from "../components/footer"
 
 const IndexLayout = ({children, customSEO}) =>
-	<div>
+	<div data-testid="app-layout">
 		{!customSEO && <SEO />}
 		<Header />
-		<main className="center-ns mw-100 ml2 mr2 w-two-thirds-ns georgia">
+		<main className="center-ns mw-100 ml2 mr2 w-two-thirds-ns georgia" data-testid="main-content">
 			{children}
 		</main>
 		<Footer />

@@ -14,7 +14,12 @@
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
 		"format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-		"test": "jest"
+		"test": "jest",
+		"test:visual": "playwright test",
+		"test:visual:ui": "playwright test --ui",
+		"test:visual:headed": "playwright test --headed",
+		"test:visual:update": "playwright test --update-snapshots",
+		"test:visual:external": "playwright test --project=chromium"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^3.1.0",
@@ -43,5 +48,8 @@
 		"sass": "^1.89.2",
 		"tachyons": "^4.12.0",
 		"tachyons-colors": "^5.3.3"
+	},
+	"devDependencies": {
+		"@playwright/test": "1.54.1"
 	}
 }

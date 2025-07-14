@@ -1,0 +1,166 @@
+name: Visual Tests on PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # Only run on code changes, not content (Decap CMS) changes
+    branches-ignore:
+      - 'decap-cms/**'
+  # Also trigger when Netlify deployment is complete
+  deployment_status:
+
+jobs:
+  visual-tests:
+    runs-on: ubuntu-latest
+    # Only run for PRs and successful deployments
+    if: |
+      (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'decap-cms/')) ||
+      (github.event_name == 'deployment_status' && 
+       github.event.deployment_status.state == 'success' && 
+       github.event.deployment.environment == 'preview' &&
+       !startsWith(github.event.deployment.ref, 'decap-cms/'))
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium
+
+      - name: Get Netlify site name
+        id: netlify-site
+        run: |
+          SITE_NAME=$(node .github/scripts/get-netlify-site-name.js)
+          echo "name=$SITE_NAME" >> $GITHUB_OUTPUT
+          echo "Using Netlify site name: $SITE_NAME"
+
+      - name: Wait for Netlify deployment
+        if: github.event_name == 'pull_request'
+        uses: jakepartusch/wait-for-netlify-action@v1.4
+        id: wait-for-netlify
+        with:
+          site_name: ${{ steps.netlify-site.outputs.name }}
+          max_timeout: 600 # 10 minutes
+
+      - name: Get preview URL
+        id: preview-url
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "url=${{ steps.wait-for-netlify.outputs.url }}" >> $GITHUB_OUTPUT
+          else
+            echo "url=${{ github.event.deployment_status.target_url }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check if baselines exist
+        id: check-baselines
+        run: |
+          if [ -d "tests/visual-snapshots.spec.js-snapshots" ] && [ "$(ls -A tests/visual-snapshots.spec.js-snapshots/)" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "✅ Baseline snapshots found"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No baseline snapshots found - will generate new baselines"
+          fi
+
+      - name: Generate baselines if missing
+        if: steps.check-baselines.outputs.exists == 'false'
+        uses: ./.github/workflows/update-visual-baselines.yml
+        with:
+          target_url: ${{ steps.preview-url.outputs.url }}
+          commit_message: "Generate initial visual test baselines from PR preview"
+
+      - name: Run visual tests against preview
+        if: steps.check-baselines.outputs.exists == 'true'
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.preview-url.outputs.url }}
+        run: |
+          echo "Running visual tests against: $PLAYWRIGHT_BASE_URL"
+          
+          # Run only visual tests with chromium, using external script
+          yarn test:visual:external --reporter=github
+
+      - name: Upload test results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-test-results-${{ github.event.number || github.sha }}
+          path: |
+            test-results/
+            tests/**/test-results/
+          retention-days: 7
+
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diff-screenshots-${{ github.event.number || github.sha }}
+          path: |
+            tests/**/*-actual.png
+            tests/**/*-diff.png
+          retention-days: 7
+
+      - name: Comment on PR with results
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            // Get test results
+            const success = '${{ job.status }}' === 'success';
+            const previewUrl = '${{ steps.preview-url.outputs.url }}';
+            
+            let comment = `## 📸 Visual Regression Test Results\n\n`;
+            comment += `**Preview URL:** ${previewUrl}\n\n`;
+            
+            if (success) {
+              comment += `✅ **All visual tests passed!**\n\n`;
+              comment += `No visual regressions detected in this PR.`;
+            } else {
+              comment += `❌ **Visual tests failed**\n\n`;
+              comment += `Visual differences detected. Please review the uploaded artifacts:\n`;
+              comment += `- Check the [Actions tab](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for detailed results\n`;
+              comment += `- Download the \`visual-diff-screenshots\` artifact to see the differences\n\n`;
+              comment += `If these changes are intentional, you can update the baseline screenshots by running:\n`;
+              comment += `\`\`\`bash\nyarn test:visual --update-snapshots\`\`\``;
+            }
+            
+            // Post comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            // Find existing visual test comment
+            const existingComment = comments.find(comment => 
+              comment.body.includes('📸 Visual Regression Test Results')
+            );
+            
+            if (existingComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: comment
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment
+              });
+            }
