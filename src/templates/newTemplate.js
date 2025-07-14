@@ -45,7 +45,7 @@ export const pageQuery = graphql`
 			body
 			frontmatter {
 				title
-				date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
+				date(formatString: "DD [de] MMMM [de] YYYY [a las] HH:mm [horas]", locale: "es")
 				image
 			}
 		}
