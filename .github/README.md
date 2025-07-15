@@ -42,14 +42,12 @@ A **unified, comprehensive workflow** that handles:
 ### Workflow Steps
 
 1. **🔍 Check Baselines** - Detect if baselines exist
-2. **🚀 Start Local Server** - `yarn develop` in background
-3. **🏠 Local Tests** - Test against localhost:8000
-4. **🛑 Stop Local Server** - Clean shutdown
-5. **⏳ Wait for Netlify** - Wait for preview deployment
-6. **🌐 Deploy Tests** - Test against Netlify preview
-7. **📸 Generate Baselines** - If missing, create from Netlify
-8. **💾 Commit & Push** - Auto-commit baselines to PR
-9. **💬 PR Comment** - Detailed status report
+2. **🏠 Local Tests** - Playwright auto-starts `yarn develop` if needed
+3. **⏳ Wait for Netlify** - Wait for preview deployment
+4. **🌐 Deploy Tests** - Test against Netlify preview
+5. **📸 Generate Baselines** - If missing, create from Netlify
+6. **💾 Commit & Push** - Auto-commit baselines to PR
+7. **💬 PR Comment** - Detailed status report
 
 ### Key Features
 
@@ -62,16 +60,16 @@ Future PRs → Compare against CI baselines
 
 **🚀 Dual Environment Testing**
 ```bash
-Local:    yarn develop → http://localhost:8000
-Deploy:   Netlify      → https://preview.netlify.app
+Local:    Playwright auto-starts → http://localhost:8000
+Deploy:   Netlify               → https://preview.netlify.app
 Both must pass! ✅
 ```
 
-**🔧 Git Automation Fixed**
+**🔧 Server Management**
 ```bash
-# Fixed detached HEAD issue
-git checkout → Proper branch reference
-git push    → Push to PR branch correctly
+# Playwright handles server lifecycle automatically
+reuseExistingServer: true → No port conflicts
+Auto-start/stop → Clean process management
 ```
 
 **📊 Comprehensive Reporting**
