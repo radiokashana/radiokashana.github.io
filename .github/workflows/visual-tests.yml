@@ -34,6 +34,8 @@ jobs:
         with:
           # Need write access for baseline generation
           token: ${{ secrets.GITHUB_TOKEN }}
+          # Avoid detached HEAD state for proper git push
+          ref: ${{ github.head_ref || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -67,6 +69,21 @@ jobs:
           fi
 
       # STEP 1: Test against local development server
+      - name: Start local development server
+        if: |
+          steps.check-baselines.outputs.exists == 'true' && 
+          inputs.generate_baselines != true
+        run: |
+          echo "🚀 Starting local development server..."
+          yarn develop &
+          echo $! > dev-server.pid
+          
+          # Wait for server to be ready
+          echo "⏳ Waiting for server to start..."
+          timeout 120 bash -c 'until curl -s http://localhost:8000 > /dev/null; do sleep 2; done'
+          echo "✅ Development server is ready"
+        id: start-local-server
+
       - name: Test against local development server
         if: |
           steps.check-baselines.outputs.exists == 'true' && 
@@ -76,6 +93,19 @@ jobs:
           yarn test:visual --project=chromium --reporter=github
         continue-on-error: true
         id: local-tests
+
+      - name: Stop local development server
+        if: |
+          always() && 
+          steps.start-local-server.outcome == 'success'
+        run: |
+          echo "🛑 Stopping local development server..."
+          if [ -f dev-server.pid ]; then
+            kill $(cat dev-server.pid) || true
+            rm dev-server.pid
+          fi
+          # Also kill any remaining gatsby processes
+          pkill -f "gatsby develop" || true
 
       # STEP 2: Wait for Netlify deployment (for PRs)
       - name: Wait for Netlify deployment
@@ -146,20 +176,25 @@ jobs:
           steps.check-baselines.outputs.exists == 'false' || 
           inputs.generate_baselines == true
         run: |
+          # Configure git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
+          # Add the snapshots
           git add tests/visual-snapshots.spec.js-snapshots/
           
+          # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            # Determine commit message
             if [ "${{ inputs.generate_baselines }}" = "true" ]; then
               COMMIT_MSG="Update visual test baselines"
             else
               COMMIT_MSG="Generate initial visual test baselines"
             fi
             
+            # Commit the changes
             git commit -m "$COMMIT_MSG
 
             Generated from: ${{ steps.target-url.outputs.url }}
@@ -167,7 +202,15 @@ jobs:
             Run: ${{ github.run_number }}
             
             🤖 Automated baseline update"
-            git push
+            
+            # Push the changes
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              # For PRs, push to the PR branch
+              git push origin HEAD:${{ github.head_ref }}
+            else
+              # For manual triggers, push to current branch
+              git push origin HEAD:${{ github.ref_name }}
+            fi
             echo "✅ Baselines committed and pushed"
           fi
 
@@ -201,6 +244,7 @@ jobs:
             const success = '${{ job.status }}' === 'success';
             const targetUrl = '${{ steps.target-url.outputs.url }}';
             const baselinesExisted = '${{ steps.check-baselines.outputs.exists }}' === 'true';
+            const localServerStatus = '${{ steps.start-local-server.outcome }}';
             const localTestsStatus = '${{ steps.local-tests.outcome }}';
             const deployedTestsStatus = '${{ steps.deployed-tests.outcome }}';
             
@@ -215,8 +259,11 @@ jobs:
             } else {
               comment += `**Test Results:**\n\n`;
               
-              // Local tests
-              if (localTestsStatus === 'success') {
+              // Local tests (including server startup)
+              if (localServerStatus !== 'success') {
+                comment += `❌ **Local development server:** FAILED TO START\n`;
+                comment += `⏭️ **Local development tests:** SKIPPED (server failed)\n`;
+              } else if (localTestsStatus === 'success') {
                 comment += `✅ **Local development tests:** PASSED\n`;
               } else if (localTestsStatus === 'failure') {
                 comment += `❌ **Local development tests:** FAILED\n`;

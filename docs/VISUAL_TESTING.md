@@ -46,21 +46,31 @@ PLAYWRIGHT_BASE_URL=https://your-site.netlify.app yarn test:visual:external
 
 ## CI/CD Integration
 
-Visual tests automatically run on Pull Requests against the Netlify preview environment:
+Visual tests run automatically on Pull Requests with a **dual testing strategy**:
 
 ### When tests run
 
 - ✅ On PRs with code changes
 - ❌ **Not** on content-only PRs (branches starting with `decap-cms/`)
 - ❌ **Not** on merges to develop/main branches
+- ✅ Manual trigger via Actions tab with baseline regeneration option
 
-### PR Process
+### Dual Testing Process
 
-1. Create a PR with code changes
-2. Netlify builds a preview environment
-3. GitHub Actions waits for the preview to be ready
-4. Visual tests run against the preview URL
-5. Results are posted as a PR comment
+1. **Create PR** with code changes
+2. **Check baselines** - Are CI-generated baselines present?
+3. **Local tests** - Start `yarn develop` and test against localhost:8000
+4. **Netlify build** - Wait for preview environment to be ready
+5. **Deploy tests** - Test against Netlify preview URL
+6. **Baseline generation** - If missing, generate from Netlify and auto-commit
+7. **PR comment** - Comprehensive results report for both test phases
+
+### Environment Consistency Solution
+
+- **Problem**: Local baselines (macOS/Windows) ≠ CI baselines (Ubuntu Linux)
+- **Solution**: All baselines generated in CI environment (Ubuntu + Chromium)
+- **First PR**: Automatically generates baselines from Netlify preview
+- **Future PRs**: Compare against CI-generated baselines (no more mismatches!)
 
 ### If Tests Fail
 
@@ -68,28 +78,41 @@ When visual differences are detected:
 
 1. **Review the differences**: Download the `visual-diff-screenshots` artifact from the GitHub Actions run
 2. **Intentional changes**: If the changes are expected, update the baselines:
-   ```bash
-   yarn test:visual:update
-   git add tests/
-   git commit -m "Update visual test baselines"
-   ```
+   - **Option A (Recommended)**: Go to Actions → Visual Regression Tests → Run workflow → Check "Generate new baselines"
+   - **Option B (Local)**: Run `yarn test:visual:update` and commit the changes
 3. **Unintentional changes**: Fix the code causing the visual regression
+
+### Test Results
+
+The PR comment will show status for both testing phases:
+
+```markdown
+## 📸 Visual Regression Test Results
+
+**Test Results:**
+✅ Local development tests: PASSED
+❌ Deployed environment tests: FAILED
+
+**Target URL:** https://preview-123.netlify.app
+```
 
 ## File Structure
 
 ```
 tests/
 ├── visual-snapshots.spec.js           # Main test file
-└── visual-snapshots.spec.js-snapshots/  # Baseline images
-    ├── homepage-banner-chromium-linux.png
-    ├── homepage-footer-chromium-linux.png
+└── visual-snapshots.spec.js-snapshots/  # CI-generated baseline images
+    ├── homepage-banner-chromium-linux.png    ✅ Keep in git
+    ├── homepage-footer-chromium-linux.png    ✅ Keep in git
+    ├── header-desktop-chromium-linux.png     ✅ Keep in git
     └── ...
 
 .github/
 ├── workflows/
-│   └── visual-tests-pr.yml           # GitHub Actions workflow
-└── scripts/
-    └── get-netlify-site-name.js      # Helper script
+│   └── visual-tests.yml              # 🎯 Unified visual testing workflow
+├── scripts/
+│   └── get-netlify-site-name.js      # Helper for Netlify site detection
+└── README.md                         # Workflow documentation
 ```
 
 ## Configuration
