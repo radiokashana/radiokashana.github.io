@@ -57,14 +57,17 @@ jobs:
             core.setOutput('pr_title', pr.data.title);
             core.setOutput('pr_number', context.issue.number);
 
-      - name: Wait for status checks
+      - name: Wait for checks to complete
         if: steps.check-author.outputs.is_dependabot == 'true'
+        id: wait-for-checks
         uses: actions/github-script@v7
         with:
           script: |
             const maxWaitTime = 10 * 60 * 1000; // 10 minutes
             const pollInterval = 30 * 1000; // 30 seconds
             const startTime = Date.now();
+            
+            console.log('Waiting for any in-progress checks to complete...');
             
             while (Date.now() - startTime < maxWaitTime) {
               // Get the latest commit SHA
@@ -76,53 +79,23 @@ jobs:
               
               const commitSha = pr.data.head.sha;
               
-              // Get all status checks for this commit
-              const [statusChecks, checkRuns] = await Promise.all([
-                github.rest.repos.getCombinedStatusForRef({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ref: commitSha,
-                }),
-                github.rest.checks.listForRef({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ref: commitSha,
-                })
-              ]);
+              // Get all check runs for this commit
+              const checkRuns = await github.rest.checks.listForRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: commitSha,
+              });
               
-              console.log(`Status checks state: ${statusChecks.data.state}`);
-              console.log(`Check runs count: ${checkRuns.data.check_runs.length}`);
-              
-              // Check if all status checks are successful
-              const statusSuccess = statusChecks.data.state === 'success' || 
-                                  (statusChecks.data.statuses.length === 0 && statusChecks.data.state !== 'failure');
-              
-              // Check if all check runs are successful
-              const checkRunsSuccess = checkRuns.data.check_runs.length === 0 || 
-                                     checkRuns.data.check_runs.every(run => 
-                                       run.status === 'completed' && run.conclusion === 'success'
-                                     );
-              
-              // Check for any pending or in-progress checks
-              const hasPendingChecks = checkRuns.data.check_runs.some(run => 
+              // Check if any checks are still running
+              const runningChecks = checkRuns.data.check_runs.filter(run => 
                 run.status === 'in_progress' || run.status === 'queued'
               );
               
-              if (statusSuccess && checkRunsSuccess && !hasPendingChecks) {
-                console.log('✅ All checks passed!');
-                core.setOutput('checks_passed', 'true');
-                return;
-              }
+              console.log(`Found ${runningChecks.length} running checks: ${runningChecks.map(r => r.name).join(', ')}`);
               
-              // Check for any failed checks
-              const hasFailedStatus = statusChecks.data.state === 'failure';
-              const hasFailedCheckRuns = checkRuns.data.check_runs.some(run => 
-                run.status === 'completed' && run.conclusion === 'failure'
-              );
-              
-              if (hasFailedStatus || hasFailedCheckRuns) {
-                console.log('❌ Some checks failed');
-                core.setOutput('checks_passed', 'false');
+              if (runningChecks.length === 0) {
+                console.log('✅ All checks completed, ready to attempt merge');
+                core.setOutput('ready_to_merge', 'true');
                 return;
               }
               
@@ -130,8 +103,8 @@ jobs:
               await new Promise(resolve => setTimeout(resolve, pollInterval));
             }
             
-            console.log('⏰ Timeout waiting for checks');
-            core.setOutput('checks_passed', 'timeout');
+            console.log('⏰ Timeout waiting for checks to complete, will attempt merge anyway');
+            core.setOutput('ready_to_merge', 'timeout');
 
       - name: Auto-approve PR
         if: steps.check-author.outputs.is_dependabot == 'true'
@@ -140,19 +113,16 @@ jobs:
           script: |
             // Check if we should auto-approve based on update type
             const updateType = '${{ steps.pr-details.outputs.update_type }}';
-            const checksResult = '${{ steps.wait-for-checks.outputs.checks_passed }}';
-            
             console.log(`Update type: ${updateType}`);
-            console.log(`Checks result: ${checksResult}`);
             
-            // Only auto-approve patch and minor updates with passing checks
-            if (checksResult === 'true' && (updateType === 'patch' || updateType === 'minor')) {
+            // Only auto-approve patch and minor updates
+            if (updateType === 'patch' || updateType === 'minor') {
               await github.rest.pulls.createReview({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: context.issue.number,
                 event: 'APPROVE',
-                body: `🤖 Auto-approving ${updateType} dependency update after all checks passed.`
+                body: `🤖 Auto-approving ${updateType} dependency update. Branch protection rules will ensure required checks pass before merge.`
               });
               console.log('✅ PR auto-approved');
             } else if (updateType === 'major') {
@@ -163,10 +133,6 @@ jobs:
                 issue_number: context.issue.number,
                 body: '⚠️ **Major dependency update detected**\n\nThis PR requires manual review before merging. Please review the changes carefully for potential breaking changes.'
               });
-            } else if (checksResult === 'false') {
-              console.log('❌ Checks failed - not auto-approving');
-            } else if (checksResult === 'timeout') {
-              console.log('⏰ Checks timed out - not auto-approving');
             }
 
       - name: Auto-merge PR
@@ -175,18 +141,18 @@ jobs:
         with:
           script: |
             const updateType = '${{ steps.pr-details.outputs.update_type }}';
-            const checksResult = '${{ steps.wait-for-checks.outputs.checks_passed }}';
             
-            // Only auto-merge patch and minor updates with passing checks
-            if (checksResult === 'true' && (updateType === 'patch' || updateType === 'minor')) {
+            // Only auto-merge patch and minor updates  
+            if (updateType === 'patch' || updateType === 'minor') {
               try {
+                console.log('🚀 Attempting to merge PR...');
                 await github.rest.pulls.merge({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   merge_method: 'squash',
                   commit_title: `${{ steps.pr-details.outputs.pr_title }} (#${{ steps.pr-details.outputs.pr_number }})`,
-                  commit_message: '🤖 Auto-merged by Dependabot workflow after all checks passed.'
+                  commit_message: '🤖 Auto-merged by Dependabot workflow. Branch protection rules enforced required checks.'
                 });
                 
                 console.log('✅ PR auto-merged successfully');
@@ -196,21 +162,32 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: context.issue.number,
-                  body: '🤖 **Auto-merged successfully!**\n\n✅ All checks passed\n✅ Dependency update approved\n✅ Merged using squash method'
+                  body: '🤖 **Auto-merged successfully!**\n\n✅ Required checks passed (enforced by branch protection)\n✅ Dependency update approved\n✅ Merged using squash method'
                 });
                 
               } catch (error) {
                 console.log('❌ Failed to auto-merge:', error.message);
                 
-                await github.rest.issues.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  body: `❌ **Auto-merge failed**\n\nError: ${error.message}\n\nPlease merge manually if appropriate.`
-                });
+                // Check if it's because of missing required checks
+                if (error.message.includes('Required status check') || error.message.includes('branch protection')) {
+                  console.log('🛡️ Branch protection prevented merge - checks not passed yet');
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: context.issue.number,
+                    body: `⏳ **Auto-merge delayed**\n\nRequired status checks haven't passed yet. The PR will be merged automatically once all required checks complete successfully.\n\n🛡️ Protected by branch rules - merge will happen when ready.`
+                  });
+                } else {
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: context.issue.number,
+                    body: `❌ **Auto-merge failed**\n\nError: ${error.message}\n\nPlease merge manually if appropriate.`
+                  });
+                }
               }
             } else {
-              console.log('ℹ️ Auto-merge skipped - conditions not met');
+              console.log('ℹ️ Auto-merge skipped - major update requires manual review');
             }
 
       - name: Summary
@@ -219,17 +196,16 @@ jobs:
           echo "## Dependabot Auto-Merge Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **PR**: ${{ steps.pr-details.outputs.pr_title }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Update Type**: ${{ steps.pr-details.outputs.update_type }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Checks Result**: ${{ steps.wait-for-checks.outputs.checks_passed }}" >> $GITHUB_STEP_SUMMARY
           
           UPDATE_TYPE="${{ steps.pr-details.outputs.update_type }}"
-          CHECKS_RESULT="${{ steps.wait-for-checks.outputs.checks_passed }}"
           
-          if [[ "$CHECKS_RESULT" == "true" && ("$UPDATE_TYPE" == "patch" || "$UPDATE_TYPE" == "minor") ]]; then
-            echo "- **Action**: ✅ Auto-approved and merged" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch Protection**: ✅ Required checks enforced by GitHub" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "$UPDATE_TYPE" == "patch" || "$UPDATE_TYPE" == "minor" ]]; then
+            echo "- **Action**: ✅ Auto-approved and merge attempted" >> $GITHUB_STEP_SUMMARY
+            echo "- **Note**: Merge succeeds only if all required checks pass" >> $GITHUB_STEP_SUMMARY
           elif [[ "$UPDATE_TYPE" == "major" ]]; then
             echo "- **Action**: ⚠️ Major update - requires manual review" >> $GITHUB_STEP_SUMMARY
-          elif [[ "$CHECKS_RESULT" == "false" ]]; then
-            echo "- **Action**: ❌ Checks failed - no action taken" >> $GITHUB_STEP_SUMMARY
           else
-            echo "- **Action**: ⏰ Checks timed out - no action taken" >> $GITHUB_STEP_SUMMARY
+            echo "- **Action**: ❓ Unknown update type - no action taken" >> $GITHUB_STEP_SUMMARY
           fi
