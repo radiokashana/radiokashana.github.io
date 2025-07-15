@@ -1,45 +1,67 @@
 name: Dependabot Auto-Merge
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  # Run after visual tests complete for PRs
+  workflow_run:
+    workflows: ["Visual Regression Tests"]
+    types: [completed]
 
 jobs:
   auto-merge:
-    # Only run for Dependabot PRs
-    if: github.actor == 'dependabot[bot]'
+    # Only run for successful Dependabot PRs
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_repository.owner.login == github.repository_owner &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    
     permissions:
       contents: write
       pull-requests: write
       checks: read
 
     steps:
-      - name: Check PR author
-        id: check-author
-        run: |
-          if [[ "${{ github.actor }}" == "dependabot[bot]" ]]; then
-            echo "is_dependabot=true" >> $GITHUB_OUTPUT
-          else
-            echo "is_dependabot=false" >> $GITHUB_OUTPUT
-          fi
+      - name: Get PR info
+        id: get-pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Get the workflow run that triggered this
+            const workflowRun = context.payload.workflow_run;
+
+            // Find the PR associated with this workflow run
+            const prs = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${workflowRun.head_repository.owner.login}:${workflowRun.head_branch}`,
+              state: 'open'
+            });
+
+            if (prs.data.length === 0) {
+              console.log('No open PR found for this workflow run');
+              core.setFailed('No open PR found');
+              return;
+            }
+
+            const prNumber = prs.data[0].number;
+            console.log(`Found PR #${prNumber} for workflow run`);
+            console.log(`Visual tests conclusion: ${workflowRun.conclusion}`);
+
+            core.setOutput('pr_number', prNumber);
 
       - name: Get PR details
         id: pr-details
-        if: steps.check-author.outputs.is_dependabot == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const pr = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.issue.number,
+              pull_number: ${{ steps.get-pr.outputs.pr_number }},
             });
-            
+
             const title = pr.data.title.toLowerCase();
             const body = pr.data.body || '';
-            
+
             // Determine update type based on PR title
             let updateType = 'unknown';
             if (title.includes('patch') || title.includes('security')) {
@@ -49,78 +71,28 @@ jobs:
             } else if (title.includes('major')) {
               updateType = 'major';
             }
-            
+
             console.log(`PR Title: ${pr.data.title}`);
             console.log(`Update Type: ${updateType}`);
-            
+
             core.setOutput('update_type', updateType);
             core.setOutput('pr_title', pr.data.title);
-            core.setOutput('pr_number', context.issue.number);
-
-      - name: Wait for checks to complete
-        if: steps.check-author.outputs.is_dependabot == 'true'
-        id: wait-for-checks
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const maxWaitTime = 10 * 60 * 1000; // 10 minutes
-            const pollInterval = 30 * 1000; // 30 seconds
-            const startTime = Date.now();
-            
-            console.log('Waiting for any in-progress checks to complete...');
-            
-            while (Date.now() - startTime < maxWaitTime) {
-              // Get the latest commit SHA
-              const pr = await github.rest.pulls.get({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.issue.number,
-              });
-              
-              const commitSha = pr.data.head.sha;
-              
-              // Get all check runs for this commit
-              const checkRuns = await github.rest.checks.listForRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: commitSha,
-              });
-              
-              // Check if any checks are still running
-              const runningChecks = checkRuns.data.check_runs.filter(run => 
-                run.status === 'in_progress' || run.status === 'queued'
-              );
-              
-              console.log(`Found ${runningChecks.length} running checks: ${runningChecks.map(r => r.name).join(', ')}`);
-              
-              if (runningChecks.length === 0) {
-                console.log('✅ All checks completed, ready to attempt merge');
-                core.setOutput('ready_to_merge', 'true');
-                return;
-              }
-              
-              console.log('⏳ Waiting for checks to complete...');
-              await new Promise(resolve => setTimeout(resolve, pollInterval));
-            }
-            
-            console.log('⏰ Timeout waiting for checks to complete, will attempt merge anyway');
-            core.setOutput('ready_to_merge', 'timeout');
+            core.setOutput('pr_number', ${{ steps.get-pr.outputs.pr_number }});
 
       - name: Auto-approve PR
-        if: steps.check-author.outputs.is_dependabot == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             // Check if we should auto-approve based on update type
             const updateType = '${{ steps.pr-details.outputs.update_type }}';
             console.log(`Update type: ${updateType}`);
-            
+
             // Only auto-approve patch and minor updates
             if (updateType === 'patch' || updateType === 'minor') {
               await github.rest.pulls.createReview({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: context.issue.number,
+                pull_number: ${{ steps.get-pr.outputs.pr_number }},
                 event: 'APPROVE',
                 body: `🤖 Auto-approving ${updateType} dependency update. Branch protection rules will ensure required checks pass before merge.`
               });
@@ -130,58 +102,57 @@ jobs:
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: context.issue.number,
+                issue_number: ${{ steps.get-pr.outputs.pr_number }},
                 body: '⚠️ **Major dependency update detected**\n\nThis PR requires manual review before merging. Please review the changes carefully for potential breaking changes.'
               });
             }
 
       - name: Auto-merge PR
-        if: steps.check-author.outputs.is_dependabot == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const updateType = '${{ steps.pr-details.outputs.update_type }}';
-            
-            // Only auto-merge patch and minor updates  
+
+            // Only auto-merge patch and minor updates
             if (updateType === 'patch' || updateType === 'minor') {
               try {
                 console.log('🚀 Attempting to merge PR...');
                 await github.rest.pulls.merge({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  pull_number: context.issue.number,
+                  pull_number: ${{ steps.get-pr.outputs.pr_number }},
                   merge_method: 'squash',
                   commit_title: `${{ steps.pr-details.outputs.pr_title }} (#${{ steps.pr-details.outputs.pr_number }})`,
                   commit_message: '🤖 Auto-merged by Dependabot workflow. Branch protection rules enforced required checks.'
                 });
-                
+
                 console.log('✅ PR auto-merged successfully');
-                
+
                 // Add a comment to confirm the auto-merge
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  issue_number: context.issue.number,
+                  issue_number: ${{ steps.get-pr.outputs.pr_number }},
                   body: '🤖 **Auto-merged successfully!**\n\n✅ Required checks passed (enforced by branch protection)\n✅ Dependency update approved\n✅ Merged using squash method'
                 });
-                
+
               } catch (error) {
                 console.log('❌ Failed to auto-merge:', error.message);
-                
+
                 // Check if it's because of missing required checks
                 if (error.message.includes('Required status check') || error.message.includes('branch protection')) {
                   console.log('🛡️ Branch protection prevented merge - checks not passed yet');
                   await github.rest.issues.createComment({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
-                    issue_number: context.issue.number,
+                    issue_number: ${{ steps.get-pr.outputs.pr_number }},
                     body: `⏳ **Auto-merge delayed**\n\nRequired status checks haven't passed yet. The PR will be merged automatically once all required checks complete successfully.\n\n🛡️ Protected by branch rules - merge will happen when ready.`
                   });
                 } else {
                   await github.rest.issues.createComment({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
-                    issue_number: context.issue.number,
+                    issue_number: ${{ steps.get-pr.outputs.pr_number }},
                     body: `❌ **Auto-merge failed**\n\nError: ${error.message}\n\nPlease merge manually if appropriate.`
                   });
                 }
@@ -191,16 +162,16 @@ jobs:
             }
 
       - name: Summary
-        if: always() && steps.check-author.outputs.is_dependabot == 'true'
+        if: always()
         run: |
           echo "## Dependabot Auto-Merge Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **PR**: ${{ steps.pr-details.outputs.pr_title }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Update Type**: ${{ steps.pr-details.outputs.update_type }}" >> $GITHUB_STEP_SUMMARY
-          
+
           UPDATE_TYPE="${{ steps.pr-details.outputs.update_type }}"
-          
+
           echo "- **Branch Protection**: ✅ Required checks enforced by GitHub" >> $GITHUB_STEP_SUMMARY
-          
+
           if [[ "$UPDATE_TYPE" == "patch" || "$UPDATE_TYPE" == "minor" ]]; then
             echo "- **Action**: ✅ Auto-approved and merge attempted" >> $GITHUB_STEP_SUMMARY
             echo "- **Note**: Merge succeeds only if all required checks pass" >> $GITHUB_STEP_SUMMARY
