@@ -59,7 +59,7 @@ Visual tests run automatically on Pull Requests with a **dual testing strategy**
 
 1. **Create PR** with code changes
 2. **Check baselines** - Are CI-generated baselines present?
-3. **Local tests** - Start `yarn develop` and test against localhost:8000
+3. **Local tests** - Playwright auto-starts `yarn develop` and tests against localhost:8000
 4. **Netlify build** - Wait for preview environment to be ready
 5. **Deploy tests** - Test against Netlify preview URL
 6. **Baseline generation** - If missing, generate from Netlify and auto-commit
