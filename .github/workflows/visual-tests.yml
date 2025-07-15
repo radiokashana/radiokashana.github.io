@@ -5,18 +5,18 @@ on:
     types: [opened, synchronize, reopened]
     # Only run on code changes, not content (Decap CMS) changes
     branches-ignore:
-      - 'decap-cms/**'
-  
+      - "decap-cms/**"
+
   # Allow manual triggering with options
   workflow_dispatch:
     inputs:
       generate_baselines:
-        description: 'Generate new baselines instead of running tests'
+        description: "Generate new baselines instead of running tests"
         required: false
         type: boolean
         default: false
       target_url:
-        description: 'Custom URL to test against (optional)'
+        description: "Custom URL to test against (optional)"
         required: false
         type: string
 
@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     # Only run for PRs that don't start with decap-cms/
     if: |
-      github.event_name == 'workflow_dispatch' || 
+      github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'decap-cms/'))
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -40,21 +40,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'yarn'
+          node-version: "18"
+          cache: "yarn"
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Install Playwright browsers
         run: npx playwright install chromium
-
-      - name: Get Netlify site name
-        id: netlify-site
-        run: |
-          SITE_NAME=$(node .github/scripts/get-netlify-site-name.js)
-          echo "name=$SITE_NAME" >> $GITHUB_OUTPUT
-          echo "Using Netlify site name: $SITE_NAME"
 
       - name: Check if baselines exist
         id: check-baselines
@@ -71,7 +64,7 @@ jobs:
       # STEP 1: Test against local development server
       - name: Test against local development server
         if: |
-          steps.check-baselines.outputs.exists == 'true' && 
+          steps.check-baselines.outputs.exists == 'true' &&
           inputs.generate_baselines != true
         run: |
           echo "🏠 Running visual tests against local development server"
@@ -86,7 +79,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: wait-for-netlify
         with:
-          site_name: ${{ steps.netlify-site.outputs.name }}
+          site_name: radiokashana
           max_timeout: 600 # 10 minutes
 
       - name: Get target URL
@@ -106,22 +99,22 @@ jobs:
       # STEP 3: Generate baselines if missing or requested
       - name: Generate baselines
         if: |
-          steps.check-baselines.outputs.exists == 'false' || 
+          steps.check-baselines.outputs.exists == 'false' ||
           inputs.generate_baselines == true
         env:
           PLAYWRIGHT_BASE_URL: ${{ steps.target-url.outputs.url }}
         run: |
           echo "📸 Generating baselines from: $PLAYWRIGHT_BASE_URL"
-          
+
           # Remove existing baselines if regenerating
           if [ "${{ inputs.generate_baselines }}" = "true" ]; then
             rm -rf tests/visual-snapshots.spec.js-snapshots/
             echo "🗑️ Removed existing baselines for regeneration"
           fi
-          
+
           # Generate new baselines
           yarn test:visual:external --reporter=line || true
-          
+
           # Verify baselines were created
           if [ -d "tests/visual-snapshots.spec.js-snapshots" ] && [ "$(ls -A tests/visual-snapshots.spec.js-snapshots/)" ]; then
             echo "✅ Baselines generated successfully"
@@ -134,7 +127,7 @@ jobs:
       # STEP 4: Test against deployed environment (if baselines exist)
       - name: Test against deployed environment
         if: |
-          steps.check-baselines.outputs.exists == 'true' && 
+          steps.check-baselines.outputs.exists == 'true' &&
           inputs.generate_baselines != true
         env:
           PLAYWRIGHT_BASE_URL: ${{ steps.target-url.outputs.url }}
@@ -146,16 +139,16 @@ jobs:
       # STEP 5: Commit baselines if they were generated
       - name: Commit new baselines
         if: |
-          steps.check-baselines.outputs.exists == 'false' || 
+          steps.check-baselines.outputs.exists == 'false' ||
           inputs.generate_baselines == true
         run: |
           # Configure git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
+
           # Add the snapshots
           git add tests/visual-snapshots.spec.js-snapshots/
-          
+
           # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -166,16 +159,16 @@ jobs:
             else
               COMMIT_MSG="Generate initial visual test baselines"
             fi
-            
+
             # Commit the changes
             git commit -m "$COMMIT_MSG
 
             Generated from: ${{ steps.target-url.outputs.url }}
             Workflow: ${{ github.workflow }}
             Run: ${{ github.run_number }}
-            
+
             🤖 Automated baseline update"
-            
+
             # Push the changes
             if [ "${{ github.event_name }}" = "pull_request" ]; then
               # For PRs, push to the PR branch
@@ -219,9 +212,9 @@ jobs:
             const baselinesExisted = '${{ steps.check-baselines.outputs.exists }}' === 'true';
             const localTestsStatus = '${{ steps.local-tests.outcome }}';
             const deployedTestsStatus = '${{ steps.deployed-tests.outcome }}';
-            
+
             let comment = `## 📸 Visual Regression Test Results\n\n`;
-            
+
             if (!baselinesExisted) {
               comment += `🆕 **Initial baselines generated**\n\n`;
               comment += `This is the first time visual tests are running for this repository. `;
@@ -230,7 +223,7 @@ jobs:
               comment += `Future PRs will compare against these baselines to detect visual regressions.`;
             } else {
               comment += `**Test Results:**\n\n`;
-              
+
               // Local tests
               if (localTestsStatus === 'success') {
                 comment += `✅ **Local development tests:** PASSED\n`;
@@ -239,7 +232,7 @@ jobs:
               } else {
                 comment += `⏭️ **Local development tests:** SKIPPED\n`;
               }
-              
+
               // Deployed tests
               if (deployedTestsStatus === 'success') {
                 comment += `✅ **Deployed environment tests:** PASSED\n`;
@@ -248,9 +241,9 @@ jobs:
               } else {
                 comment += `⏭️ **Deployed environment tests:** SKIPPED\n`;
               }
-              
+
               comment += `\n**Target URL:** ${targetUrl}\n\n`;
-              
+
               if (success) {
                 comment += `🎉 **All tests passed!** No visual regressions detected.`;
               } else {
@@ -260,18 +253,18 @@ jobs:
                 comment += `**If changes are intentional:** Re-run this workflow with "Generate new baselines" option enabled.`;
               }
             }
-            
+
             // Post or update comment
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
             });
-            
-            const existingComment = comments.find(comment => 
+
+            const existingComment = comments.find(comment =>
               comment.body.includes('📸 Visual Regression Test Results')
             );
-            
+
             if (existingComment) {
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
@@ -297,10 +290,10 @@ jobs:
           BASELINES_EXISTED="${{ steps.check-baselines.outputs.exists == 'true' }}"
           LOCAL_TESTS_STATUS="${{ steps.local-tests.outcome }}"
           DEPLOYED_TESTS_STATUS="${{ steps.deployed-tests.outcome }}"
-          
+
           echo "## 📸 Visual Regression Test Results (Dependabot PR)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           if [[ "$BASELINES_EXISTED" == "false" ]]; then
             echo "🆕 **Initial baselines generated**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
@@ -313,7 +306,7 @@ jobs:
           else
             echo "**Test Results:**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            
+
             # Local tests
             if [[ "$LOCAL_TESTS_STATUS" == "success" ]]; then
               echo "✅ **Local development tests:** PASSED" >> $GITHUB_STEP_SUMMARY
@@ -322,7 +315,7 @@ jobs:
             else
               echo "⏭️ **Local development tests:** SKIPPED" >> $GITHUB_STEP_SUMMARY
             fi
-            
+
             # Deployed tests
             if [[ "$DEPLOYED_TESTS_STATUS" == "success" ]]; then
               echo "✅ **Deployed environment tests:** PASSED" >> $GITHUB_STEP_SUMMARY
@@ -331,11 +324,11 @@ jobs:
             else
               echo "⏭️ **Deployed environment tests:** SKIPPED" >> $GITHUB_STEP_SUMMARY
             fi
-            
+
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Target URL:** $TARGET_URL" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            
+
             if [[ "$SUCCESS" == "true" ]]; then
               echo "🎉 **All tests passed!** No visual regressions detected." >> $GITHUB_STEP_SUMMARY
             else
@@ -347,6 +340,6 @@ jobs:
               echo "**If changes are intentional:** Re-run this workflow with 'Generate new baselines' option enabled." >> $GITHUB_STEP_SUMMARY
             fi
           fi
-          
+
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "ℹ️ *Note: Dependabot PRs have limited permissions and cannot post comments directly to the PR.*" >> $GITHUB_STEP_SUMMARY
