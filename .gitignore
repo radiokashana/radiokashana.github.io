@@ -6,3 +6,13 @@ public
 yarn-error.log
 
 coverage/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Visual test artifacts (ignore test results but keep baseline snapshots)
+tests/**/test-results/
+tests/**/*-actual.png
+tests/**/*-diff.png

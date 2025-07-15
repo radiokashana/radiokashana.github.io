@@ -45,7 +45,7 @@ const IndexPage = ({ data, location }) => {
 			{/* Floating Facebook Live embed - now positioned closer to top and bottom-right */}
 			<Embed html={facebookLiveEmbedHtml} />
 			
-			<section>
+			<section data-testid="homepage-content">
 				<MainNews>
 					{mainNews}
 				</MainNews>

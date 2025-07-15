@@ -3,6 +3,7 @@ import React from "react"
 const Embed = ({ html }) => (
   <div 
     className="fixed bottom-2 z-999" 
+    data-testid="live-embed"
     style={{ 
       maxWidth: "300px", // Made narrower as requested
       right: "20px", // Moved further to the right
@@ -14,12 +15,14 @@ const Embed = ({ html }) => (
     <div 
       className="bg-navy white pa2 flex justify-between items-center"
       style={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
+      data-testid="live-embed-header"
     >
       <span className="f6 b">Radio Kashana - En vivo</span>
       <button 
         id="toggleLiveBtn"
         className="bn bg-transparent white pointer f6" 
         style={{ cursor: "pointer" }}
+        data-testid="live-embed-toggle"
         onClick={() => {
           const content = document.getElementById('liveContent');
           const btn = document.getElementById('toggleLiveBtn');
@@ -35,7 +38,7 @@ const Embed = ({ html }) => (
         −
       </button>
     </div>
-    <div id="liveContent">
+    <div id="liveContent" data-testid="live-embed-content">
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   </div>
