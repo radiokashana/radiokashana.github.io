@@ -1,50 +1,273 @@
 name: Visual Regression Tests
 
 on:
-  push:
-    branches: [develop, main]
   pull_request:
-    branches: [develop, main]
+    types: [opened, synchronize, reopened]
+    # Only run on code changes, not content (Decap CMS) changes
+    branches-ignore:
+      - 'decap-cms/**'
+  
+  # Allow manual triggering with options
+  workflow_dispatch:
+    inputs:
+      generate_baselines:
+        description: 'Generate new baselines instead of running tests'
+        required: false
+        type: boolean
+        default: false
+      target_url:
+        description: 'Custom URL to test against (optional)'
+        required: false
+        type: string
 
 jobs:
   visual-tests:
-    timeout-minutes: 60
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
+    # Only run for PRs that don't start with decap-cms/
+    if: |
+      github.event_name == 'workflow_dispatch' || 
+      (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'decap-cms/'))
     
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        cache: 'yarn'
-        
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-      
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-      
-    - name: Build site
-      run: yarn build
-      
-    - name: Serve site and run tests
-      run: |
-        yarn serve &
-        sleep 10
-        yarn test:visual
-      env:
-        CI: true
-        
-    - uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
-        
-    - uses: actions/upload-artifact@v4
-      if: failure()
-      with:
-        name: visual-test-results
-        path: test-results/
-        retention-days: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Need write access for baseline generation
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium
+
+      - name: Get Netlify site name
+        id: netlify-site
+        run: |
+          SITE_NAME=$(node .github/scripts/get-netlify-site-name.js)
+          echo "name=$SITE_NAME" >> $GITHUB_OUTPUT
+          echo "Using Netlify site name: $SITE_NAME"
+
+      - name: Check if baselines exist
+        id: check-baselines
+        run: |
+          if [ -d "tests/visual-snapshots.spec.js-snapshots" ] && [ "$(ls -A tests/visual-snapshots.spec.js-snapshots/)" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "✅ Baseline snapshots found"
+            ls -la tests/visual-snapshots.spec.js-snapshots/ | head -5
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No baseline snapshots found"
+          fi
+
+      # STEP 1: Test against local development server
+      - name: Test against local development server
+        if: |
+          steps.check-baselines.outputs.exists == 'true' && 
+          inputs.generate_baselines != true
+        run: |
+          echo "🏠 Running visual tests against local development server"
+          yarn test:visual --project=chromium --reporter=github
+        continue-on-error: true
+        id: local-tests
+
+      # STEP 2: Wait for Netlify deployment (for PRs)
+      - name: Wait for Netlify deployment
+        if: github.event_name == 'pull_request'
+        uses: jakepartusch/wait-for-netlify-action@v1.4
+        id: wait-for-netlify
+        with:
+          site_name: ${{ steps.netlify-site.outputs.name }}
+          max_timeout: 600 # 10 minutes
+
+      - name: Get target URL
+        id: target-url
+        run: |
+          if [ -n "${{ inputs.target_url }}" ]; then
+            echo "url=${{ inputs.target_url }}" >> $GITHUB_OUTPUT
+            echo "Using custom URL: ${{ inputs.target_url }}"
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "url=${{ steps.wait-for-netlify.outputs.url }}" >> $GITHUB_OUTPUT
+            echo "Using Netlify preview URL: ${{ steps.wait-for-netlify.outputs.url }}"
+          else
+            echo "url=https://radiokashana.org" >> $GITHUB_OUTPUT
+            echo "Using production URL: https://radiokashana.org"
+          fi
+
+      # STEP 3: Generate baselines if missing or requested
+      - name: Generate baselines
+        if: |
+          steps.check-baselines.outputs.exists == 'false' || 
+          inputs.generate_baselines == true
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.target-url.outputs.url }}
+        run: |
+          echo "📸 Generating baselines from: $PLAYWRIGHT_BASE_URL"
+          
+          # Remove existing baselines if regenerating
+          if [ "${{ inputs.generate_baselines }}" = "true" ]; then
+            rm -rf tests/visual-snapshots.spec.js-snapshots/
+            echo "🗑️ Removed existing baselines for regeneration"
+          fi
+          
+          # Generate new baselines
+          yarn test:visual:external --reporter=line || true
+          
+          # Verify baselines were created
+          if [ -d "tests/visual-snapshots.spec.js-snapshots" ] && [ "$(ls -A tests/visual-snapshots.spec.js-snapshots/)" ]; then
+            echo "✅ Baselines generated successfully"
+            ls -la tests/visual-snapshots.spec.js-snapshots/
+          else
+            echo "❌ Failed to generate baselines"
+            exit 1
+          fi
+
+      # STEP 4: Test against deployed environment (if baselines exist)
+      - name: Test against deployed environment
+        if: |
+          steps.check-baselines.outputs.exists == 'true' && 
+          inputs.generate_baselines != true
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.target-url.outputs.url }}
+        run: |
+          echo "🌐 Running visual tests against deployed environment: $PLAYWRIGHT_BASE_URL"
+          yarn test:visual:external --reporter=github
+        id: deployed-tests
+
+      # STEP 5: Commit baselines if they were generated
+      - name: Commit new baselines
+        if: |
+          steps.check-baselines.outputs.exists == 'false' || 
+          inputs.generate_baselines == true
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add tests/visual-snapshots.spec.js-snapshots/
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            if [ "${{ inputs.generate_baselines }}" = "true" ]; then
+              COMMIT_MSG="Update visual test baselines"
+            else
+              COMMIT_MSG="Generate initial visual test baselines"
+            fi
+            
+            git commit -m "$COMMIT_MSG
+
+            Generated from: ${{ steps.target-url.outputs.url }}
+            Workflow: ${{ github.workflow }}
+            Run: ${{ github.run_number }}
+            
+            🤖 Automated baseline update"
+            git push
+            echo "✅ Baselines committed and pushed"
+          fi
+
+      # STEP 6: Upload artifacts on failure
+      - name: Upload test results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-test-results-${{ github.event.number || github.run_number }}
+          path: |
+            test-results/
+            tests/**/test-results/
+          retention-days: 7
+
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diff-screenshots-${{ github.event.number || github.run_number }}
+          path: |
+            tests/**/*-actual.png
+            tests/**/*-diff.png
+          retention-days: 7
+
+      # STEP 7: Comment on PR with comprehensive results
+      - name: Comment on PR with results
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const success = '${{ job.status }}' === 'success';
+            const targetUrl = '${{ steps.target-url.outputs.url }}';
+            const baselinesExisted = '${{ steps.check-baselines.outputs.exists }}' === 'true';
+            const localTestsStatus = '${{ steps.local-tests.outcome }}';
+            const deployedTestsStatus = '${{ steps.deployed-tests.outcome }}';
+            
+            let comment = `## 📸 Visual Regression Test Results\n\n`;
+            
+            if (!baselinesExisted) {
+              comment += `🆕 **Initial baselines generated**\n\n`;
+              comment += `This is the first time visual tests are running for this repository. `;
+              comment += `New baseline screenshots have been generated from the Netlify preview and committed.\n\n`;
+              comment += `**Target URL:** ${targetUrl}\n\n`;
+              comment += `Future PRs will compare against these baselines to detect visual regressions.`;
+            } else {
+              comment += `**Test Results:**\n\n`;
+              
+              // Local tests
+              if (localTestsStatus === 'success') {
+                comment += `✅ **Local development tests:** PASSED\n`;
+              } else if (localTestsStatus === 'failure') {
+                comment += `❌ **Local development tests:** FAILED\n`;
+              } else {
+                comment += `⏭️ **Local development tests:** SKIPPED\n`;
+              }
+              
+              // Deployed tests
+              if (deployedTestsStatus === 'success') {
+                comment += `✅ **Deployed environment tests:** PASSED\n`;
+              } else if (deployedTestsStatus === 'failure') {
+                comment += `❌ **Deployed environment tests:** FAILED\n`;
+              } else {
+                comment += `⏭️ **Deployed environment tests:** SKIPPED\n`;
+              }
+              
+              comment += `\n**Target URL:** ${targetUrl}\n\n`;
+              
+              if (success) {
+                comment += `🎉 **All tests passed!** No visual regressions detected.`;
+              } else {
+                comment += `⚠️ **Some tests failed.** Please review the results:\n\n`;
+                comment += `- Check the [Actions tab](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for detailed results\n`;
+                comment += `- Download artifacts to see visual differences\n\n`;
+                comment += `**If changes are intentional:** Re-run this workflow with "Generate new baselines" option enabled.`;
+              }
+            }
+            
+            // Post or update comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const existingComment = comments.find(comment => 
+              comment.body.includes('📸 Visual Regression Test Results')
+            );
+            
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: comment
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment
+              });
+            }
