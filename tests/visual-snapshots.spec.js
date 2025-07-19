@@ -54,8 +54,8 @@ test.describe("Visual Snapshot Tests", () => {
 	});
 
 	test("specific article page visual test", async ({ page }) => {
-		// Use the hashtag article we found
-		await page.goto("/noticias/hashtag-cuéntalo/");
+		// Use the hashtag article we found (Next.js URL structure)
+		await page.goto("/hashtag-cuéntalo");
 
 		// Wait for article content to load
 		await page.waitForSelector("article");
@@ -104,63 +104,5 @@ test.describe("Visual Snapshot Tests", () => {
 		);
 	});
 
-	test("mocked homepage data test", async ({ page }) => {
-		// Set up GraphQL mock with consistent data
-		await page.route("**/___graphql", async (route) => {
-			await route.fulfill({
-				json: {
-					data: {
-						allMdx: {
-							edges: [
-								{
-									node: {
-										id: "test-1",
-										excerpt: "Test article excerpt for visual consistency.",
-										fields: { slug: "/test-article/" },
-										frontmatter: {
-											title: "Test Article Title",
-											date: "15 de enero de 2025",
-											dateRaw: "2025-01-15",
-											image: "/img/logo.svg",
-										},
-									},
-								},
-								{
-									node: {
-										id: "test-2",
-										excerpt: "Second test article excerpt for visual testing.",
-										fields: { slug: "/test-article-2/" },
-										frontmatter: {
-											title: "Second Test Article",
-											date: "14 de enero de 2025",
-											dateRaw: "2025-01-14",
-											image: "/img/logo.svg",
-										},
-									},
-								},
-							],
-						},
-						allDataJson: {
-							edges: [
-								{
-									node: {
-										facebookLiveEmbedHtml:
-											'<div style="padding:20px;background:#f0f0f0;text-align:center;">Test Facebook Live Embed</div>',
-									},
-								},
-							],
-						},
-					},
-				},
-			});
-		});
-
-		await page.goto("/");
-		await page.waitForSelector('[data-testid="main-news"]');
-
-		// Test with consistent mocked data
-		await expect(page.locator('[data-testid="main-news"]')).toHaveScreenshot(
-			"main-news-mocked.png",
-		);
-	});
+	// Removed GraphQL mocked test - not applicable to Next.js API routes
 });

@@ -2,7 +2,7 @@ import FooterMenuItem from './FooterMenuItem'
 
 export default function Footer() {
   return (
-    <footer className="white w-100 tc bg-near-black cl">
+    <footer className="white w-100 tc bg-near-black cl" data-testid="site-footer">
       <nav>
         <ul className="dib list ma0 pa0 f6">
           <FooterMenuItem href="http://www.amarcmexico.org/">AMARC México</FooterMenuItem>
