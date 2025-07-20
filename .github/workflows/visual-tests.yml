@@ -70,7 +70,6 @@ jobs:
           echo "🏠 Running visual tests against local development server"
           echo "Playwright will automatically start the development server if needed"
           yarn test:visual --project=chromium --reporter=github
-        continue-on-error: true
         id: local-tests
 
       # STEP 2: Wait for Netlify deployment (for PRs)
