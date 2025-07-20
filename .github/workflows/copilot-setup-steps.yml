@@ -35,4 +35,4 @@ jobs:
           cache: "yarn"
 
       - name: Install JavaScript dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
