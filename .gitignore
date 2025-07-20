@@ -1,6 +1,17 @@
 node_modules/
 .cache/
-public
+# Ignore Gatsby's public build directory (but not Next.js static assets)
+/public/*.html
+/public/*.js
+/public/*.json
+/public/*.xml
+/public/*.txt
+/public/manifest.json
+/public/sw.js
+/public/workbox-*
+/public/static/
+/public/page-data/
+/public/_next/
 
 .DS_Store
 yarn-error.log
@@ -16,3 +27,7 @@ playwright/.cache/
 tests/**/test-results/
 tests/**/*-actual.png
 tests/**/*-diff.png
+
+**/.claude/settings.local.json
+
+.next

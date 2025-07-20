@@ -1,7 +1,7 @@
-const postcssImport = require(`postcss-import`)
-
-module.exports = () => ({
-	plugins: [
-		postcssImport(),
-	],
-})
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss': {},
+    'autoprefixer': {},
+  },
+}
