@@ -53,6 +53,9 @@ jobs:
           # allowed_tools: "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
           allowed_tools: |
             Bash(*)
+            Bash(mkdir:*)
+            Bash(cp:*)
+            Bash(ls:*)
             Edit
             Read
             Write
