@@ -2,7 +2,7 @@ import React from "react"
 
 const Embed = ({ html }) => (
   <div 
-    className="fixed bottom-2 z-999" 
+    className="fixed bottom-2 z-[999]" 
     data-testid="live-embed"
     style={{ 
       maxWidth: "300px", // Made narrower as requested
@@ -13,14 +13,14 @@ const Embed = ({ html }) => (
     }}
   >
     <div 
-      className="bg-navy white pa2 flex justify-between items-center"
+      className="bg-blue-900 text-white p-2 flex justify-between items-center"
       style={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
       data-testid="live-embed-header"
     >
-      <span className="f6 b">Radio Kashana - En vivo</span>
+      <span className="text-xs font-bold">Radio Kashana - En vivo</span>
       <button 
         id="toggleLiveBtn"
-        className="bn bg-transparent white pointer f6" 
+        className="border-none bg-transparent text-white cursor-pointer text-xs" 
         style={{ cursor: "pointer" }}
         data-testid="live-embed-toggle"
         onClick={() => {

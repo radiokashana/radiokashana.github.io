@@ -9,7 +9,7 @@ const IndexLayout = ({children, customSEO}) =>
 	<div data-testid="app-layout">
 		{!customSEO && <SEO />}
 		<Header />
-		<main className="center-ns mw-100 ml2 mr2 w-two-thirds-ns georgia" data-testid="main-content">
+		<main className="md:mx-auto max-w-full ml-2 mr-2 md:w-2/3 font-serif" data-testid="main-content">
 			{children}
 		</main>
 		<Footer />

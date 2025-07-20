@@ -1,12 +1,11 @@
-@import "~tachyons-colors";
-@import "~tachyons";
+@import "tailwindcss";
 
 .bl--mid-gray {
-	border-left: 1px solid var(--mid-gray);
+	border-left: 1px solid theme('colors.gray.500');
 }
 
 .br--near-black {
-	border-right: 1px solid var(--near-black);
+	border-right: 1px solid theme('colors.gray.900');
 }
 
 #news article {
@@ -23,7 +22,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	background: linear-gradient(rgba(255, 255, 255, 0) 50%, var(--white));
+	background: linear-gradient(rgba(255, 255, 255, 0) 50%, theme('colors.white'));
 }
 
 #main-news article {
@@ -64,17 +63,17 @@
 }
 
 .bg-top-gray-bottom-near-black {
-	background: linear-gradient(to bottom, var(--gray) 0%, var(--near-black) 100%)
+	background: linear-gradient(to bottom, theme('colors.gray.500') 0%, theme('colors.gray.900') 100%)
 }
 
 .bg-left-dark-red-bottom-near-black {
-	background: linear-gradient(to bottom, var(--gray) 0%, var(--near-black) 100%)
+	background: linear-gradient(to bottom, theme('colors.gray.500') 0%, theme('colors.gray.900') 100%)
 }
 
 /* Facebook Live container styling */
 #liveContent {
 	width: 100%;
-	background-color: var(--white);
+	background-color: theme('colors.white');
 }
 
 #liveContent iframe {
