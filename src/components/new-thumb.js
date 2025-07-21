@@ -8,7 +8,7 @@ const NewThumb = ({href, title, img, excerpt}) =>
 			<Link className="text-black" to={href}>
 				<header>
 					<img src={img.src} alt={img.alt} />
-					<h2>{title}</h2>
+					<h2 className="font-bold text-2xl">{title}</h2>
 				</header>
 				<section dangerouslySetInnerHTML={{ __html: excerpt }} />
 			</Link>
