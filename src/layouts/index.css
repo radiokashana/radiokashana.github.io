@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Set global line-height to match previous Tachyons design */
+@layer base {
+  html {
+    line-height: 1.5;
+  }
+}
+
 .bl--mid-gray {
 	border-left: 1px solid theme('colors.gray.500');
 }
