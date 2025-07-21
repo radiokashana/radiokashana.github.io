@@ -2426,9 +2426,9 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@tailwindcss/node@^4.0.0":
+"@tailwindcss/node@4.1.11":
   version "4.1.11"
-  resolved "https://registry.npmjs.org/@tailwindcss/node/-/node-4.1.11.tgz"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/node/-/node-4.1.11.tgz#d626af65fc9872e5e9d8884791d7e3856e945359"
   integrity sha512-yzhzuGRmv5QyU9qLNg4GTlYI6STedBWRE7NjxP45CsFYYq9taI0zJXZBMqIC/c8fViNLhmrbpSFS57EoxUmD6Q==
   dependencies:
     "@ampproject/remapping" "^2.3.0"
@@ -2506,9 +2506,9 @@
   resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.1.11.tgz#cdcb9eea9225a346c0695f67f621990b0534763f"
   integrity sha512-YfHoggn1j0LK7wR82TOucWc5LDCguHnoS879idHekmmiR7g9HUtMw9MI0NHatS28u/Xlkfi9w5RJWgz2Dl+5Qg==
 
-"@tailwindcss/oxide@^4.0.0":
+"@tailwindcss/oxide@4.1.11":
   version "4.1.11"
-  resolved "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.1.11.tgz"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide/-/oxide-4.1.11.tgz#569b668c99c337b7b8204bc5b6a833429755a05b"
   integrity sha512-Q69XzrtAhuyfHo+5/HMgr1lAiPP/G40OMFAnws7xcFEYqcypZmdW8eGXaOUIeOl1dzPJBPENXgbjsOyhg2nkrg==
   dependencies:
     detect-libc "^2.0.4"
@@ -2527,17 +2527,16 @@
     "@tailwindcss/oxide-win32-arm64-msvc" "4.1.11"
     "@tailwindcss/oxide-win32-x64-msvc" "4.1.11"
 
-"@tailwindcss/postcss@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.0.0.tgz"
-  integrity sha512-lI2bPk4TvwavHdehjr5WiC6HnZ59hacM6ySEo4RM/H7tsjWd8JpqiNW9ThH7rO/yKtrn4mGBoXshpvn8clXjPg==
+"@tailwindcss/postcss@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/postcss/-/postcss-4.1.11.tgz#4d844f7ff295c731ceab54934531bece7380ce0c"
+  integrity sha512-q/EAIIpF6WpLhKEuQSEVMZNMIY8KhWoAemZ9eylNAih9jxMGAYPPWBn3I9QL/2jZ+e7OEz/tZkX5HwbBR4HohA==
   dependencies:
     "@alloc/quick-lru" "^5.2.0"
-    "@tailwindcss/node" "^4.0.0"
-    "@tailwindcss/oxide" "^4.0.0"
-    lightningcss "^1.29.1"
+    "@tailwindcss/node" "4.1.11"
+    "@tailwindcss/oxide" "4.1.11"
     postcss "^8.4.41"
-    tailwindcss "4.0.0"
+    tailwindcss "4.1.11"
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -9294,7 +9293,7 @@ lightningcss-win32-x64-msvc@1.30.1:
   resolved "https://registry.yarnpkg.com/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.30.1.tgz#fd7dd008ea98494b85d24b4bea016793f2e0e352"
   integrity sha512-PVqXh48wh4T53F/1CCu8PIPCxLzWyCnn/9T5W1Jpmdy5h9Cwd+0YQS6/LwhHXSafuc61/xg9Lv5OrCby6a++jg==
 
-lightningcss@1.30.1, lightningcss@^1.29.1:
+lightningcss@1.30.1:
   version "1.30.1"
   resolved "https://registry.npmjs.org/lightningcss/-/lightningcss-1.30.1.tgz"
   integrity sha512-xi6IyHML+c9+Q3W0S4fCQJOym42pyurFiJUHEcEyHS0CeKzia4yZDEsLlqOFykxOdHpNy0NmvVO31vcSqAxJCg==
@@ -14406,14 +14405,9 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwindcss@4.0.0, tailwindcss@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.0.0.tgz"
-  integrity sha512-ULRPI3A+e39T7pSaf1xoi58AqqJxVCLg8F/uM5A3FadUbnyDTgltVnXJvdkTjwCOGA6NazqHVcwPJC5h2vRYVQ==
-
 tailwindcss@4.1.11:
   version "4.1.11"
-  resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.1.11.tgz"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.11.tgz#799af3e98c19c5baaefafc6e0c16304a0e684854"
   integrity sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==
 
 tapable@^1.0.0:
