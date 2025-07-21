@@ -19,7 +19,7 @@ const NewTemplate = ({data, location}) => {
 				article
 			/>
 			<article className="after:clear-both after:content-[''] after:table">
-				<h2 className="font-bold text-2xl">{frontmatter.title}</h2>
+				<h2>{frontmatter.title}</h2>
 				<p>{frontmatter.date}</p>
 				<section className="after:clear-both after:content-[''] after:table">
 					<aside className="float-right w-1/2 ml-4 mb-3">

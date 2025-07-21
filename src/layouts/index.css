@@ -1,18 +1,27 @@
 @import "tailwindcss";
 
-/* Set global line-height to match previous Tachyons design */
 @layer base {
-  html {
-    line-height: 1.5;
-  }
+	h2 {
+		margin-top: 0.83em;
+		margin-bottom: 0.83em;
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+	p {
+		margin-top: 0.83em;
+		margin-bottom: 0.83em;
+	}
+	html {
+		line-height: 1.5em;
+	}
 }
 
 .bl--mid-gray {
-	border-left: 1px solid theme('colors.gray.500');
+	border-left: 1px solid theme("colors.gray.500");
 }
 
 .br--near-black {
-	border-right: 1px solid theme('colors.gray.900');
+	border-right: 1px solid theme("colors.gray.900");
 }
 
 #news article {
@@ -24,12 +33,15 @@
 
 #news section:after {
 	content: "";
-	height:200px;
-	width:100%;
+	height: 200px;
+	width: 100%;
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	background: linear-gradient(rgba(255, 255, 255, 0) 50%, theme('colors.white'));
+	background: linear-gradient(
+		rgba(255, 255, 255, 0) 50%,
+		theme("colors.white")
+	);
 }
 
 #main-news article {
@@ -37,14 +49,14 @@
 	padding: 10px;
 	color: white;
 	text-shadow:
-    -1px -1px 0 #000,
-     0   -1px 0 #000,
-     1px -1px 0 #000,
-     1px  0   0 #000,
-     1px  1px 0 #000,
-     0    1px 0 #000,
-    -1px  1px 0 #000,
-    -1px  0   0 #000;
+		-1px -1px 0 #000,
+		0 -1px 0 #000,
+		1px -1px 0 #000,
+		1px 0 0 #000,
+		1px 1px 0 #000,
+		0 1px 0 #000,
+		-1px 1px 0 #000,
+		-1px 0 0 #000;
 }
 
 .h-one-third-ar-16-9 {
@@ -70,29 +82,37 @@
 }
 
 .bg-top-gray-bottom-near-black {
-	background: linear-gradient(to bottom, theme('colors.gray.500') 0%, theme('colors.gray.900') 100%)
+	background: linear-gradient(
+		to bottom,
+		theme("colors.gray.500") 0%,
+		theme("colors.gray.900") 100%
+	);
 }
 
 .bg-left-dark-red-bottom-near-black {
-	background: linear-gradient(to bottom, theme('colors.gray.500') 0%, theme('colors.gray.900') 100%)
+	background: linear-gradient(
+		to bottom,
+		theme("colors.gray.500") 0%,
+		theme("colors.gray.900") 100%
+	);
 }
 
 /* Facebook Live container styling */
 #liveContent {
 	width: 100%;
-	background-color: theme('colors.white');
+	background-color: theme("colors.white");
 }
 
 #liveContent iframe {
 	width: 100%;
-	height: 200px;  /* Adjusted for smaller width */
+	height: 200px; /* Adjusted for smaller width */
 	border: none;
 	display: block;
 }
 
 @media screen and (max-width: 30em) {
 	#liveContent iframe {
-		height: 170px;  /* Smaller on mobile */
+		height: 170px; /* Smaller on mobile */
 	}
 }
 

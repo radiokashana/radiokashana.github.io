@@ -1,8 +1,8 @@
 module.exports = {
-	pathPrefix: '/',
+	pathPrefix: "/",
 	siteMetadata: {
 		siteUrl: "https://www.radiokashana.org/",
-		pathPrefix: '',
+		pathPrefix: "",
 		title: "RadioKashana - Tu Radio de Verdad",
 		titleAlt: "RadioKashana.org",
 		description: "RadioKashana es tu Radio de Verdad.",
@@ -18,23 +18,7 @@ module.exports = {
 	plugins: [
 		//"gatsby-plugin-layout",
 		"gatsby-plugin-decap-cms",
-		//"gatsby-plugin-postcss",
-		{
-			resolve: "gatsby-plugin-sass",
-			options: {
-				postCssPlugins: [
-					require("postcss-import")(),
-				],
-			},
-		},
-		/*		{
-			resolve: "gatsby-plugin-postcss-sass",
-			options: {
-				postCssPlugins: [
-					require("postcss-import")()
-				],
-			},
-		},*/
+		"gatsby-plugin-postcss",
 		"gatsby-plugin-image",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-sitemap",
@@ -85,4 +69,4 @@ module.exports = {
 			},
 		},
 	],
-}
+};
