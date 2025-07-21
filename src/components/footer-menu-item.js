@@ -1,8 +1,8 @@
 import React from "react"
 
 const FooterMenuItem = ({href, children}) =>
-	<li className="fl-ns ph1 pv2">
-		<a className="white b link underline-hover" href={href}>
+	<li className="md:float-left px-1 py-2">
+		<a className="text-white font-bold hover:underline" href={href}>
 			{children}
 		</a>
 	</li>

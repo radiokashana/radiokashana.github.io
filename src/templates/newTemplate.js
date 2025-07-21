@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 
 const NewTemplate = ({data, location}) => {
 	const { frontmatter, body, excerpt } = data.mdx
-	
+
 	return (
 		<IndexLayout customSEO>
 			<SEO
@@ -18,20 +18,20 @@ const NewTemplate = ({data, location}) => {
 				banner={frontmatter.image}
 				article
 			/>
-			<article className="cf">
+			<article className="after:clear-both after:content-[''] after:table">
 				<h2>{frontmatter.title}</h2>
 				<p>{frontmatter.date}</p>
-				<section className="cf">
-					<aside className="fr w-50 ml4 mb3">
+				<section className="after:clear-both after:content-[''] after:table">
+					<aside className="float-right w-1/2 ml-4 mb-3">
 						<img src={frontmatter.image} alt=""/>
 					</aside>
-					<main className="w-100 tj">
+					<main className="w-full text-justify">
 						<MDXProvider>
 							{body}
 						</MDXProvider>
 					</main>
 				</section>
-				<div className="cf"></div>
+				<div className="after:clear-both after:content-[''] after:table"></div>
 			</article>
 		</IndexLayout>
 	)

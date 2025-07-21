@@ -3,8 +3,8 @@ import React from "react"
 import MenuItem from "../menu-item"
 
 const Menu = () =>
-	<nav className="dib w-100 center bg-top-gray-bottom-near-black">
-		<ul className="center list dib ma0 pa0">
+	<nav className="inline-block w-full mx-auto bg-top-gray-bottom-near-black">
+		<ul className="mx-auto list-none inline-block m-0 p-0">
 			<MenuItem href="/">Inicio</MenuItem>
 			<MenuItem href="/noticias/">Noticias</MenuItem>
 			<MenuItem href="/locales/">Locales</MenuItem>
