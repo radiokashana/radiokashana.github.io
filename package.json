@@ -19,7 +19,8 @@
 		"test:visual:ui": "playwright test --ui",
 		"test:visual:headed": "playwright test --headed",
 		"test:visual:update": "playwright test --update-snapshots",
-		"test:visual:external": "playwright test --project=chromium"
+		"test:visual:external": "playwright test --project=chromium",
+		"convert:html-to-jsx": "node scripts/html-to-jsx-converter.js"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^3.1.0",
