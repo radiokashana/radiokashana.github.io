@@ -31,6 +31,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           },
         },
         image: "String",
+        imagePosition: {
+          type: "String",
+          resolve: (source) => source.imagePosition || "center",
+        },
       },
     }),
   ]);

@@ -88,7 +88,7 @@
 /* Modern news section styling */
 #news article {
 	position: relative;
-	max-height: 400px;
+	/*max-height: 400px;*/
 	overflow: hidden;
 	text-overflow: ellipsis;
 	background: var(--bg-primary);
@@ -245,7 +245,7 @@
 
 .news-thumb-card img {
 	width: 100%;
-	height: 200px;
+	height: 280px; /* Increased from 240px to 280px */
 	object-fit: cover;
 	transition: transform 0.3s ease;
 }
@@ -255,19 +255,25 @@
 }
 
 .news-thumb-card .content {
-	padding: 1.25rem;
+	padding: 1.25rem 1.5rem 1.5rem 1.5rem; /* Reduced top padding from 1.5rem to 1.25rem */
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	min-height: 180px; /* Increased from 160px to accommodate 4-line titles */
 }
 
 .news-thumb-card h2 {
 	font-size: 1.125rem;
 	font-weight: 700;
 	color: var(--text-primary);
-	margin-bottom: 0.5rem;
+	margin-bottom: 0; /* Remove bottom margin since we have fixed height */
 	line-height: 1.4;
 	transition: color 0.2s ease;
+	height: 5.6rem; /* Fixed height for exactly 4 lines (1.4 line-height * 4) */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4; /* Changed from 3 to 4 lines */
+	-webkit-box-orient: vertical;
 }
 
 .news-thumb-card:hover h2 {
@@ -276,9 +282,10 @@
 
 .news-thumb-card .excerpt {
 	color: var(--text-secondary);
-	font-size: 0.875rem;
+	font-size: 1rem; /* Increased from 0.9rem to 1rem */
 	line-height: 1.6;
 	flex-grow: 1;
+	margin-top: 0.75rem; /* Add space between title and excerpt */
 }
 
 .news-thumb-card .excerpt p {
@@ -529,3 +536,14 @@ header img:hover {
 .article-content a:hover {
 	color: var(--brand-secondary);
 }
+
+/* Image positioning utility classes */
+.img-position-center { object-position: center center; }
+.img-position-top { object-position: center top; }
+.img-position-bottom { object-position: center bottom; }
+.img-position-left { object-position: left center; }
+.img-position-right { object-position: right center; }
+.img-position-top-left { object-position: left top; }
+.img-position-top-right { object-position: right top; }
+.img-position-bottom-left { object-position: left bottom; }
+.img-position-bottom-right { object-position: right bottom; }

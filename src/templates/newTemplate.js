@@ -20,6 +20,41 @@ const mdxComponents = {
 	a: (props) => <a className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200" {...props} />,
 }
 
+// Function to convert imagePosition to CSS object-position value
+const getObjectPosition = (position = 'center') => {
+	// Handle all edge cases: undefined, null, empty string, invalid values
+	if (!position || typeof position !== 'string' || position.trim() === '') {
+		// Log in development for debugging
+		if (process.env.NODE_ENV === 'development' && position !== undefined) {
+			console.warn('Invalid imagePosition value:', position, '- defaulting to center')
+		}
+		return 'center center'
+	}
+	
+	const normalizedPosition = position.toLowerCase().trim()
+	
+	const positionMap = {
+		'center': 'center center',
+		'top': 'center top',
+		'bottom': 'center bottom',
+		'left': 'left center',
+		'right': 'right center',
+		'top-left': 'left top',
+		'top-right': 'right top',
+		'bottom-left': 'left bottom',
+		'bottom-right': 'right bottom'
+	}
+	
+	// Check if position exists in map
+	const result = positionMap[normalizedPosition]
+	if (!result && process.env.NODE_ENV === 'development') {
+		console.warn('Unknown imagePosition value:', position, '- defaulting to center')
+	}
+	
+	// Return mapped position or default to center
+	return result || 'center center'
+}
+
 const NewTemplate = ({data, location, children}) => {
 	const { frontmatter, excerpt } = data.mdx
 
@@ -40,7 +75,8 @@ const NewTemplate = ({data, location, children}) => {
 						<img 
 							src={frontmatter.image} 
 							alt={frontmatter.title}
-							className="w-full h-64 md:h-80 object-cover"
+							className="w-full h-72 md:h-80 lg:h-96 object-cover"
+							style={{ objectPosition: getObjectPosition(frontmatter?.imagePosition) }}
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -76,6 +112,7 @@ export const pageQuery = graphql`
 				title
 				date(formatString: "DD [de] MMMM [de] YYYY [a las] HH:mm [horas]", locale: "es")
 				image
+				imagePosition
 			}
 		}
 	}
