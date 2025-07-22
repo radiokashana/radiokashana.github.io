@@ -285,8 +285,33 @@
 	margin-bottom: 0.5rem;
 }
 
-/* Enhanced Facebook Live embed styling */
+/* Facebook Live container styling */
 #liveContent {
+	width: 100%;
+	background-color: theme("colors.white");
+}
+
+#liveContent iframe {
+	width: 100%;
+	height: 200px; /* Adjusted for smaller width */
+	border: none;
+	display: block;
+}
+
+@media screen and (max-width: 30em) {
+	#liveContent iframe {
+		height: 170px; /* Smaller on mobile */
+	}
+}
+
+iframe {
+	height: 225px;
+	width: 100%;
+}
+
+
+/* Enhanced Facebook Live embed styling */
+/* #liveContent {
 	background: var(--bg-primary);
 	border-radius: 0.75rem;
 	box-shadow: var(--shadow-md);
@@ -329,7 +354,7 @@
 	#liveContent iframe {
 		height: 170px;
 	}
-}
+} */
 
 /* Utility classes for modern design */
 .container-modern {
@@ -427,12 +452,6 @@ header img {
 
 header img:hover {
 	transform: scale(1.02);
-}
-
-iframe {
-	height: 225px;
-	width: 100%;
-	border-radius: 0.5rem;
 }
 
 /* Article content styling to ensure proper paragraph spacing */

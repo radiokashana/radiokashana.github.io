@@ -20,8 +20,8 @@ const mdxComponents = {
 	a: (props) => <a className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200" {...props} />,
 }
 
-const NewTemplate = ({data, location}) => {
-	const { frontmatter, body, excerpt } = data.mdx
+const NewTemplate = ({data, location, children}) => {
+	const { frontmatter, excerpt } = data.mdx
 
 	return (
 		<IndexLayout customSEO>
@@ -57,7 +57,7 @@ const NewTemplate = ({data, location}) => {
 					<div className="p-6 md:p-8">
 						<div className="prose prose-gray max-w-none">
 							<MDXProvider components={mdxComponents}>
-								{body}
+								{children}
 							</MDXProvider>
 						</div>
 					</div>
@@ -72,7 +72,6 @@ export const pageQuery = graphql`
 		mdx(id: { eq: $id }) {
 			id
 			excerpt(pruneLength: 200)
-			body
 			frontmatter {
 				title
 				date(formatString: "DD [de] MMMM [de] YYYY [a las] HH:mm [horas]", locale: "es")
