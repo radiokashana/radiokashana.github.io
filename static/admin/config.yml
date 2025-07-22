@@ -19,6 +19,7 @@ collections:
         - { label: "Titulo", name: "title" }
         - { label: "Fecha", name: "date", widget: "datetime" }
         - { label: "Imagen", name: "image", widget: "image" }
+        - { label: "Posición de Imagen", name: "imagePosition", widget: "select", options: ["center", "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"], default: "center", required: false }
         - { label: "Contenido", name: "body", widget: "markdown" }
     - name: settings
       label: Configuracion

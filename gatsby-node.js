@@ -31,6 +31,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           },
         },
         image: "String",
+        imagePosition: {
+          type: "String",
+          resolve: (source) => source.imagePosition || "center",
+        },
       },
     }),
   ]);
@@ -46,6 +50,9 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            internal {
+              contentFilePath
+            }
             fields {
               slug
             }
@@ -66,7 +73,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = node.id;
       createPage({
         path: node.fields.slug,
-        component: newTemplate,
+        component: `${newTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
         context: {
           id,
         },

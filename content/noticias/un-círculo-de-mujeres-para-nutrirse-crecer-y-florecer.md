@@ -2,6 +2,7 @@
 title: "Círculo de Mujeres para nutrirse, crecer y florecer "
 date: "2019-07-19T20:14:48-06:00"
 image: /img/67152926_490768345061125_5968777310369742848_n.jpg
+imagePosition: top
 ---
 
 Les presento a Beatriz, ella nos cuenta quién es y de qué trata su proyecto con Mujeres, aquí, en el municipio de Mulegé.
