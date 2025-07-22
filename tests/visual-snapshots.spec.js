@@ -104,6 +104,34 @@ test.describe("Visual Snapshot Tests", () => {
 		);
 	});
 
+	test("pagination component visual test", async ({ page }) => {
+		await page.goto("/");
+
+		// Wait for pagination to load
+		await page.waitForSelector('[data-testid="pagination"]');
+
+		// Test the pagination component
+		await expect(page.locator('[data-testid="pagination"]')).toHaveScreenshot(
+			"pagination-component.png",
+		);
+	});
+
+	test("page 2 without main news test", async ({ page }) => {
+		await page.goto("/page/2/");
+
+		// Wait for content to load
+		await page.waitForSelector('[data-testid="news-articles"]');
+		
+		// Verify that main news section is not present
+		const mainNewsExists = await page.locator('[data-testid="main-news"]').count();
+		expect(mainNewsExists).toBe(0);
+
+		// Test the page 2 structure (ads + news list, no main news)
+		await expect(page.locator('[data-testid="homepage-content"]')).toHaveScreenshot(
+			"page2-content.png",
+		);
+	});
+
 	test("mocked homepage data test", async ({ page }) => {
 		// Set up GraphQL mock with consistent data
 		await page.route("**/___graphql", async (route) => {
