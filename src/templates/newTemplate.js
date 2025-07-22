@@ -30,9 +30,9 @@ const getObjectPosition = (position = 'center') => {
 		}
 		return 'center center'
 	}
-	
+
 	const normalizedPosition = position.toLowerCase().trim()
-	
+
 	const positionMap = {
 		'center': 'center center',
 		'top': 'center top',
@@ -44,13 +44,13 @@ const getObjectPosition = (position = 'center') => {
 		'bottom-left': 'left bottom',
 		'bottom-right': 'right bottom'
 	}
-	
+
 	// Check if position exists in map
 	const result = positionMap[normalizedPosition]
 	if (!result && process.env.NODE_ENV === 'development') {
 		console.warn('Unknown imagePosition value:', position, '- defaulting to center')
 	}
-	
+
 	// Return mapped position or default to center
 	return result || 'center center'
 }
@@ -72,15 +72,15 @@ const NewTemplate = ({data, location, children}) => {
 				<article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
 					{/* Article Header */}
 					<div className="relative">
-						<img 
-							src={frontmatter.image} 
+						<img
+							src={frontmatter.image}
 							alt={frontmatter.title}
 							className="w-full h-72 md:h-80 lg:h-96 object-cover"
 							style={{ objectPosition: getObjectPosition(frontmatter?.imagePosition) }}
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-							<time className="inline-block bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+							<time className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
 								{frontmatter.date}
 							</time>
 							<h1 className="text-2xl md:text-4xl font-bold leading-tight">

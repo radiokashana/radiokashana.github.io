@@ -12,7 +12,7 @@ const Embed = ({ html }) => (
     }}
   >
     <div
-      className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-3 flex justify-between items-center"
+      className="bg-gradient-to-r from-red-600 to-red-700 text-white p-3 flex justify-between items-center"
       data-testid="live-embed-header"
     >
       <span className="text-sm font-semibold">Radio Kashana - En vivo</span>

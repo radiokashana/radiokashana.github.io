@@ -2,8 +2,8 @@
 
 :root {
 	/* Modern color palette inspired by contemporary news sites */
-	--brand-primary: #2563eb;
-	--brand-secondary: #dc2626;
+	--brand-primary: #D80125; /*#2563eb;*/
+	--brand-secondary: #2563eb; /*#dc2626; */
 	--brand-accent: #059669;
 	--text-primary: #111827;
 	--text-secondary: #6b7280;
