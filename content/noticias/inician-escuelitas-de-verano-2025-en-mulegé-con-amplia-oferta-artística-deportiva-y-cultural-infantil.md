@@ -2,7 +2,7 @@
 title: INICIAN ESCUELITAS DE VERANO 2025 EN MULEGÉ CON AMPLIA OFERTA ARTÍSTICA,
   DEPORTIVA Y CULTURAL INFANTIL.
 date: 2025-07-22T20:30:00.000Z
-image: /img/escuelitas-verano.jpeg
+image: /img/verano.jpeg
 imagePosition: center
 ---
 Santa Rosalía, B.C.S.– Con gran entusiasmo y participación de niñas y niños muleginos, este lunes comenzaron las Escuelitas de Verano 2025, un programa integral impulsado por el H. XVIII Ayuntamiento de Mulegé que busca brindar alternativas formativas, recreativas y culturales durante el periodo vacacional.
