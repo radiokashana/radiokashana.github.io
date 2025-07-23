@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
+import SocialShare from "../components/SocialShare"
 import { formatDateSpanish } from "../utils/dateUtils"
 
 // Function to convert imagePosition to CSS object-position value
@@ -42,6 +43,7 @@ const getObjectPosition = (position = 'center') => {
 
 const NewTemplate = ({data, location, children}) => {
 	const { frontmatter, excerpt } = data.mdx
+	const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://radiokashana.github.io${location.pathname}`
 
 	return (
 		<IndexLayout customSEO>
@@ -79,6 +81,13 @@ const NewTemplate = ({data, location, children}) => {
 						<div className="prose prose-gray max-w-none">
 							{children}
 						</div>
+						
+						{/* Social Share Component */}
+						<SocialShare 
+							url={currentUrl}
+							title={frontmatter.title}
+							description={excerpt}
+						/>
 					</div>
 				</article>
 			</div>
