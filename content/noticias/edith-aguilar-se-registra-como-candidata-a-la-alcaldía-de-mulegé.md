@@ -1,6 +1,6 @@
 ---
 title: Edith Aguilar se registra como candidata a la alcaldía de Mulegé
-date: '2018-04-15T13:24:55-06:00'
+date: 2018-04-15T19:24:55.000Z
 image: /img/30121132_1834379123279941_1451330420_n.jpg
 ---
 Ayer por la tarde, acompañada por cientos de simpatizantes, Edith Aguilar se presentó en las oficinas del Consejo Municipal Electoral de Mulegé a registrarse para contender en los próximos comicios electorales como candidata por el PAN, PRD, PRS y PH a la presidencia municipal de Mulegé.

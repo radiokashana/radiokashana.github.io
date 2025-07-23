@@ -2,7 +2,7 @@
 title: >-
   Por segunda vez en la historia habrá Debate entre Candidatos a Presidente
   Municipal de Mulegé por Radiokashana
-date: '2018-06-07T12:29:25-06:00'
+date: 2018-06-07T18:29:25.000Z
 image: '/img/micro-pc-y-cerebro.jpg'
 ---
 Nosotros hicimos historia al organizar un debate entre  candidatos a la presidencia municipal de Mulegé por primera vez el 19 de mayo del 2015, de hecho, creemos que hicimos historia al tener bajo el mismo techo por primera vez a cuatro simultaneamente. Lo volveremos a hacer este domingo 10 de junio a las 18 horas, cuando transmitiremos el segundo debate en la historia de nuestro municipio.

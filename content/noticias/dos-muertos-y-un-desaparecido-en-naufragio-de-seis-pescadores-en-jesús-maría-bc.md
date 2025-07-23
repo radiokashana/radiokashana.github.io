@@ -2,7 +2,7 @@
 title: >-
   Dos muertos y un desaparecido en naufragio de seis pescadores en Jesús María,
   BC
-date: '2018-05-02T22:02:36-06:00'
+date: 2018-05-03T04:02:36.000Z
 image: /img/momento-naufragio_lprima20170108_0098_32.png
 ---
 \*Ante la lejanía del municipio de Ensenada, el Procurador de BCS ofreció a su homóloga realizar las investigaciones necesarias

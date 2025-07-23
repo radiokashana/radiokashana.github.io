@@ -2,7 +2,7 @@
 title: >-
   El senador Barroso con pescadores ribereños afectados por  creación de refugio
   marino en el Golfo de Ulloa
-date: '2018-06-08T16:31:33-06:00'
+date: 2018-06-08T22:31:33.000Z
 image: /img/boletin-actividades-pesqueras.jpg
 ---
 El senador Ricardo Barroso Agramont manifestó su solidaridad con los pescadores ribereños que resultarán afectados por la creación del refugio en 1.9 millones de hectáreas recién publicado en el Diario Oficial de la Federación con motivo de la protección a la tortuga amarilla, derivado de la mortandad que esta especie registra en el llamado Golfo de Ulloa, y a la que sin razón alguna se quiere atribuir a la interacción con las artes de pesca ribereñas, según señaló el legislador.

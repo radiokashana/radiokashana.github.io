@@ -1,6 +1,6 @@
 ---
 title: Toman medidas cautelares contra imputado por lesiones simples en Santa Rosalía
-date: '2018-08-13T15:36:29-06:00'
+date: 2018-08-13T21:36:29.000Z
 image: /img/ambulancia-ejecutados-patrulla-990x660.jpg
 ---
 El 20 de julio del año en curso, el imputado llegó a un domicilio que se ubica en el ejido San Lucas y agredió a la víctima golpeándola en diversas partes del cuerpo en varias ocasiones, provocándole lesiones que tardan mas de 15 días en sanar y no ponen en riesgo la vida.

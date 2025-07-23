@@ -1,6 +1,6 @@
 ---
 title: Acerca Secretaría de Salud servicios preventivos a estudiantes de secundaria
-date: '2018-05-14T21:16:27-06:00'
+date: 2018-05-15T03:16:27.000Z
 image: /img/sep.jpg
 ---
 Como parte de las acciones de prevención que efectúan los Centros de Atención Primaria en Adicciones (CAPA) en Baja California Sur, se realizó la aplicación de cuestionarios de valoración en escuelas de nivel básico de Cabo San Lucas, cuyo objetivo es detectar de manera oportuna a jóvenes que están en riesgo de consumir alguna sustancia psicoactiva, o que ya presentan este problema. 

@@ -1,6 +1,6 @@
 ---
 title: Abandera alcaldesa instalación de Comité Comunitario
-date: '2021-10-23T09:17:44-06:00'
+date: 2021-10-23T15:17:44.000Z
 image: /img/comite.jpeg
 ---
 Santa Rosalía, B. C. S.- Con la participación de autoridades estatales y municipales, Edith Aguilar Villavicencio, presidenta municipal de Mulegé, abanderó el protocolo de instalación del Comité Comunitario sobre Derechos Sexuales y Reproductivos en la localidad.

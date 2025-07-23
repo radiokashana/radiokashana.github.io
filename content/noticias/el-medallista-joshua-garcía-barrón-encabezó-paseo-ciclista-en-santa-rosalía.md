@@ -1,6 +1,6 @@
 ---
 title: El medallista Joshua García Barrón encabezó paseo ciclista en Santa Rosalía
-date: '2018-03-21T02:19:52-07:00'
+date: 2018-03-21T09:19:52.000Z
 image: /img/foto-1-5.jpg
 ---
 Este lunes 19 de marzo se llevó a cabo en la cabecera  municipal el “Paseo Ciclista 7k #SantaRosalía”, encabezado por el medallista nacional Brian Joshua García Barrón y la Alcaldesa Cecilia López González, con la  participación de los clubes de ciclismo de Guerrero Negro, Vizcaíno, Bahía Tortugas y  Santa Rosalía, así como niños y niñas y población en general que gustan practicar de este deporte.

@@ -1,6 +1,6 @@
 ---
 title: Abren nuevo vuelo de Loreto a San José del Cabo
-date: '2018-03-13T14:00:58-07:00'
+date: 2018-03-13T21:00:58.000Z
 image: /img/avion.jpg
 ---
 Iniciará a partir del 3 de abril la operación del nuevo vuelo de una aerolínea local con ruta Guadalajara- San José del Cabo- Loreto, informó el titular de la Secretaría de Turismo, Economía y Sustentabilidad (SETUES), Luis Genaro Ruíz Hernández, al tiempo de abundar en los grandes beneficios que esta nueva oferta representa al conectar al pueblo mágico con uno de los aeropuertos con mayor flujo de pasaje.

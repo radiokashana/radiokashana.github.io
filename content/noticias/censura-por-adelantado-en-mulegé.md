@@ -1,6 +1,6 @@
 ---
 title: Censura por adelantado en Mulegé
-date: '2018-11-14T05:19:58-07:00'
+date: 2018-11-14T12:19:58.000Z
 image: /img/fpb-palacio.jpg
 ---
 En cincuenta y dos días de gobierno de Felipe Prado he vivido más agresiones y abuso de autoridad que en los seis años anteriores, desde que ejerzo el periodismo en mi ciudad natal, Santa Rosalía. 

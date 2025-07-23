@@ -1,6 +1,6 @@
 ---
 title: Tinta Negra - Justicia divina VS justicia humana
-date: "2018-06-26T20:11:00-06:00"
+date: 2018-06-27T02:11:00.000Z
 image: /img/tinta-negra-2.jpg
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Inicia operativo del programa "Paisano" de semana santa
-date: '2018-03-13T13:00:00-07:00'
+date: 2018-03-13T20:00:00.000Z
 image: /img/programa-paisano.jpg
 ---
 Para garantizar el ingreso y tránsito seguro al país de los mexicanos que residen legalmente en Estados Unidos, el Instituto Nacional de Migración (INM) de la Secretaría de Gobernación arrancó el día 9 de marzo 2018 el Operativo de Semana Santa 2018, en el que se espera recibir cerca de 2 millones de connacionales en este periodo hasta el 9 de abril 2018.

@@ -2,7 +2,7 @@
 title: >-
   Por primera vez en BCS, una persona con discapacidad se certifica como guía de
   turistas
-date: '2018-05-14T20:05:06-06:00'
+date: 2018-05-15T02:05:06.000Z
 image: /img/setues.jpg
 ---
 Baja California Sur es un estado con vocación turística, más de 61 mil familias sudcalifornianas se dedican a esta actividad, y esta cifra va en aumento, lo que fortalece la competitividad de los servicios que se ofrecen a los visitantes, señaló el secretario de Turismo, Economía y Sustentabilidad, Luis Humberto Araiza López, luego de dar a conocer la certificación de una persona con discapacidad como Guía de Turistas, especializado hacia la naturaleza. 

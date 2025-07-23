@@ -1,6 +1,6 @@
 ---
 title: Escucha la emisión 241 de Eclectomeiroland
-date: '2018-06-15T18:55:53-06:00'
+date: 2018-06-16T00:55:53.000Z
 image: /img/eclectomeiroland-2-3.png
 ---
 Paranoia para para piratones trae música de los Beatles interpretada por los Bee Gees, nada más para empezar, entre promesas vacías de candigatos perrunos.\

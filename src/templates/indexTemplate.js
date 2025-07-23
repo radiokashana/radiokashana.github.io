@@ -15,7 +15,6 @@ const IndexTemplate = ({ data, pageContext }) => {
 
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
-		.sort((a, b) => new Date(b.node.frontmatter.dateRaw) - new Date(a.node.frontmatter.dateRaw))
 
 	const newsCards = news.map(edge =>
 		<NewThumb
@@ -66,8 +65,7 @@ export const pageQuery = graphql`
 					}
 					frontmatter {
 						title
-						date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
-						dateRaw: date
+						date
 						image
 					}
 				}

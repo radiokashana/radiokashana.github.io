@@ -9,6 +9,7 @@ import Embed from "../components/embed"
 import NewThumbList from "../components/new-thumb-list"
 import NewThumb from "../components/new-thumb"
 import Pagination from "../components/pagination"
+import { formatDateSpanish } from "../utils/dateUtils"
 
 const IndexPage = ({ data, location }) => {
 	const { edges } = data.allMdx
@@ -16,7 +17,6 @@ const IndexPage = ({ data, location }) => {
 
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
-		.sort((a, b) => new Date(b.node.frontmatter.dateRaw) - new Date(a.node.frontmatter.dateRaw))
 
 	// Configuration for pagination
 	const mainNewsCount = 4
@@ -33,7 +33,7 @@ const IndexPage = ({ data, location }) => {
 				key={edge.node.id}
 				href={edge.node.fields.slug}
 				title={edge.node.frontmatter.title}
-				date={edge.node.frontmatter.date}
+				date={formatDateSpanish(edge.node.frontmatter.date)}
 				img={{ src: edge.node.frontmatter.image, alt: "" }} />
 		)
 
@@ -88,8 +88,7 @@ export const pageQuery = graphql`
 					}
 					frontmatter {
 						title
-						date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
-						dateRaw: date
+						date
 						image
 					}
 				}

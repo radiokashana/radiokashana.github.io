@@ -1,6 +1,6 @@
 ---
 title: Candidato al Senado se reúne con habitantes de Chametla
-date: '2018-06-15T15:52:43-06:00'
+date: 2018-06-15T21:52:43.000Z
 image: /img/foto1_reunion_chametla.jpeg
 ---
 Ante la desigualdad y el olvido de algunas comunidades en la entidad, Baja California Sur merece que cada comunidad reciba un trato de acuerdo a sus necesidades para impulsar el potencial del desarrollo económico de los sudcalifornianos, aseguró el candidato a senador de la república, Juan Alberto Valdivia Alvarado.

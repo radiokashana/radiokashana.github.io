@@ -2,7 +2,7 @@
 title: >-
   Valdivia se declara ganador del debate entre candidatos al Senado, con
   propuestas y generando contraste
-date: '2018-05-14T21:27:10-06:00'
+date: 2018-05-15T03:27:10.000Z
 image: /img/foto1_debate_candidatos.jpg
 ---
 El debate entre candidatos al Senado de la República lo ganamos porque presentamos propuestas serias y viables, lo que permitió que la ciudadanía contraste proyectos de nación y para nuestra entidad, Juan Alberto Valdivia Alvarado, abanderado del Partido Revolucionario Institucional.

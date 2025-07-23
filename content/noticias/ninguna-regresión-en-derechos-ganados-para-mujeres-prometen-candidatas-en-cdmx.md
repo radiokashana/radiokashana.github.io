@@ -2,7 +2,7 @@
 title: >-
   Ninguna regresión en derechos ganados para mujeres, prometen candidatas en 
   CDMX
-date: '2018-04-06T13:17:53-06:00'
+date: 2018-04-06T19:17:53.000Z
 image: /img/vidacotidiana01_mg_0945cesarmartinezlopez.jpg
 ---
 Las candidatas de las coaliciones encabezadas por Movimiento Regeneración Nacional (Morena) y el Partido de la Revolución Democrática (PRD), Claudia Sheinbaum Pardo y Alejandra Barrales Magdaleno, respectivamente, presentaron sus propuestas en materia de Derechos Humanos de las mujeres que van desde darles 2 mil 500 pesos mensuales hasta atender la Alerta de Violencia de Género.

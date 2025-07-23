@@ -1,6 +1,6 @@
 ---
 title: PGJE vincula a proceso a imputado por robo en Loreto
-date: '2018-05-15T10:45:33-06:00'
+date: 2018-05-15T16:45:33.000Z
 image: /img/logo-6-280x168.png
 ---
 El viernes 11 del mes en curso, la Procuraduría General de Justicia del Estado (PGJE), obtuvo vinculación a proceso contra una persona del sexo masculino, por su probable responsabilidad en la comisión de delito de robo.

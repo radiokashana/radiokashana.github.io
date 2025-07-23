@@ -1,6 +1,6 @@
 ---
 title: Asegura PGJE en Guerrero Negro a individuo en posesión de 65 dosis de cristal
-date: '2018-05-25T15:15:51-06:00'
+date: 2018-05-25T21:15:51.000Z
 image: /img/29939068_1820264534691400_231003301_n.jpg
 ---
 Este martes 22 del mes en curso, elementos de investigación de la Policía Ministerial, adscritos a la Unidad Especializada en Investigación y Judicialización de Delito de Comercio de Narcóticos Destinados al Consumo Final, aseguraron a una persona del sexo masculino, con 65 dosis de sustancias ilícitas en la colonia Centro de esa población.

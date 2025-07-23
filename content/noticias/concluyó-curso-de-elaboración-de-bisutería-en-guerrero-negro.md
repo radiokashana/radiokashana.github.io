@@ -1,6 +1,6 @@
 ---
 title: Concluyó curso de elaboración de bisutería en Guerrero Negro
-date: '2018-05-30T08:50:50-06:00'
+date: 2018-05-30T14:50:50.000Z
 image: /img/stds.jpg
 ---
 Como parte de las acciones permanentes de atención a la población femenina que lleva a cabo la Secretaría del Trabajo Desarrollo Social (STDS), a través del Servicio Nacional de Empleo en la entidad (SNEBCS), se realizó la clausura del curso de “Elaboración de Bisutería”, que se impartió a un grupo de 25 mujeres en Guerrero Negro, informó Gustavo Hernández Vela, titular de la dependencia estatal.

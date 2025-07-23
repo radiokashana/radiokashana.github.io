@@ -1,6 +1,6 @@
 ---
 title: Destaca BCS a nivel nacional en el sector industrial
-date: '2018-04-10T20:25:20-06:00'
+date: 2018-04-11T02:25:20.000Z
 image: /img/destaca.jpg
 ---
 Baja California Sur se destacó a nivel nacional como el** Estado del país con mayor crecimiento en su actividad industrial** con un 29.7 por ciento, de acuerdo con datos del Instituto Nacional de Estadística y Geografía (INEGI).

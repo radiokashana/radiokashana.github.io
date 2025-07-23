@@ -1,6 +1,6 @@
 ---
 title: Isaías González explica simulación de Ricardo Anaya
-date: '2018-03-21T21:49:26-07:00'
+date: 2018-03-22T04:49:26.000Z
 image: /img/dsc_0933.jpg
 ---
 Como lo dijo claramente José Antonio Meade, “Ricardo Anaya es un candidato especializado en la simulación; simula recepciones, lo mismo que operaciones  inmobiliarias”, afirmó Isaías González Nava, coordinador de la campaña de José  Antonio Meade en Baja California Sur, al destacar que ahora se sabe que el abanderado de la coalición Por México al Frente también es señalado por falsificar documentos.

@@ -1,6 +1,6 @@
 ---
 title: Contundente el respaldo para Edith Aguilar en Santa Rosalía
-date: '2018-05-25T15:02:09-06:00'
+date: 2018-05-25T21:02:09.000Z
 image: /img/foto-1-9.jpeg
 ---
 La aspirante a la alcaldía de Mulegé, **Edith Aguilar Villavicencio**, acompañada del candidato a la diputación federal, **Venustiano “Tano” Pérez Sánchez**, se reunió al aire libre con las más de 500 personas que integran la estructura de coordinadores y de promoción al voto de Santa Rosalía, a quienes les agradeció infinitamente por el apoyo a su candidatura rumbo a las elecciones del 1º de julio, y llevar junto con ella casa por casa, las propuestas de este proyecto.

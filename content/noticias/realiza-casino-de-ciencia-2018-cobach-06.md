@@ -1,6 +1,6 @@
 ---
 title: Realiza Casino de Ciencia 2018 Cobach 06
-date: '2018-12-11T13:40:41-07:00'
+date: 2018-12-11T20:40:41.000Z
 image: /img/casino-de-ciencia.jpg
 ---
 Durante la tarde del lunes 10 de diciembre realizó el Colegio de Bachilleres Plantel 06 (COBACH) el Casino de Ciencia 2018, organizado por la maestra Lourdes Rosalia Gastélum Serna, que imparte la materia de química y biología, involucrando al programa Construye T.

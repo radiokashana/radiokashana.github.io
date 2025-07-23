@@ -2,7 +2,7 @@
 title: >-
   Se realizó con gran éxito el primer Sábado Juvenil "Tokando Ando" en Santa
   Rosalía
-date: '2018-03-21T17:19:13-07:00'
+date: 2018-03-22T00:19:13.000Z
 image: /img/foto-1-6.jpg
 ---
 El H. XV Ayuntamiento de Mulegé a través del Instituto

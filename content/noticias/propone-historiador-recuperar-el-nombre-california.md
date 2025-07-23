@@ -1,6 +1,6 @@
 ---
 title: Propone historiador recuperar el nombre California
-date: '2019-06-20T16:20:32-06:00'
+date: 2019-06-20T22:20:32.000Z
 image: /img/oceans-oasis-snapshot5.jpg
 ---
 El investigador Carlos Lazcano Sahagún propuso que el nombre oficial del Estado de Baja California Sur regrese a su primera denominación y se le llame “California”, ya que fue aquí donde originalmente se dio ese nombre y que el hoy Estado de Baja California cambie su nombre oficial por el de “California Norte”.

@@ -1,6 +1,6 @@
 ---
 title: Edith Aguilar señala que las mujeres serán el eje central de su gobierno
-date: '2018-05-14T20:02:04-06:00'
+date: 2018-05-15T02:02:04.000Z
 image: /img/foto-1-1.jpeg
 ---
 “Las mujeres son el eje central de nuestras familias y lo serán también de mi gobierno, con la creación de un área especializada en atención a madres de familia emprendedoras”, así lo afirmó Edith Aguilar, candidata a la Presidencia Municipal de Mulegé, en sus recorridos por todo el municipio.

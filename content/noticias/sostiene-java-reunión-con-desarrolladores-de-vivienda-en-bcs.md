@@ -1,6 +1,6 @@
 ---
 title: Sostiene JAVA reunión con desarrolladores de vivienda en BCS
-date: '2018-03-13T14:45:42-07:00'
+date: 2018-03-13T21:45:42.000Z
 image: /img/java-desarrolladores.jpg
 ---
 La oportunidad de satisfacer la necesidad de los sudcalifornianos para contar con una vivienda digna y decorosa debe ser preocupación de los tres niveles de gobierno, aseguró el aspirante al Senado de la República por el Partido Revolucionario Institucional, Juan Alberto Valdivia Alvarado.

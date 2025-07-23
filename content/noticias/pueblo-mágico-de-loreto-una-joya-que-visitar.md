@@ -1,6 +1,6 @@
 ---
 title: 'Pueblo Mágico de Loreto, una joya que visitar'
-date: '2018-05-30T10:14:36-06:00'
+date: 2018-05-30T16:14:36.000Z
 image: /img/setues_famtrip-2.jpg
 ---
 Con el propósito de promover y difundir a nivel nacional las bellezas naturales, así como la riqueza histórica y gastronómica del Pueblo Mágico de Loreto, la Secretaría de Turismo, Economía y Sustentabilidad (SETUES) en coordinación con el Fideicomiso de Turismo Estatal (FITUES) llevó a cabo un viaje de familiarización del destino, (FAM-TRIP), donde participaron medios de comunicación del estado de Jalisco.

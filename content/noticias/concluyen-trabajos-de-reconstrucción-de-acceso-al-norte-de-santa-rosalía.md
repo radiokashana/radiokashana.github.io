@@ -1,6 +1,6 @@
 ---
 title: Concluyen trabajos de reconstrucción de acceso al norte de Santa Rosalía
-date: '2018-05-14T21:20:41-06:00'
+date: 2018-05-15T03:20:41.000Z
 image: /img/jec.jpg
 ---
 Con el propósito de que las localidades del norte de la entidad tengan mejores vías de comunicación, la Junta Estatal de Caminos (JEC) informó sobre la culminación de los trabajos de reconstrucción de los dos primeros kilómetros del acceso norte a la ciudad de Santa Rosalía, obra que fue una petición muy sentida de la ciudadanía.

@@ -1,6 +1,6 @@
 ---
 title: Tinta Negra “Nonato”
-date: '2018-06-19T19:57:27-06:00'
+date: 2018-06-20T01:57:27.000Z
 image: /img/92ef4f8d-fa3b-4bcd-ab82-ce09b0b55d61.jpeg
 ---
 Hoy quiero compartir  con ustedes un relato que escribí hace un par de años. Ojalá puedan opinar, es a razón de un tema que siempre ha causado polémica, más en esos días, cuando en Argentina se ha legalizado el aborto. Pese a todo, tenemos el derecho de hacernos una opinión propia, eso genera debate y siempre será bueno. En mi opinión todas son válidas y sobre todo respetadas.

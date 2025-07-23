@@ -2,7 +2,7 @@
 title: >-
   Gobierno del Estado y Gobierno Municipal continúan fortaleciendo a Mulegé con
   obras carreteras
-date: '2018-04-02T15:51:28-06:00'
+date: 2018-04-02T21:51:28.000Z
 image: /img/foto-1-bahiatortugas.jpg
 ---
 En un compromiso más cumplido y a más de 42 años de haberse iniciado los primeros trabajos por el entonces Gobernador Ángel Cesar Mendoza, en gira de trabajo por la Pacífico Norte el actual Gobernador de Baja California Sur, Carlos Mendoza Davis, hizo entrega de la pavimentación del último tramo carretero Vizcaíno-Bahía Tortugas, acompañado por la Alcaldesa Cecilia López González, el Diputado Francisco Javier Arce Arce y el Secretario de Planeación Urbana, Infraestructura y Movilidad, José Luis Escalera Morfín.

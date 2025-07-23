@@ -1,6 +1,6 @@
 ---
 title: CDMX creará programa para atender orfandad por feminicidio
-date: '2018-05-15T11:46:57-06:00'
+date: 2018-05-15T17:46:57.000Z
 image: /img/infancia19_cesarmartinezlopez.jpg
 ---
 El Instituto de las Mujeres de la Ciudad de México (Inmujeres) junto al Sistema para el Desarrollo Integrante de la Familia capitalino (DIF) informaron que crearán un “Programa de atención y cuidado a la niñez y adolescentes hijas e hijos de víctimas de feminicidio”.

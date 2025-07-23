@@ -1,6 +1,6 @@
 ---
 title: Medalla de oro para México en volley-ball playero
-date: '2019-06-10T15:39:35-06:00'
+date: 2019-06-10T21:39:35.000Z
 image: /img/norceca-campeones-la-paz-2019-990x660.jpg
 ---
 Este fin de semana se llevó a cabo la cuarta edición del torneo de voleibol de playa de la Confederación Norte, Centroamérica y el Caribe (Norceca) La Paz 2019, en el cual resultaron campeones los representantes de México, en la rama varonil y Canadá, en la femenil.

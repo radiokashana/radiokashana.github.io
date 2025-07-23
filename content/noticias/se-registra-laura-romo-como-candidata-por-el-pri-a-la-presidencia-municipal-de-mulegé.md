@@ -2,7 +2,7 @@
 title: >-
   Se registra Laura Romo como candidata por el PRI a la Presidencia Municipal de
   Mulegé
-date: '2018-04-25T11:01:02-06:00'
+date: 2018-04-25T17:01:02.000Z
 image: /img/30776775_1844630485588138_2021909505_n.jpg
 ---
 El pasado domingo 15 de Abril se llevó a cabo el registro de Laura Romo Campos ante el Consejo Municipal Electoral de Mulegé para participar en la próxima contienda electoral como candidata por el Partido Revolucionario Institucional (PRI) a la Presidencia Municipal de Mulegé.

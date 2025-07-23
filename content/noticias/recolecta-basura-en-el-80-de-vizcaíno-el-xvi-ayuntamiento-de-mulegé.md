@@ -1,6 +1,6 @@
 ---
 title: Recolecta basura en el 80% de Vizcaíno el XVI Ayuntamiento de Mulegé
-date: '2018-10-09T02:29:33-06:00'
+date: 2018-10-09T08:29:33.000Z
 image: /img/basura-2-1.jpg
 ---
 Con una cobertura del 80% en el servicio de recolección de basura han iniciado en el área de Servicios Públicos en la Delegación de Vizcaíno. “Se restablecieron las rutas porque había zonas que estaban muy abandonadas, las cuales tenían meses sin recibir servicio de recolección de basura; podemos decir que se está atendiendo toda la zona centro y la mayoría de las colonias del pueblo”, expresó el delegado interino de la comunidad de Villa Alberto Alvarado, Ricardo Camacho González.

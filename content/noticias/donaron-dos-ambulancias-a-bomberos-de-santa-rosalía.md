@@ -1,6 +1,6 @@
 ---
 title: Donaron dos ambulancias a Bomberos de Santa Rosalía
-date: '2018-08-21T15:00:36-06:00'
+date: 2018-08-21T21:00:36.000Z
 image: /img/ambulancias-bomberos.jpg
 ---
 Los Bomberos de la ciudad hermana de Santa Rosalía, Manhattan Beach, California, donaron dos ambulancias a los bomberos de esta localidad.

@@ -60,7 +60,6 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               title
               date
-              dateRaw: date
               image
             }
           }
@@ -103,7 +102,9 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages 2, 3, 4, etc.
     Array.from({ length: additionalPages }).forEach((_, i) => {
       const pageNumber = i + 2; // Start from page 2
-      const skip = mainNewsCount + (i * postsPerPage); // Skip main news + previous pages
+      // Page 1 shows 16 articles (4 main + 12 regular), so skip 16 for page 2
+      // Then skip 12 more for each subsequent page
+      const skip = (mainNewsCount + postsPerPage) + (i * postsPerPage); // Skip page 1 content + previous pages
       
       createPage({
         path: `/page/${pageNumber}`,

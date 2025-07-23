@@ -2,7 +2,7 @@
 title: >-
   Se fortalece programa de recolección de basura en la Reserva de la Biosfera de
   Vizcaíno
-date: '2018-04-21T11:32:50-06:00'
+date: 2018-04-21T17:32:50.000Z
 image: /img/vizcaino_setues.jpg
 ---
 Con la finalidad de atender la problemática sobre el manejo de basura en comunidades pertenecientes a la Reserva de la Biosfera del Vizcaíno (REBIVI), la Secretaría de Turismo, Economía y Sustentabilidad (SETUES) realizó una gira de trabajo por el municipio de Mulegé, en conjunto con personal del Ayuntamiento y representantes del comité del Área Natural Protegida.

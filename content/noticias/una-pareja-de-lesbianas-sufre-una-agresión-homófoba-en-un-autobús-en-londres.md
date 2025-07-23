@@ -1,6 +1,6 @@
 ---
 title: Una pareja de lesbianas sufre una agresión homófoba en un autobús en Londres
-date: '2019-06-07T13:35:09-06:00'
+date: 2019-06-07T19:35:09.000Z
 image: /img/1559920710_665433_1559922113_noticia_normal_recorte1.jpg
 ---
 Una pareja de lesbianas fue agredida y sufrió un robo en un ataque homófobo en un autobús de Londres, según ha explicado este viernes la policía británica, que está investigando el caso. Varios medios —entre ellos la BBC— han publicado que las mujeres fueron golpeadas por un grupo de hombres después de que estas se negaran a besarse, tal y como le pedían sus agresores. El suceso ocurrió en la madrugada del pasado jueves 30 de mayo en un autobús nocturno cuando la pareja se dirigía a Camden Town, un barrio londinense famoso por su mercado, sus tiendas y sus bares con música en directo.

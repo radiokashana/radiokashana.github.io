@@ -1,6 +1,6 @@
 ---
 title: 'Ayuntamiento  entrega uniformes a Policías '
-date: '2018-03-16T11:48:15-07:00'
+date: 2018-03-16T18:48:15.000Z
 image: /img/foto-1-entrega-en-santa-rosalia.jpg
 ---
 Como parte de las acciones en materia de seguridad pública emprendidas por el H. XV Ayuntamiento de Mulegé, en representación de la Alcaldesa Cecilia López González, el Secretario General, Luis Alberto Hernández González, acompañado por el Director de Seguridad Pública en Mulegé, Luis Arturo Navarrete Delgado, hicieron entrega por tercera ocasión en lo que va de la administración, un paquete de 3 uniformes a los elementos de las comunidades de Santa Rosalía, Vizcaíno y Guerrero Negro.

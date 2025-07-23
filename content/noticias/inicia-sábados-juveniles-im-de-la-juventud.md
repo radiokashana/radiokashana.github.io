@@ -1,6 +1,6 @@
 ---
 title: Inicia Sábados Juveniles IM de la Juventud
-date: '2018-03-14T15:41:28-07:00'
+date: 2018-03-14T22:41:28.000Z
 image: /img/sabados-jovenes.jpg
 ---
 Como parte de las acciones encaminadas a la creación de espacios enfocados a promover en la juventud la cultura y el deporte, el H. XV Ayuntamiento de Mulegé a través del Instituto Municipal de la Juventud en coordinación con la Dirección de Cultura y la Dirección del Deporte, iniciarán este 17 de marzo en el parque Morelos los sábados juveniles “Tokando-ando”, con música en vivo, concursos de baile y juegos recreativos.

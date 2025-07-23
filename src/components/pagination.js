@@ -15,7 +15,7 @@ const Pagination = ({ currentPage, totalPages, pathPrefix = "" }) => {
 			{!isFirst && (
 				<Link
 					to={currentPage - 1 === 1 ? "/" : prevPage}
-					className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+					className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-light transition-colors"
 				>
 					← Anterior
 				</Link>
@@ -29,9 +29,9 @@ const Pagination = ({ currentPage, totalPages, pathPrefix = "" }) => {
 					const isCurrentPage = page === currentPage
 
 					// Show page numbers with some logic to avoid too many
-					const showPage = 
-						page === 1 || 
-						page === totalPages || 
+					const showPage =
+						page === 1 ||
+						page === totalPages ||
 						Math.abs(page - currentPage) <= 2
 
 					if (!showPage) {
@@ -48,7 +48,7 @@ const Pagination = ({ currentPage, totalPages, pathPrefix = "" }) => {
 							to={pagePath}
 							className={`px-3 py-2 rounded transition-colors ${
 								isCurrentPage
-									? "bg-blue-600 text-white"
+									? "bg-primary-light text-white"
 									: "bg-gray-200 text-gray-700 hover:bg-gray-300"
 							}`}
 						>
@@ -62,7 +62,7 @@ const Pagination = ({ currentPage, totalPages, pathPrefix = "" }) => {
 			{!isLast && (
 				<Link
 					to={nextPage}
-					className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+					className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-light transition-colors"
 				>
 					Siguiente →
 				</Link>

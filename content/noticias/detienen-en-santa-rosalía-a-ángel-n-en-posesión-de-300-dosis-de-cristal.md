@@ -1,6 +1,6 @@
 ---
 title: Detienen en Santa Rosalía a Ángel "N" en posesión de 300 dosis de cristal
-date: '2018-05-30T12:22:08-06:00'
+date: 2018-05-30T18:22:08.000Z
 image: /img/detenido-704x391.jpg
 ---
 Como resultado de los trabajos de investigación realizados por la Unidad Especializada en Investigación del Delito de Comercio de Narcóticos Destinados al Consumo Final, los días 24 y 25 del mes en curso en los municipios de La Paz, Los Cabos y Mulegé, se logró el aseguramiento de 4 personas y mil setecientas dosis de sustancias ilícitas en diversos operativos de investigación.

@@ -1,6 +1,6 @@
 ---
 title: Hoy se cumplen 133 años de la fundación de Santa Rosalía
-date: '2018-07-07T18:32:44-06:00'
+date: 2018-07-08T00:32:44.000Z
 image: /img/img_0321.jpg
 ---
 Hoy se cumplen 133 años de la fundación de Santa Rosalía

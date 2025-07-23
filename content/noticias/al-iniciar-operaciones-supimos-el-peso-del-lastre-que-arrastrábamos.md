@@ -1,6 +1,6 @@
 ---
 title: Al iniciar operaciones supimos el peso del lastre que arrastrábamos
-date: '2018-06-20T12:16:31-06:00'
+date: 2018-06-20T18:16:31.000Z
 image: /img/pagando-demandas.jpg
 ---
 Cuando me decían que esta persona comentaba que él era el bueno de la radio, sonreía sintiendo pena ajena y pensaba "qué gandalla". Algo normal para quienes nos dedicamos a las ciencias sociales y trabajamos con humanos frustrados.

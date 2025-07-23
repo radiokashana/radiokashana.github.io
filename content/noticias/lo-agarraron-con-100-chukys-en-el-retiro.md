@@ -1,6 +1,6 @@
 ---
 title: Lo agarraron con 100 "chukys" en el Retiro
-date: '2018-06-29T18:41:17-06:00'
+date: 2018-06-30T00:41:17.000Z
 image: /img/29939068_1820264534691400_231003301_n.jpg
 ---
 Este martes 26 , elementos de la Unidad Especializada en Investigación del Delito de Comercio de Narcóticos, lograron asegurar a una persona del sexo masculino con sustancias ilícitas en esta localidad. 

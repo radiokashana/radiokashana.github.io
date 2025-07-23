@@ -1,6 +1,6 @@
 ---
 title: Tinta Negra / La memoria de Consuelo y El Boleo
-date: "2019-07-04T16:08:17-06:00"
+date: 2019-07-04T22:08:17.000Z
 image: /img/consuelo.jpg
 ---
 

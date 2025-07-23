@@ -1,6 +1,6 @@
 ---
 title: 'Sororidad: acto que salva'
-date: '2019-07-16T20:43:30-06:00'
+date: 2019-07-17T02:43:30.000Z
 image: /img/sororidad.jpg
 ---
 Ahora estoy aquí sentada tratando de escribir. Me cuesta tragar saliva, retener las lágrimas. No sé si de rabia o tristeza, dolor o impotencia.  Con la maldita opresión en el pecho que apenas me deja respirar. 

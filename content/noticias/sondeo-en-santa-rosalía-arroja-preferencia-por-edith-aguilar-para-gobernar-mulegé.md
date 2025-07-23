@@ -2,7 +2,7 @@
 title: >-
   Sondeo en Santa Rosalía arroja preferencia por Edith Aguilar para gobernar
   Mulegé
-date: '2018-05-24T17:03:21-06:00'
+date: 2018-05-24T23:03:21.000Z
 image: /img/edith-aguilar.jpg
 ---
 Realizamos un sondeo de opinión en Santa Rosalía el día 22 de mayo del presente año electoral con una simple pregunta abierta: ¿quién crees que será la próxima persona Presidente Municipal de Mulegé? El 60% de las personas opinaron que Edith Aguilar será quien presida el próximo Ayuntamiento de Mulegé.

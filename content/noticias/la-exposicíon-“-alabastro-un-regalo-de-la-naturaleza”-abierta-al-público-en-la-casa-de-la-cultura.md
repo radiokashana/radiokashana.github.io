@@ -2,7 +2,7 @@
 title: >-
   La exposicíon “ Alabastro, un regalo de la naturaleza” abierta al público en
   la Casa de la Cultura
-date: '2018-05-09T01:45:40-06:00'
+date: 2018-05-09T07:45:40.000Z
 image: /img/31355919_1762576537142059_5667043938710574843_n.jpg
 ---
 Desde mediados del pasado mes de Abril se encuentra abierta al público en general, en la casa de la cultura _Federico Galaz Ramírez_, la exposición titulada “_Alabastro, un regalo de la naturaleza_” del escultor **Narciso Antonio Arce Rubio.**

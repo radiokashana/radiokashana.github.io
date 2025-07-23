@@ -2,7 +2,7 @@
 title: >-
   Vargas Llosa solloza sus intenciones: achacar al narco crímenes de
   funcionarios
-date: '2018-03-21T22:04:42-07:00'
+date: 2018-03-22T05:04:42.000Z
 image: /img/vargas-llosa.jpg
 ---
 **Editorial**. Inconcebible que surgiera de un premio Nobel por sus letras, la oración que imputa a la libertad de expresión por los asesinatos de periodistas mexicanos. Varias inspiraciones bruscas, entrecortadas, seguidas; de su esperación (al parecer), formaron las declaraciones de Mario Vargas Llosa en el noticiero con más credibilidad de México. Insultó y mintió.

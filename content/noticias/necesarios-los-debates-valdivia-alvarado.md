@@ -1,6 +1,6 @@
 ---
 title: 'Necesarios los debates: Valdivia Alvarado'
-date: '2018-06-15T19:59:16-06:00'
+date: 2018-06-16T01:59:16.000Z
 image: /img/foto1_debates_necesarios.jpeg
 ---
 Los debates son un mecanismo indispensable para la democracia porque permite que los electores orientarán mejor su decisión en la presente elección, aseguró el candidato del Partido Revolucionario Institucional a senador de la república, Juan Alberto Valdivia Alvarado.

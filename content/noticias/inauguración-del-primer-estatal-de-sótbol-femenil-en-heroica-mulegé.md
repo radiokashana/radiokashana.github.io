@@ -1,6 +1,6 @@
 ---
 title: Inauguración del primer Estatal de Sóftbol Femenil en Heroica Mulegé
-date: '2018-05-28T10:30:41-06:00'
+date: 2018-05-28T16:30:41.000Z
 image: /img/foto-1-17.jpg
 ---
 Este fin de semana, con la participación de los contingentes de los municipios de Los Cabos, La Paz, Comondú y Loreto, siendo el anfitrión Mulegé, en el estadio de béisbol “Maistro Ortega” en la Heroica Mulegé, se llevó a cabo la inauguración del “Estatal de Sóftbol Femenil” categoría 25 y menores, lo que representa un orgullo para Mulegé, al tener un evento más de esta magnitud, ya que recientemente se tuvo el “Estatal Béisbol infantil U12” y el “Estatal de Fútbol Sub 17” en Santa Rosalía, aseguró la Alcaldesa Cecilia López González al poner en marcha los juegos en esta disciplina.

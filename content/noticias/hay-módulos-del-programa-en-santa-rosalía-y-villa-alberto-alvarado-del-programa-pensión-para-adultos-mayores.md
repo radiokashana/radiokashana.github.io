@@ -2,7 +2,7 @@
 title: >-
   Hay módulos en Santa Rosalía y Villa Alberto Alvarado del Programa Pensión
   para Adultos Mayores 
-date: '2018-03-13T14:57:59-07:00'
+date: 2018-03-13T21:57:59.000Z
 image: /img/susana-aguilar.jpg
 ---
 Con el propósito de ampliar los beneficios de los programas sociales de la Secretaría de Desarrollo Social en Baja California Sur, la delegada de la dependencia, Susana Aguilar Acevedo, informó que actualmente se encuentra en proceso la incorporación de mil 173 sudcalifornianos al Programa Pensión para Adultos Mayores.

@@ -1,6 +1,6 @@
 ---
 title: 'Tinta Negra / El Palmarito: un sendero olvidado'
-date: '2019-06-13T17:05:06-06:00'
+date: 2019-06-13T23:05:06.000Z
 image: /img/img_1710.jpg
 ---
 Saliendo de Santa Rosalía, cuarenta kilómetros al norte sobre la carretera Transpeninsular -Ruta 1-, se toma la desviación hacia la derecha en el ejido Bonfil y, sobre otros cuarenta kilómetros ahora de terracería, un camino custodiado por choyas, mezquites, cardones, palo blancos; espectaculares y enormes formaciones rocosas que dejan a la vista sus bien diferenciados estratos -donde el tiempo celosamente ha sido guardado-, se llega al valle de Santa Martha.

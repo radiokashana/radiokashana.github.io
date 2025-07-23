@@ -1,6 +1,6 @@
 ---
 title: Aplicará XV Ayuntamiento 33 MDP en obra pública
-date: '2018-08-07T15:15:05-06:00'
+date: 2018-08-07T21:15:05.000Z
 image: /img/obras-publicas.jpeg
 ---
 Este lunes 6 de agosto, durante la Trigésima Sexta Sesión Ordinaria de Cabildo, se dio a conocer que  tras meses de gestión ante instancias federales y estatales por parte de la Presidenta Municipal, Cecilia López González, el pasado 26 de junio fue aprobado en la segunda sesión ordinaria del Comité de Desarrollo Regional para las Obras Mineras en BCS, un paquete de obras a ejecutarse en las comunidades de Guerrero Negro, Punta Abreojos, y Santa Rosalía, a través de los recursos del Fondo Minero con una inversión que supera los 33 millones de pesos.

@@ -1,6 +1,6 @@
 ---
 title: Ejecutan a machetazos al “Güero Maruchan” en Guerrero Negro
-date: '2018-05-09T04:03:26-06:00'
+date: 2018-05-09T10:03:26.000Z
 image: /img/machete-ilustrativa.jpg
 ---
 Terrible muerte tuvo quien en vida llevara por nombre Juan de Dios Medina Soberanes, de aproximadamente 60 años, luego de que un sujeto le arrancara la vida a machetazos en el interior de su domicilio.

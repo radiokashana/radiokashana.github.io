@@ -1,6 +1,6 @@
 ---
 title: Juez aprueba testigos y peritajes en caso Lesvy Osorio
-date: '2018-06-13T11:36:01-06:00'
+date: 2018-06-13T17:36:01.000Z
 image: /img/lesvytribunal_cesarmartinezlopez.jpg
 ---
 En una audiencia exhaustiva de cerca de 12 horas se definieron los más de 30 testigos y peritajes que serán expuestos en la etapa de juicio oral para esclarecer el feminicidio de Lesvy Berlín Rivera Osorio, asesinada por su entonces pareja el 3 de mayo de 2017 en una caseta telefónica ubicada a un lado del Instituto de Ingeniería de Ciudad Universitaria (CU).

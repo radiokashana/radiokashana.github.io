@@ -1,6 +1,6 @@
 ---
 title: 'Mensaje de los Trabajadores Libres y Democráticos de MMB '
-date: '2018-03-20T21:17:05-07:00'
+date: 2018-03-21T04:17:05.000Z
 image: /img/mineros-2018.jpeg
 ---
 Seguimos de pie por todos los mineros de Boleo, por nuestras familias, sabiendo que conseguiremos mejoras laborales, salariales, y un trato justo por los valores que generamos cada jornada. 

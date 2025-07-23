@@ -1,6 +1,6 @@
 ---
 title: Edith Aguilar se reúne con el Sector Transportista
-date: '2018-06-08T16:06:43-06:00'
+date: 2018-06-08T22:06:43.000Z
 image: /img/foto-1-10.jpeg
 ---
 “Como Presidenta Municipal mi compromiso será atender a todos los sectores, y al frente del Consejo Municipal de Transporte, daré el espacio para que sus integrantes tengan la oportunidad de exponer sus planteamientos y juntos lograr mejores condiciones para este importante sector y sobre todo para quienes quieren construir un mejor Mulegé”, aseguró Edith Aguilar Villavicencio, candidata a Presidenta Municipal de Mulegé, en su mensaje en la reunión sostenida con la unión de transportistas.

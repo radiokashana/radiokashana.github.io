@@ -1,6 +1,6 @@
 ---
 title: Terminaron filmación de "Santa Rosalia Un Pueblo Francés en el Desierto"
-date: '2018-03-13T13:47:56-07:00'
+date: 2018-03-13T20:47:56.000Z
 image: /img/un-pueblo-frances-en-el-desierto.jpg
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: ¡Tomarán las áreas de trabajo como medida de presión!
-date: '2021-01-11T16:30:57-07:00'
+date: 2021-01-11T23:30:57.000Z
 image: /img/clausura.jpg
 ---
 Durante el mitin llevado a cabo el dia hoy, Lunes 11 de enero del 2021, en el cual, trabajadores sindicalizados del municipio de Mulegé, continúan exigiendo el pago de la última quincena de diciembre, bono navideño y bono único.

@@ -1,6 +1,6 @@
 ---
 title: 'Peña Nieto le cumple a BCS: Barroso'
-date: '2018-06-15T15:45:33-06:00'
+date: 2018-06-15T21:45:33.000Z
 image: /img/presidente-pena-cumple-a-bcs.jpg
 ---
 Después de cinco años en el Senado de la República, Ricardo Barroso dijo sentirse profundamente orgulloso por los resultados de su gestión a favor de Baja California Sur, y reconoció ampliamente los compromisos cumplidos por parte del presidente Enrique Peña Nieto en obras de gran trascendencia para todo el territorio estatal.

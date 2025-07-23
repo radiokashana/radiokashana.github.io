@@ -1,6 +1,6 @@
 ---
 title: Traía 4 paquetes de mota con 1472 dosis
-date: '2018-10-17T04:41:36-06:00'
+date: 2018-10-17T10:41:36.000Z
 image: /img/jorge-_rk.png
 ---
 Ayer martes 16 de octubre en Santa Rosalía, agentes de la Policía Ministerial aseguraron a Jorge “N”, con más de mil 472 dosis de marihuana; lo dejaron a disposición del agente del Ministerio Público de la Federación.

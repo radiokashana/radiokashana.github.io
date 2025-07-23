@@ -1,6 +1,6 @@
 ---
 title: Hay nuevo Director de Seguridad Pública en Mulegé
-date: '2018-08-13T12:14:11-06:00'
+date: 2018-08-13T18:14:11.000Z
 image: /img/director-seguridad-publica-agosto-2018.jpg
 ---
 Como parte de los ajustes en materia de seguridad pública, la mañana del viernes 10 de agosto el Teniente Luis Arturo Navarrete Delgado, dejó el cargo de Director de Seguridad Pública en Mulegé, al mismo tiempo que la Presidenta Municipal, Cecilia López González, nombró como nuevo Encargado del Despacho de esta corporación al Teniente de Navío José Francisco Estrada Calvillo.

@@ -1,6 +1,6 @@
 ---
 title: 'Anuncia detonación de economía en rancherías y áreas rurales Edith Aguilar '
-date: '2018-06-20T09:40:15-06:00'
+date: 2018-06-20T15:40:15.000Z
 image: /img/edith-sierra.jpeg
 ---
 Edith Aguilar Villavicencio, candidata a presidente municipal, en su visita a la Sierra del Patrocinio expresó “Como Presidenta Municipal habré de acompañar y respaldar a la zona rural para darle valor agregado a sus productos y podamos detonar la economía de los más de 400 ranchos que existen en nuestro municipio, con la comercialización regional de los diversos productos y artesanías que actualmente realizan”.
