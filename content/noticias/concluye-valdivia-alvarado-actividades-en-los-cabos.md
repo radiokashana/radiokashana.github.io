@@ -1,6 +1,6 @@
 ---
 title: Concluye Valdivia Alvarado actividades en Los Cabos
-date: '2018-05-02T22:24:34-06:00'
+date: 2018-05-03T04:24:34.000Z
 image: /img/aaaa.jpeg
 ---
 En la nueva etapa del desarrollo de Baja California Sur, desde el Senado de la República fortaleceremos el trabajo de los ayuntamientos para que cumplan con todos los servicios públicos básicos de nuestra población y con ello, anticipó, elevar el bienestar de los sudcalifornianos, se comprometió el candidato del Partido Revolucionario Institucional, Juan Alberto Valdivia Alvarado.

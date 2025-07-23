@@ -2,7 +2,7 @@
 title: >-
   Establece Valdivia Alvarado compromiso para gestionar recursos para ampliar y
   mejorar caminos en BCS
-date: '2018-05-14T20:00:05-06:00'
+date: 2018-05-15T02:00:05.000Z
 image: /img/foto1_reunion_cmic.jpeg
 ---
 La nueva etapa que comenzará a vivir Baja California Sur exige el impostergable compromiso de contar con una mayor y mejor red de caminos y carreteras, lo que dará paso a detonar otras actividades económicas y sociales, por lo que el candidato del Partido Revolucionario Institucional a senador de la república, Juan Alberto Valdivia Alvarado, se comprometió a gestionar los recursos necesarios para equilibrar el desarrollo regional de la entidad.

@@ -1,6 +1,6 @@
 ---
 title: Entrevista con Los Yerberos
-date: '2018-06-22T13:04:42-06:00'
+date: 2018-06-22T19:04:42.000Z
 image: /img/con-los-yerberos.jpg
 ---
 Diego concluyó "Yo quiero decirle a la población de Baja California Sur que admiro su lucha por su entorno, admiro la lucha por su naturaleza, sé que han detenido varios megaproyectos asesinos, y que sigan luchando, que no se dejen amilanar por las fuerzas oscuras del capital, y vientos a todos los periodistas que resisten, vientos a toda esa banda de Baja California y Baja California Sur que resiste, les mandamos un abrazo, yo los admiro cabrón, y que le sigan echando ganas, inspirándonos a todos". Con este mensaje cerramos la entrevista que el vocalista, y Hans, el baterista de Los Yerberos, concedieron para este medio comunitario.

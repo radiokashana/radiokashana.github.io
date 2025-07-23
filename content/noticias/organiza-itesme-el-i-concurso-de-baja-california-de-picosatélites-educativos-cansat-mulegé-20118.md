@@ -2,7 +2,7 @@
 title: >-
   Organiza ITESME el I Concurso de Baja California de PicoSatélites Educativos
   CanSat Mulegé 2018
-date: '2018-04-13T17:49:52-06:00'
+date: 2018-04-13T23:49:52.000Z
 image: /img/30184704_1832470946804092_1546000429_n.jpg
 ---
 Esta mañana en el Aula Magna del **Instituto Tecnológico Superior de Mulegé (ITESME)**, el Director, _Mtro Juan Antonio Villavicencio Villalejos_ dio por iniciados los trabajos del** I Concurso de Baja California de PicoSatélites CanSat Mulegé 2018, **dando la bienvenida a los Maestros del **Programa Educativo de Ingeniería Aeroespacial en la UABC Campus Valle de las Palmas**, del vecino Estado del Norte; _Antonio Gómez Roa, José Manuel Ramírez Zárate y Javier Martínez Arauz_.

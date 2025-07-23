@@ -1,6 +1,6 @@
 ---
 title: Asegura PGJE 2 mil 300 dosis de sustancias ilicitas en Santa Rosalía
-date: '2018-03-22T10:50:42-07:00'
+date: 2018-03-22T17:50:42.000Z
 image: /img/droga-y-arma-741x486.jpg
 ---
 La Procuraduría General de Justicia del Estado (PGJE) informa elementos de la Policía Ministerial de la Unidad Especializada en  la Investigación del Delito de Comercio de Narcóticos Destinados al Consumo Final, dejaron a disposición del agente del Ministerio Público del Fuero Común a una persona del sexo masculino, por su relación en la comisión de hechos que pueden constituir delito contra la salud, a quien se encontró en posesión sustancia granulada y cristalina, con las características de la droga conocida como cristal, correspondientes  2 mil 300 dosis.

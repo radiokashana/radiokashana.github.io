@@ -2,7 +2,7 @@
 title: >-
   Protesta personal de la SS en Santa Rosalía para exigir equipo de protección
   por el COVID-19
-date: '2020-04-13T11:35:09-05:00'
+date: 2020-04-13T16:35:09.000Z
 image: /img/img_20200413_104740482-1.jpg
 ---
 Santa Rosalía, Baja California Sur.- Personal de la Secretaría de Salud en Santa Rosalía, se manifestó el día de hoy lunes 13 de Abril del 2020, en el exterior de la Jurisdicción Sanitaria 02, para exigir a las autoridades los insumos y herramientas necesarias para poder hacerle frente al Coronavirus, ya que indican, no cuentan con los recursos humanos y materiales para poder atender a pacientes bajo el contagio del COVID-19.

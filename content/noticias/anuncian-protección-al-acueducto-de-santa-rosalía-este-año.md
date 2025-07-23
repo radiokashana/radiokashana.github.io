@@ -1,6 +1,6 @@
 ---
 title: Anuncian protección al acueducto de Santa Rosalía este año
-date: '2018-06-14T21:06:03-06:00'
+date: 2018-06-15T03:06:03.000Z
 image: /img/acueducto_cea1.png
 ---
 La Comisión Estatal del Agua de Baja California Sur (CEA) informó para este año se construirá la plataforma para protección del pozo 2, del Acueducto Palo Verde – Santa Rosalía, el cual forma parte del abastecimiento de agua potable a más de 11 mil 765 habitantes de la cabecera municipal de Mulegé.

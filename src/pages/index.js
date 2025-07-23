@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import MainNews from "../components/main-news"
@@ -8,6 +8,8 @@ import Ads from "../components/ads"
 import Embed from "../components/embed"
 import NewThumbList from "../components/new-thumb-list"
 import NewThumb from "../components/new-thumb"
+import Pagination from "../components/pagination"
+import { formatDateSpanish } from "../utils/dateUtils"
 
 const IndexPage = ({ data, location }) => {
 	const { edges } = data.allMdx
@@ -15,22 +17,29 @@ const IndexPage = ({ data, location }) => {
 
 	const news = edges
 		.filter(edge => !!edge.node.frontmatter.date)
-		.sort((a, b) => new Date(b.node.frontmatter.dateRaw) - new Date(a.node.frontmatter.dateRaw))
 
+	// Configuration for pagination
+	const mainNewsCount = 4
+	const postsPerPage = 12
+	
+	// Calculate pagination info
+	const remainingPosts = news.length - mainNewsCount
+	const totalPages = Math.ceil(remainingPosts / postsPerPage) + 1 // +1 for the first page
 
 	const mainNews = news
-		.slice(0, 4)
+		.slice(0, mainNewsCount)
 		.map(edge =>
 			<MainNew
 				key={edge.node.id}
 				href={edge.node.fields.slug}
 				title={edge.node.frontmatter.title}
-				date={edge.node.frontmatter.date}
+				date={formatDateSpanish(edge.node.frontmatter.date)}
 				img={{ src: edge.node.frontmatter.image, alt: "" }} />
 		)
 
+	// For page 1, show the first 12 articles after main news
 	const oldNews = news
-		.slice(4)
+		.slice(mainNewsCount, mainNewsCount + postsPerPage)
 		.map(edge =>
 			<NewThumb
 				key={edge.node.id}
@@ -55,6 +64,13 @@ const IndexPage = ({ data, location }) => {
 				<NewThumbList>
 					{oldNews}
 				</NewThumbList>
+				
+				{totalPages > 1 && (
+					<Pagination 
+						currentPage={1} 
+						totalPages={totalPages} 
+					/>
+				)}
 			</section>
 		</IndexLayout>
 	)
@@ -72,8 +88,7 @@ export const pageQuery = graphql`
 					}
 					frontmatter {
 						title
-						date(formatString: "DD [de] MMMM [de] YYYY", locale: "es")
-						dateRaw: date
+						date
 						image
 					}
 				}

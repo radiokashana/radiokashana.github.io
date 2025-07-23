@@ -2,7 +2,7 @@
 title: >-
   Valdivia se compromete a que desde el Senado brindará apoyo incondicional a
   Ayuntamientos, sin distinción de colores
-date: '2018-05-09T20:09:51-06:00'
+date: 2018-05-10T02:09:51.000Z
 image: /img/foto1_respaldo_ayuntamientos.jpeg
 ---
 Con el propósito de coadyuvar en el mejoramiento de las condiciones de vida de todos los sudcalifornianos, desde el Senado de la República vamos a brindar un apoyo incondicional a los cinco ayuntamientos de la entidad, sin importar el color o signo partidista de su integración, aseguró el candidato del Partido Revolucionario Institucional, Juan Alberto Valdivia Alvarado.

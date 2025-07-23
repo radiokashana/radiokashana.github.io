@@ -43,6 +43,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const newTemplate = path.resolve("./src/templates/newTemplate.js");
+  const indexTemplate = path.resolve("./src/templates/indexTemplate.js");
 
   return graphql(`
     {
@@ -58,6 +59,8 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               title
+              date
+              image
             }
           }
         }
@@ -69,6 +72,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
+    // Create individual news pages
     result.data.allMdx.edges.forEach(({ node }) => {
       const id = node.id;
       createPage({
@@ -76,6 +80,41 @@ exports.createPages = ({ actions, graphql }) => {
         component: `${newTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
         context: {
           id,
+        },
+      });
+    });
+
+    // Create paginated index pages
+    const posts = result.data.allMdx.edges;
+    const postsPerPage = 12; // 12 news per page after the main news
+    const mainNewsCount = 4; // Main news section has 4 articles
+    
+    // Calculate total pages
+    // Page 1: 4 main news + 12 regular = 16 total
+    // Pages 2+: 12 regular each
+    const remainingPosts = posts.length - mainNewsCount;
+    const additionalPages = Math.ceil(remainingPosts / postsPerPage);
+    const totalPages = additionalPages + 1; // +1 for the first page
+
+    // Create page 1 (handled by src/pages/index.js, but we need context)
+    // We don't need to create page 1 since it's handled by the existing index.js
+    
+    // Create pages 2, 3, 4, etc.
+    Array.from({ length: additionalPages }).forEach((_, i) => {
+      const pageNumber = i + 2; // Start from page 2
+      // Page 1 shows 16 articles (4 main + 12 regular), so skip 16 for page 2
+      // Then skip 12 more for each subsequent page
+      const skip = (mainNewsCount + postsPerPage) + (i * postsPerPage); // Skip page 1 content + previous pages
+      
+      createPage({
+        path: `/page/${pageNumber}`,
+        component: indexTemplate,
+        context: {
+          currentPage: pageNumber,
+          totalPages: totalPages,
+          skip: skip,
+          limit: postsPerPage,
+          isFirstPage: false,
         },
       });
     });

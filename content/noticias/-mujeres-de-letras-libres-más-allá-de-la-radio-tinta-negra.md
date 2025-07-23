@@ -1,6 +1,6 @@
 ---
 title: '"Mujeres de letras libres" Más allá de la radio - Tinta Negra -'
-date: '2018-08-14T11:16:11-06:00'
+date: 2018-08-14T17:16:11.000Z
 image: /img/mujeres_letras_libres_3.jpg
 ---
 Ser mujer no es algo fácil. En ningún momento de la historia lo ha sido. Desde el génesis fuimos subyugadas. La historia se conoce de sobra, así que no tengo porqué repetirlo escribiéndolo ahora. 

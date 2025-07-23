@@ -1,6 +1,6 @@
 ---
 title: Esta Semana Santa se vivió la tradición Yoreme-Mestizo en Santa Rosalía
-date: '2018-04-02T16:58:23-06:00'
+date: 2018-04-02T22:58:23.000Z
 image: /img/foto-1-8.jpg
 ---
 Una de las tradiciones más importantes de la cabecera municipal

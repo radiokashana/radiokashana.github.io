@@ -1,6 +1,6 @@
 ---
 title: La Devolución Mexicana
-date: '2018-11-20T15:31:44-07:00'
+date: 2018-11-20T22:31:44.000Z
 image: /img/ayo6.jpeg
 ---
 Exactamente hace 12 años estaba asombrado entre la aglomeración más grande que he visto en el episodio de la historia moderna mexicana llamado "Toma de protesta del Presidente Legítimo de la Nación". Ese día cambió mi vida. Comprobé que las televisoras nacionales sí estaban muy vendidas y amordazadas por el poder político, decidí dedicar mi vida a la defensa de los derechos humanos, y escuché a Silvio Rodríguez en persona.

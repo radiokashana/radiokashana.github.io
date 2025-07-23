@@ -1,6 +1,6 @@
 ---
 title: BCS es primer lugar nacional en producción agrícola por hectárea
-date: '2018-06-25T16:46:57-06:00'
+date: 2018-06-25T22:46:57.000Z
 image: /img/verduras.jpg
 ---
 Con un valor de producción agrícola superior a los 124 mil pesos por hectárea, Baja California Sur ocupa el primer lugar a nivel nacional en este renglón, informó el secretario Andrés Córdova Urrutia, quien agregó que después de nuestro estado, se ubica la Ciudad de México con un valor de producción de 90 mil pesos y Baja California con un valor de 7 mil 800 pesos por hectárea.

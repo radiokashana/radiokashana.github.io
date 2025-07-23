@@ -1,6 +1,6 @@
 ---
 title: Será delito tomar fotos y vídeo a mujeres sin su consentimiento
-date: '2018-05-15T11:51:37-06:00'
+date: 2018-05-15T17:51:37.000Z
 image: /img/feminicidio01_hazelzamora.jpg
 ---
 La Asamblea Legislativa del Distrito Federal (ALDF) aprobó adicionar un nuevo tipo penal que castiga, con uno hasta tres años de prisión, a quienes tomen fotografías o grabaciones con índole sexual a mujeres sin su consentimiento.

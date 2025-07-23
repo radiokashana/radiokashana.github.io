@@ -1,6 +1,6 @@
 ---
 title: Votó en Mulegé más de la mitad del padrón electoral
-date: '2018-07-02T06:30:24-06:00'
+date: 2018-07-02T12:30:24.000Z
 image: /img/votando.jpg
 ---
 En el corte de las 7:16 horas el Programa de Resultados Electorales Preliminares (PREP) del Instituto Estatal Electoral (IEE) han sido contabilizadas 887 actas de las 978 que se esperan, que representan el  90 % del total. 

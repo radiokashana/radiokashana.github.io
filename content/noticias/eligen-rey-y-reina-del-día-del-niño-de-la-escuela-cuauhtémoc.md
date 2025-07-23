@@ -1,6 +1,6 @@
 ---
 title: Eligen Rey y Reina del Día del Niño de la Escuela Cuauhtémoc
-date: '2018-04-23T17:41:33-06:00'
+date: 2018-04-23T23:41:33.000Z
 image: /img/30777144_1842805955770591_1967126518_n.jpg
 ---
 El pasado viernes se celebró, en el escenario de la Sociedad Mutualista Progreso, el concurso de selección de Rey y Reina del Día del Niño de la Escuela Primaria “Cuauhtémoc” de Santa Rosalía.

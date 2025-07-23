@@ -1,6 +1,6 @@
 ---
 title: Suma simpatizantes el proyecto de José Felipe Prado Bautista
-date: '2018-06-09T12:15:53-06:00'
+date: 2018-06-09T18:15:53.000Z
 image: /img/fpb-5.jpg
 ---
 A más de la mitad de campaña política el candidato a la presidencia municipal de Mulegé por el Partido de la Nueva Alianza, José Felipe Prado Bautista continúa recorriendo todo lo largo y ancho de la geografía municipal sosteniendo reuniones con vecinos de la mayoría de las comunidades. Prado Bautista les ha dado a conocer sus propuestas de gobierno, muy bien aceptadas por parte de la ciudadanía que se suma a este proyecto político. 

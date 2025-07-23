@@ -19,6 +19,7 @@ The `html-to-jsx-converter.js` script automatically converts:
 ## Usage
 
 ### Run the converter:
+
 ```bash
 # Using yarn
 yarn convert:html-to-jsx
@@ -28,6 +29,7 @@ node scripts/html-to-jsx-converter.js
 ```
 
 ### Test the converter:
+
 ```bash
 node scripts/test-converter.js
 ```
@@ -63,3 +65,8 @@ node scripts/test-converter.js
 ## Note
 
 This is a temporary fix for the immediate MDX parsing issues. For a long-term solution, consider implementing the migration plan in `MDX_TO_MD_MIGRATION_PLAN.md` which separates pure markdown (`.md`) from MDX (`.mdx`) files.
+
+# Standardize test script
+
+This is another migration script used to standardize dates to ISO8601 in markdown frontmatter of content files.
+This format is properly supported by latest gatsby and decap-cms.

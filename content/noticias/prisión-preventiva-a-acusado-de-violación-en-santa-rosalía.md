@@ -1,6 +1,6 @@
 ---
 title: Prisión preventiva a acusado de violación en Santa Rosalía
-date: '2018-05-09T03:43:23-06:00'
+date: 2018-05-09T09:43:23.000Z
 image: /img/carcel2.jpg
 ---
 El agente del Ministerio Público de la Unidad Especializada en Investigación y Judicialización de Delitos, de la Procuraduría General de Justicia del Estado (PGJE), obtuvo, del Juez, auto de vinculación a proceso contra una persona del sexo masculino, tras presentar elementos de prueba suficientes que acreditan su relación en hechos que pueden constituir delito de violación, en audiencia inicial en el Centro de Justicia Penal en Santa Rosalía.

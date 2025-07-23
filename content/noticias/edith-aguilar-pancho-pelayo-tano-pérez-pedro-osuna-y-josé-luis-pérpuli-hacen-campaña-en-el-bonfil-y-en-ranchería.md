@@ -1,6 +1,6 @@
 ---
 title: 'La fuerza de este proyecto ya no la detiene nadie: Edith Aguilar'
-date: '2018-06-14T21:20:41-06:00'
+date: 2018-06-15T03:20:41.000Z
 image: /img/foto-1-13.jpeg
 ---
 En un recorrido por el Ejido Alfredo V. Bonfil, San Ignacio y un

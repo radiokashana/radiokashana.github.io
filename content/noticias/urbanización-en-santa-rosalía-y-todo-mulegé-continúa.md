@@ -1,6 +1,6 @@
 ---
 title: Urbanización en Santa Rosalía y todo Mulegé continúa
-date: '2018-06-09T17:07:32-06:00'
+date: 2018-06-09T23:07:32.000Z
 image: /img/obras-publicas.jpeg
 ---
 Iniciará próximamente el proceso de Licitación Pública Nacional de diversas obras de urbanización en el municipio de Mulegé, obras que fueron gestionadas por la Presidente Municipal, Profra. Cecilia López González, cuya inversión ya fue autorizada por las instancias correspondientes.

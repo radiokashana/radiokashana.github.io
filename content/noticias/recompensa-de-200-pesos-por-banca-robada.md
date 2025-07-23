@@ -1,6 +1,6 @@
 ---
 title: Recompensa de 200 pesos por banca robada
-date: '2018-12-12T14:48:30-07:00'
+date: 2018-12-12T21:48:30.000Z
 image: /img/banca-robada.jpg
 ---
 Mejor conocido como "El Chorizo" el Paseo Juárez organiza el tránsito vehicular y alberga una antigua grua, bancas, jardineras y escalones, colinda con casas por ambos costados y gente de marcado arraigo a lo largo de cuatro cuadras en la Colonia Ranchería. Que le hayan robado la  banca de jardín a escasos metros de ella mientras platicaba en su hogar con las visitas, provocaron en la señora Rosario Alcantar un malestar que quiso expresar por este medio de información.

@@ -1,6 +1,6 @@
 ---
 title: "Círculo de Mujeres para nutrirse, crecer y florecer "
-date: "2019-07-19T20:14:48-06:00"
+date: 2019-07-20T02:14:48.000Z
 image: /img/67152926_490768345061125_5968777310369742848_n.jpg
 imagePosition: top
 ---

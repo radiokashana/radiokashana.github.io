@@ -1,6 +1,6 @@
 ---
 title: 'CNDH, Fepade, INE e Inmujeres llaman a frenar violencia política de género'
-date: '2018-06-15T20:08:43-06:00'
+date: 2018-06-16T02:08:43.000Z
 image: /img/violenciapoliticacndh_soniagerth.jpg
 ---
 Ante los niveles de violencia política que se han alcanzado en México, y especialmente la cantidad de agresiones hacia mujeres, la Comisión Nacional de Derechos Humanos (CNDH), el Instituto Nacional Electoral (INE), la Fiscalía Especializada para la Atención de Delitos Electorales (Fepade), y el Instituto Nacional de las Mujeres (Inmujeres) llamaron a un inmediato cese de estos delitos.

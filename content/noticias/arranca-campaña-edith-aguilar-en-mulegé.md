@@ -1,6 +1,6 @@
 ---
 title: Arranca campaña Edith Aguilar en Mulegé
-date: '2018-05-02T22:15:59-06:00'
+date: 2018-05-03T04:15:59.000Z
 image: /img/foto-1-1.jpeg
 ---
 Con la frase “Vamos Juntos, Vamos Más Fuertes” y comprometida en trabajar por hacer caminar a Mulegé, Edith Aguilar Villavicencio inició su campaña como candidata a la Presidencia Municipal de Mulegé, este domingo 29 de abril frente a las instalaciones de su casa de campaña ubicada en Colonia Ranchería en Santa Rosalía.

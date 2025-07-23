@@ -1,6 +1,6 @@
 ---
 title: Ciclista Mulegino al Panamericano en Colombia
-date: '2018-03-14T09:57:28-07:00'
+date: 2018-03-14T16:57:28.000Z
 image: /img/20797c74-100d-40be-bafb-9ee42173c57b.jpeg
 ---
 Brian Joshua García Barrón continúa cosechando éxitos en la disciplina de ciclismo en sus diferentes pruebas, y después de que en días pasados consiguiera su clasificación a los “Juegos Olímpicos de la Juventud”, este domingo 11 de marzo logró obtener su clasificación en la prueba de montaña al “Campeonato Panamericano 2018” a realizarse del 4 al 8 de abril en Pereira, Colombia.

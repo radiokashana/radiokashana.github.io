@@ -1,6 +1,6 @@
 ---
 title: Entregan constancia a Felipe Prado
-date: '2018-07-05T20:13:35-06:00'
+date: 2018-07-06T02:13:35.000Z
 image: /img/resultado-eleccion-2018-editada.jpg
 ---
 Será presidido por Felipe Prado Bautista el XVI Ayuntamiento de Mulegé. Luego del recuento de los votos emitidos por los muleginos el pasado domingo en las 85 secciones electorales, se ratificó el resultado arrojado por el conteo rápido aunque disminuyó la diferencia entre el primero y el segundo lugar.

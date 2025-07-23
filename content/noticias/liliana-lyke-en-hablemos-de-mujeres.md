@@ -1,6 +1,6 @@
 ---
 title: Liliana Lyle en Hablemos de Mujeres
-date: '2018-06-15T19:48:01-06:00'
+date: 2018-06-16T01:48:01.000Z
 image: /img/liliana-l.jpg
 ---
 Candidata a la Presidencia Municipal de Mulegé por el partido MORENA, Liliana Lyle estuvo aún como precandidata, en el programa de Maribel Gonzalez Parra "Hablemos de Mujeres". Transmitido por la 93.3 FM.

@@ -1,6 +1,6 @@
 ---
 title: Estatal de Sóftbol Femenil en la H. Mulegé
-date: '2018-05-25T16:10:02-06:00'
+date: 2018-05-25T22:10:02.000Z
 image: /img/foto-1-39.jpg
 ---
 Este viernes 25 de mayo a partir de las 3:00 P.M. se llevó a cabo la inauguración del “Estatal de Sóftbol Femenil” categoría 25 y menores, en las instalaciones del Estadio de béisbol “Francisco Maistro Ortega”, siendo sede Heroica Mulegé por primera ocasión en este tipo de eventos deportivos, recibiendo a los equipos representativos de los cinco municipios del estado, Los Cabos, La Paz, Comondú, Loreto y Mulegé.

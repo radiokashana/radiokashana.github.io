@@ -19,6 +19,13 @@
 		0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+@theme {
+	--color-primary: var(--brand-primary);
+	--color-secondary: var(--brand-secondary);
+	--color-accent: var(--brand-accent);
+	--color-primary-light: color-mix(in srgb, var(--brand-primary) 80%, white);
+}
+
 @layer base {
 	html {
 		line-height: 1.6;

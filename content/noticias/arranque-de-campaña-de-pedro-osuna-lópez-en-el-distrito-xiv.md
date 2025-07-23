@@ -1,6 +1,6 @@
 ---
 title: Arranque de Campaña de Pedro Osuna López en el distrito XIV
-date: '2018-05-02T21:51:15-06:00'
+date: 2018-05-03T03:51:15.000Z
 image: /img/foto-1-5.jpeg
 ---
 Este domingo 29 de abril arrancó campaña rumbo a la Diputación por el Distrito XIV, el profesor Pedro Osuna López, en las comunidades de Guerrero Negro y Vizcaíno, donde demostró una vez más el contundente apoyo por parte de los electores de esta zona.

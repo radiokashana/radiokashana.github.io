@@ -2,7 +2,7 @@
 title: >-
   Recibirán medallas al mérito 180 docentes de BCS por 28, 30 Y 40 años de
   servicio: SEP
-date: '2018-05-14T19:56:53-06:00'
+date: 2018-05-15T01:56:53.000Z
 image: /img/ssa.jpg
 ---
 El Gobierno del Estado de Baja California Sur, a través de la Secretaría de Educación Pública (SEP) en coordinación con la Sección III del SNTE, llevará a cabo el martes 15 de mayo la entrega de medallas y recompensas económicas a 180 docentes que cumplen 28, 30 y 40 años o más de servicio ininterrumpido en el sector educativo, informó el titular de la SEP, Héctor Jiménez Márquez.

@@ -1,6 +1,6 @@
 ---
 title: Alertan sobre extorsión telefónica desde el número 612 160 7303
-date: '2018-06-01T15:40:25-06:00'
+date: 2018-06-01T21:40:25.000Z
 image: /img/_448_336_1401938.jpg
 ---
 La Procuraduría General de Justicia de Estado (PGJE), advierte a la ciudadanía sobre llamadas de extorsión que las últimas horas se registraron en diversas partes de la entidad, del número 612 1607303.

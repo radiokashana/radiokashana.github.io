@@ -1,6 +1,6 @@
 ---
 title: SCJN resuelve caso de discriminación laboral por cáncer de mama
-date: '2018-06-15T15:39:26-06:00'
+date: 2018-06-15T21:39:26.000Z
 image: /img/cancerdemama_fatosdesconhecidos_com_br.jpg
 ---
 La Segunda Sala de la Suprema Corte de Justicia de la Nación (SCJN) estableció que en los casos de trabajadoras y trabajadores con discapacidad por su condición de salud que denuncien un despido injustificado, los órganos jurisdiccionales deben analizar exhaustivamente si se trata o no de un acto de discriminación.  

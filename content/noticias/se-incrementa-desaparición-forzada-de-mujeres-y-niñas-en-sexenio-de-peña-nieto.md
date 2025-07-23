@@ -1,6 +1,6 @@
 ---
 title: Se incrementa desaparición forzada de mujeres y niñas en sexenio de Peña Nieto
-date: '2018-05-28T11:47:43-06:00'
+date: 2018-05-28T17:47:43.000Z
 image: /img/amnistiainternacional_clausura01_cesarmartinez.jpg
 ---
 A partir del año 2012 -de la administración de Enrique Peña Nieto- se incrementó el número de desapariciones forzadas de mujeres y niñas en las entidades de Jalisco, Estado de México y Veracruz, informaron Colectivos de familiares de personas desaparecidas y la organización I(dh)eas, “Litigio Estratégico en Derechos Humanos AC” al Comité de Naciones Unidas contra las Desapariciones Forzadas (CED, por sus siglas en inglés).

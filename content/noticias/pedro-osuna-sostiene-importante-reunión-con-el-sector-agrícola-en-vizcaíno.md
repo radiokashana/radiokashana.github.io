@@ -1,6 +1,6 @@
 ---
 title: Pedro Osuna sostiene importante reunión con el sector agrícola en Vizcaíno
-date: '2018-05-09T20:39:38-06:00'
+date: 2018-05-10T02:39:38.000Z
 image: /img/foto-1-8.jpeg
 ---
 Con el compromiso de aprovechar la fortaleza del trabajo en equipo en el senado, la diputación federal y local, y la presidencia municipal, Pedro Osuna López, candidato a diputado local por el Distrito XIV, en compañía de la candidata a la Presidencia Municipal, Edith Aguilar, los candidatos a senadores Lupita Saldaña y Francisco Pelayo y a diputado federal, Tano Pérez, sostuvieron importante reunión con el sector agrícola en el Valle de Vizcaíno.

@@ -1,6 +1,6 @@
 ---
 title: ' A una semana de campaña, Edith Aguilar continúa recorriendo Mulegé'
-date: '2018-05-09T01:25:15-06:00'
+date: 2018-05-09T07:25:15.000Z
 image: /img/31960329_1487955638000160_3484578504220082176_o.jpg
 ---
 A una semana de haber iniciado campaña rumbo a la Presidencia Municipal de Mulegé, Edith Aguilar Villavicencio, continúa recorriendo las comunidades haciendo llegar sus propuestas a cada una de las familias, comprometiéndose a lograr la continuidad de un proyecto que ha sabido mantener la estabilidad financiera y operativa de este municipio.

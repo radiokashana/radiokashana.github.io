@@ -1,6 +1,6 @@
 ---
 title: Restablecen servicio de agua potable en Loreto
-date: '2018-06-01T15:31:56-06:00'
+date: 2018-06-01T21:31:56.000Z
 image: /img/sgg_operacion-2.jpeg
 ---
 Después de varias horas de trabajo y en una operación conjunta entre los tres órdenes de gobierno, encabezado por el secretario general de gobierno, Álvaro De la Peña Angulo, de la encargada del despacho de la presidencia municipal de Loreto, María Miriam Arce Campos, del delegado estatal de la Secretaría de Gobernación, Ricardo Millán Bueno, así como las diversas corporaciones policíacas de la entidad, se logró restablecer el servicio de agua en esa localidad.

@@ -1,6 +1,6 @@
 ---
 title: Bud continúa debilitándose en su trayecto hacia BCS
-date: '2018-06-13T12:14:03-06:00'
+date: 2018-06-13T18:14:03.000Z
 image: /img/bud2.png
 ---
 De acuerdo al Centro Nacional de Huracanes en Miami, el centro de la tormenta tropical "Bud" se localizó hoy a mediodía en la latitud 19.6 N, longitud 108.8 W, a 385 km al S-SE de Cabo San Lucas. 

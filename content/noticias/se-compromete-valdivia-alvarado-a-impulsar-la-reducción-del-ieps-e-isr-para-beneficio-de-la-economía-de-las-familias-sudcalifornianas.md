@@ -2,7 +2,7 @@
 title: >-
   Se compromete Valdivia Alvarado a impulsar la reducción del IEPS e ISR para
   beneficio de la economía de las familias sudcalifornianas
-date: '2018-05-09T20:57:51-06:00'
+date: 2018-05-10T02:57:51.000Z
 image: /img/foto1_reduccion_ieps_isr.jpeg
 ---
 Para alcanzar una nueva etapa de desarrollo económico que beneficie a las familias sudcalifornianas, desde el Senado de la República impulsaré la reducción de los Impuestos Especial sobre Producción y Servicios (IEPS) y Sobre la Renta (ISR), comprometió el candidato del Partido Revolucionario Institucional, Juan Alberto Valdivia Alvarado.

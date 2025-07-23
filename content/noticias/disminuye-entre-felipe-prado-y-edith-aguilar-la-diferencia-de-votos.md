@@ -1,6 +1,6 @@
 ---
 title: 'Disminuye entre Felipe Prado y Edith Aguilar la diferencia de votos '
-date: '2018-07-04T22:33:43-06:00'
+date: 2018-07-05T04:33:43.000Z
 image: /img/boletas-iee.jpg
 ---
 Faltan aún más de la mitad de las casillas por recontarse y la diferencia ya bajó a 370 votos, casi el 50% de lo que reportaban las actas este primero de julio. Así lo informan desde el interior del Consejo Municipal Electoral.

@@ -1,6 +1,6 @@
 ---
 title: Operan normalmente las carreteras en todo el Estado al paso de "Bud"
-date: '2018-06-15T03:18:50-06:00'
+date: 2018-06-15T09:18:50.000Z
 image: /img/bud.jpg
 ---
 La tormenta tropical Bud continúa dejando lluvias en Baja California Sur,

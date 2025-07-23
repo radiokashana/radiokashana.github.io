@@ -1,6 +1,6 @@
 ---
 title: 'Una manifestación abandonada '
-date: '2018-06-07T15:54:09-06:00'
+date: 2018-06-07T21:54:09.000Z
 image: /img/quien-sera.jpg
 ---
 Desde que supe de la manta este domingo por una filtración de la gente que debería apoyar a Mario Navarrete, supe que una manifestación probablemente legítima, sería utilizada por algún grupo de poder con intenciones de gobernar Mulegé. Cuando vi la manta através de la transmisión en vivo de una candidata a regidora por el Movimiento Ciudadano lo comprobé y sentí lástima.

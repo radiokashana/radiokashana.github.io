@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
+import { formatDateSpanish } from "../utils/dateUtils"
 
 // Function to convert imagePosition to CSS object-position value
 const getObjectPosition = (position = 'center') => {
@@ -64,8 +65,8 @@ const NewTemplate = ({data, location, children}) => {
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-							<time className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-								{frontmatter.date}
+							<time className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+								{formatDateSpanish(frontmatter.date)}
 							</time>
 							<h1 className="text-2xl md:text-4xl font-bold leading-tight">
 								{frontmatter.title}
@@ -92,7 +93,7 @@ export const pageQuery = graphql`
 			excerpt(pruneLength: 200)
 			frontmatter {
 				title
-				date(formatString: "DD [de] MMMM [de] YYYY [a las] HH:mm [horas]", locale: "es")
+				date
 				image
 				imagePosition
 			}

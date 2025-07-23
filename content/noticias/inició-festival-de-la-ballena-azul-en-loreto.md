@@ -1,6 +1,6 @@
 ---
 title: Inició Festival de la Ballena Azul en Loreto
-date: '2018-03-13T15:06:16-07:00'
+date: 2018-03-13T22:06:16.000Z
 image: /img/ballena-azul.jpg
 ---
 “Baja California Sur y Loreto, tienen las condiciones para competir a nivel internacional, como uno de los mejores destinos turísticos que México tiene para el mundo”, expresó el secretario general de gobierno, Álvaro De la Peña Angulo, al inaugurar en representación del gobernador Carlos Mendoza Davis y acompañado de la presidenta de ese municipio, Arely Arce Peralta, el Tercer gran festival de la Ballena Azul 2018.

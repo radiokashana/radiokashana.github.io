@@ -1,6 +1,6 @@
 ---
 title: Detienen a dos en Santa Rosalía con 300 dosis de "chuky"
-date: '2018-08-23T12:30:27-06:00'
+date: 2018-08-23T18:30:27.000Z
 image: /img/cristal-meth.jpg
 ---
 La Procuraduría General de Justicia del Estado (PGJE) informó mediante boletín de prensa esta tarde que la mañana de este miércoles 22 de agosto en Santa Rosalía, lograron el aseguramiento de sustancias ilícitas y la detención de dos personas del sexo masculino por la probable comisión de delito contra la salud.

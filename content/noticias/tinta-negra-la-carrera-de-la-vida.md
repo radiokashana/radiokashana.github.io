@@ -1,6 +1,6 @@
 ---
 title: Tinta Negra "La carrera de la vida"
-date: '2018-07-06T19:30:53-06:00'
+date: 2018-07-07T01:30:53.000Z
 image: /img/tinta-negra-2.jpg
 ---
 _Y me esforcé en aislarme y en reducir todo lo posible el mundo que percibía en esos momentos_. “De qué hablo cuando hablo de correr”, de Haruki Murakami.

@@ -1,6 +1,6 @@
 ---
 title: 'Hashtag #Cuéntalo'
-date: '2018-06-05T09:53:07-06:00'
+date: 2018-06-05T15:53:07.000Z
 image: /img/tinta-negra-2.jpg
 ---
 **TINTA NEGRA**

@@ -1,6 +1,6 @@
 ---
 title: Pronostican altas temperaturas en BCS
-date: '2019-06-07T11:42:15-06:00'
+date: 2019-06-07T17:42:15.000Z
 image: /img/download.jpg
 ---
 De acuerdo con datos de Metmex Baja California Sur, en la próxima semana se tendrán máximas de 43 ºC en algunas zonas de la entidad, siendo la parte norte del estado la que presentará las mayores temperaturas.

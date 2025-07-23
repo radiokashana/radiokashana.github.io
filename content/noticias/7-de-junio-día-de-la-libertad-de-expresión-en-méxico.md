@@ -1,6 +1,6 @@
 ---
 title: '7 de Junio, Día de la Libertad de Expresión en México'
-date: '2019-06-07T14:38:38-06:00'
+date: 2019-06-07T20:38:38.000Z
 image: /img/_105289012_49592424_10161265805555147_8524500584856813568_o.jpg
 ---
 La libertad de expresión se reconoce como un derecho humano en virtud del artículo 19 de la Declaración Universal de los Derechos Humanos (DUDH) y se reconoce en el derecho internacional de los derechos humanos en el Pacto Internacional de Derechos Civiles y Políticos (PIDCP). El artículo 19 de la DUDH establece que "todos tendrán derecho a opinar sin interferencia" y "todos tendrán derecho a la libertad de expresión, este derecho incluirá la libertad de buscar, recibir y difundir información e ideas de todo tipo, independientemente de fronteras, ya sea oralmente, por escrito o impreso, en forma de arte, o por cualquier otro medio de su elección ".
