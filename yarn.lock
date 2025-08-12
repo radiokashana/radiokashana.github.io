@@ -6982,10 +6982,10 @@ fuzzy@^0.1.1:
   resolved "https://registry.npmjs.org/fuzzy/-/fuzzy-0.1.3.tgz"
   integrity sha512-/gZffu4ykarLrCiP3Ygsa86UAo1E5vEVlvTrpkKywXSbP9Xhln3oSp9QSV57gEq3JFFpGJ4GZ+5zdEp3FcUh4w==
 
-gatsby-adapter-netlify@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/gatsby-adapter-netlify/-/gatsby-adapter-netlify-1.2.0.tgz"
-  integrity sha512-B7L9Z0HSr/z02lG0fRovtE4WcbgCbfDzwPyRNGjk4GE0cttuHQtibpd1kglekKdajm70wyT0imvV7IBAKajg9Q==
+gatsby-adapter-netlify@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-adapter-netlify/-/gatsby-adapter-netlify-1.2.1.tgz#4bdada1a882e429a089d8ff481f145d2f990b264"
+  integrity sha512-TQv5kw/1PuDLqF/x8zFQwVB7lZ044ecaDpKqM313RyOZW3XOioymcCcStLx3kRGydNU07ohf3fiDQK3sUzn+ow==
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@netlify/cache-utils" "^5.1.5"
