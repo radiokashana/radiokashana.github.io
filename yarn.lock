@@ -6982,10 +6982,10 @@ fuzzy@^0.1.1:
   resolved "https://registry.npmjs.org/fuzzy/-/fuzzy-0.1.3.tgz"
   integrity sha512-/gZffu4ykarLrCiP3Ygsa86UAo1E5vEVlvTrpkKywXSbP9Xhln3oSp9QSV57gEq3JFFpGJ4GZ+5zdEp3FcUh4w==
 
-gatsby-adapter-netlify@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/gatsby-adapter-netlify/-/gatsby-adapter-netlify-1.2.0.tgz"
-  integrity sha512-B7L9Z0HSr/z02lG0fRovtE4WcbgCbfDzwPyRNGjk4GE0cttuHQtibpd1kglekKdajm70wyT0imvV7IBAKajg9Q==
+gatsby-adapter-netlify@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-adapter-netlify/-/gatsby-adapter-netlify-1.3.0.tgz#82cd29802f48d29ed04963d7241d630095fd3f69"
+  integrity sha512-T+i5GxC/zYA2y9+KOGpFEQSqAdwmCD6nf3HD5dHPevIytKcPC54f36haRkGY4F+0qgUsMbW4yTt0uc6yRlF4qQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@netlify/cache-utils" "^5.1.5"
@@ -6994,7 +6994,7 @@ gatsby-adapter-netlify@^1.2.0:
     cookie "^0.6.0"
     fastq "^1.15.0"
     fs-extra "^11.2.0"
-    gatsby-core-utils "^4.14.0"
+    gatsby-core-utils "^4.15.0"
 
 gatsby-cli@^5.14.0:
   version "5.14.0"
@@ -7042,10 +7042,10 @@ gatsby-cli@^5.14.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.14.0:
-  version "4.14.0"
-  resolved "https://registry.npmjs.org/gatsby-core-utils/-/gatsby-core-utils-4.14.0.tgz"
-  integrity sha512-h0v20gB213PmhKjioCJ93SrUb7Hihnqxd6X6Iur4u1eiWTUDsGeV9g1bkquiuDl2qovUnjj7mOoHdWiu/Ax/9Q==
+gatsby-core-utils@^4.14.0, gatsby-core-utils@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.15.0.tgz#7c644f1587a47b14a0209e7d2894451e14a7514c"
+  integrity sha512-fxzHbCvQm1u74DSjy7G4PVqEcWb7sOCFg3kFFVUqVKe3hDCm6s1M/gRSvpm3/3fm74HhgLsmQ54Qaf54Ckyn9w==
   dependencies:
     "@babel/runtime" "^7.20.13"
     ci-info "2.0.0"
