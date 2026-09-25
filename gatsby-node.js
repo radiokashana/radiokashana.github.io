@@ -48,6 +48,23 @@ const getImageDimensions = (imagePath, reporter) => {
   return result;
 };
 
+// Frontmatter images are plain strings ("/img/foo.jpg") written by the CMS.
+// Map one to the path of the File node sourced from static/img (see the
+// "media" source in gatsby-config.js), so templates can query responsive
+// versions through childImageSharp without changing the content model.
+const toMediaRelativePath = (imagePath) => {
+  if (!imagePath || typeof imagePath !== "string") return null;
+  let value = imagePath.trim();
+  try {
+    value = decodeURI(value);
+  } catch (e) {
+    // Malformed escape sequence: keep the raw value
+  }
+  value = value.replace(/^https?:\/\/[^/]+/i, "").replace(/^\/+/, "");
+  if (!value.startsWith("img/")) return null;
+  return value.slice("img/".length);
+};
+
 // Schema customization for Gatsby v5
 exports.createSchemaCustomization = ({ actions, schema, reporter }) => {
   const { createTypes } = actions;
@@ -89,6 +106,23 @@ exports.createSchemaCustomization = ({ actions, schema, reporter }) => {
         imagePosition: {
           type: "String",
           resolve: (source) => source.imagePosition || "center",
+        },
+        // Derived field (not stored in Markdown): the File node behind `image`
+        cover: {
+          type: "File",
+          resolve: async (source, args, context) => {
+            const relativePath = toMediaRelativePath(source.image);
+            if (!relativePath) return null;
+            return context.nodeModel.findOne({
+              type: "File",
+              query: {
+                filter: {
+                  sourceInstanceName: { eq: "media" },
+                  relativePath: { eq: relativePath },
+                },
+              },
+            });
+          },
         },
       },
     }),

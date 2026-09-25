@@ -1,19 +1,48 @@
 import React from "react"
+import { Link } from "gatsby"
 
-import FooterMenuItem from "./footer-menu-item"
+const links = [
+	{ href: "http://www.amarcmexico.org/", label: "AMARC México" },
+	{ href: "https://www.facebook.com/radiokashana/", label: "Facebook Radiokashana" },
+	{ href: "https://www.facebook.com/lavozdelpacificoradio/", label: "Facebook La Voz del Pacífico" },
+]
 
-const Footer = () =>
-	<footer className="text-white w-full text-center bg-gray-900 clear-both" data-testid="site-footer">
-		<nav data-testid="footer-nav">
-			<ul className="inline-block list-none m-0 p-0 text-xs">
-				<FooterMenuItem href="http://www.amarcmexico.org/">AMARC M&eacute;xico</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/radiokashana/">Facebook Radiokashana</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/lavozdelpacificoradio/">Facebook La Voz del Pac&iacute;fico</FooterMenuItem>
-			</ul>
-		</nav>
-		<h3 className="m-0" data-testid="footer-frequency">Transmitiendo en la 93.3 FM desde el punto m&aacute;s alto de Santa Rosal&iacute;a, Baja California Sur</h3>
-		<h3 className="m-0" data-testid="footer-contact">Cel. 615 155 8484 rafael@radiokashana.org</h3>
+const Footer = () => (
+	<footer className="site-footer" data-testid="site-footer">
+		<div className="wrap">
+			<div className="site-footer__top">
+				<p className="site-footer__dial" aria-hidden="true">
+					93.3<span>FM</span>
+				</p>
+				<div className="site-footer__about">
+					<h3 data-testid="footer-frequency">
+						Transmitiendo en la 93.3 FM desde el punto más alto de Santa Rosalía, Baja California Sur
+					</h3>
+					<h3 className="site-footer__contact" data-testid="footer-contact">
+						Cel. <a href="tel:+526151558484">615 155 8484</a>
+						<span aria-hidden="true"> · </span>
+						<a href="mailto:rafael@radiokashana.org">rafael@radiokashana.org</a>
+					</h3>
+				</div>
+			</div>
+			<div className="site-footer__bottom">
+				<Link to="/" className="site-footer__name">
+					RadioKashana
+				</Link>
+				<nav data-testid="footer-nav" aria-label="Enlaces">
+					<ul>
+						{links.map((link) => (
+							<li key={link.href}>
+								<a href={link.href} rel="noopener noreferrer">
+									{link.label}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</footer>
-
+)
 
 export default Footer

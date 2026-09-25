@@ -1,44 +1,33 @@
 import React from "react"
 
+// The Facebook Live player as a full-width red band instead of a floating
+// box: it no longer covers the photos, and the masthead's "En vivo" button
+// jumps straight to it (#en-vivo). The iframe markup comes from the CMS
+// (_data/settings.json) and is sized by CSS.
 const Embed = ({ html }) => (
-  <div
-    className="fixed bottom-4 right-4 z-[999]"
-    data-testid="live-embed"
-    style={{
-      maxWidth: "320px",
-      borderRadius: "12px",
-      overflow: "hidden",
-      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)"
-    }}
-  >
-    <div
-      className="bg-gradient-to-r from-red-600 to-red-700 text-white p-3 flex justify-between items-center"
-      data-testid="live-embed-header"
-    >
-      <span className="text-sm font-semibold">Radio Kashana - En vivo</span>
-      <button
-        id="toggleLiveBtn"
-        className="border-none bg-white/20 hover:bg-white/30 text-white cursor-pointer text-sm px-2 py-1 rounded transition-colors"
-        data-testid="live-embed-toggle"
-        onClick={() => {
-          const content = document.getElementById('liveContent');
-          const btn = document.getElementById('toggleLiveBtn');
-          if (content.style.display === 'none') {
-            content.style.display = 'block';
-            btn.innerHTML = '−';
-          } else {
-            content.style.display = 'none';
-            btn.innerHTML = '+';
-          }
-        }}
-      >
-        −
-      </button>
-    </div>
-    <div id="liveContent" className="bg-white" data-testid="live-embed-content">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  </div>
+	<section className="live" id="en-vivo" data-testid="live-embed" aria-labelledby="en-vivo-title">
+		<div className="wrap live__inner">
+			<div className="live__copy" data-testid="live-embed-header">
+				<p className="live__eyebrow">
+					<span className="live-dot" aria-hidden="true" />
+					En vivo
+				</p>
+				<h2 className="live__title" id="en-vivo-title">
+					Escucha <span>RadioKashana</span>
+				</h2>
+				<p className="live__text">
+					Transmitiendo en la 93.3 FM desde el punto más alto de Santa Rosalía, Baja California Sur. Sigue la
+					señal en vivo por Facebook.
+				</p>
+				<a className="live__button" href="https://www.facebook.com/radiokashana/live/" rel="noopener noreferrer">
+					Abrir en Facebook
+				</a>
+			</div>
+			<div className="live__player" data-testid="live-embed-content">
+				<div dangerouslySetInnerHTML={{ __html: html }} />
+			</div>
+		</div>
+	</section>
 )
 
 export default Embed

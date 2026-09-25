@@ -48,6 +48,17 @@ module.exports = {
 			__key: "images",
 		},
 		{
+			// The CMS media folder. Sourcing it lets gatsby-plugin-image build
+			// responsive, lazy-loaded versions of every article photo; the files
+			// are still copied to /img/ as before for Open Graph and the CMS.
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "media",
+				path: "./static/img/",
+			},
+			__key: "media",
+		},
+		{
 			resolve: "gatsby-source-filesystem",
 			options: {
 				name: "pages",
