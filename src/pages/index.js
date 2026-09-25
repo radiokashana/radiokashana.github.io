@@ -2,76 +2,42 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
-import MainNews from "../components/main-news"
-import MainNew from "../components/main-new"
-import Ads from "../components/ads"
-import Embed from "../components/embed"
-import NewThumbList from "../components/new-thumb-list"
-import NewThumb from "../components/new-thumb"
+import OnAirHero from "../components/OnAirHero"
+import StationCard from "../components/StationCard"
+import { LeadStories, NewsFeed, toStory } from "../components/news"
 import Pagination from "../components/pagination"
-import { formatDateSpanish } from "../utils/dateUtils"
 
-const IndexPage = ({ data, location }) => {
-	const { edges } = data.allMdx
+// Keep in sync with gatsby-node.js, which builds /page/2 onwards.
+const mainNewsCount = 4
+const postsPerPage = 12
+
+const IndexPage = ({ data }) => {
 	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
+	const news = data.allMdx.edges.filter(edge => !!edge.node.frontmatter.date).map(toStory)
 
-	const news = edges
-		.filter(edge => !!edge.node.frontmatter.date)
-
-	// Configuration for pagination
-	const mainNewsCount = 4
-	const postsPerPage = 12
-	
-	// Calculate pagination info
 	const remainingPosts = news.length - mainNewsCount
-	const totalPages = Math.ceil(remainingPosts / postsPerPage) + 1 // +1 for the first page
+	const totalPages = Math.ceil(remainingPosts / postsPerPage) + 1
 
-	const mainNews = news
-		.slice(0, mainNewsCount)
-		.map(edge =>
-			<MainNew
-				key={edge.node.id}
-				href={edge.node.fields.slug}
-				title={edge.node.frontmatter.title}
-				date={formatDateSpanish(edge.node.frontmatter.date)}
-				img={{ src: edge.node.frontmatter.image, alt: "" }} />
-		)
-
-	// For page 1, show the first 12 articles after main news
-	const oldNews = news
-		.slice(mainNewsCount, mainNewsCount + postsPerPage)
-		.map(edge =>
-			<NewThumb
-				key={edge.node.id}
-				href={edge.node.fields.slug}
-				title={edge.node.frontmatter.title}
-				img={{ src: edge.node.frontmatter.image, alt: "" }}
-				excerpt={edge.node.excerpt} />
-		)
+	const mainNews = news.slice(0, mainNewsCount)
+	const moreNews = news.slice(mainNewsCount, mainNewsCount + postsPerPage)
 
 	return (
-		<IndexLayout>
-			{/* Floating Facebook Live embed - now positioned closer to top and bottom-right */}
-			<Embed html={facebookLiveEmbedHtml} />
-			
-			<section data-testid="homepage-content">
-				<MainNews>
-					{mainNews}
-				</MainNews>
-				<Ads/>
-				<Ads/>
-				<Ads/>
-				<NewThumbList>
-					{oldNews}
-				</NewThumbList>
-				
-				{totalPages > 1 && (
-					<Pagination 
-						currentPage={1} 
-						totalPages={totalPages} 
-					/>
-				)}
-			</section>
+		<IndexLayout inlinePlayer>
+			<OnAirHero embedHtml={facebookLiveEmbedHtml} />
+
+			<div className="news-page" data-testid="homepage-content">
+				<LeadStories stories={mainNews} />
+
+				<div className="shell news-columns">
+					<div className="news-columns__main">
+						<NewsFeed stories={moreNews} eyebrow="En la redacción" title="Más noticias" />
+						{totalPages > 1 && <Pagination currentPage={1} totalPages={totalPages} />}
+					</div>
+					<div className="news-columns__aside">
+						<StationCard />
+					</div>
+				</div>
+			</div>
 		</IndexLayout>
 	)
 }
@@ -90,6 +56,7 @@ export const pageQuery = graphql`
 						title
 						date
 						image
+						imagePosition
 					}
 				}
 			}

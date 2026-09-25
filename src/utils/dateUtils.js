@@ -19,3 +19,22 @@ export const formatDateSpanish = (date) => {
 	// Format the date using toLocaleDateString
 	return dateObj.toLocaleDateString("es-ES", options);
 };
+
+/**
+ * Short date for news feeds, e.g. "14 sept 2025". Always in Santa Rosalía's
+ * time zone so the server-rendered HTML matches what the browser hydrates.
+ * @param {string|Date} date
+ * @returns {string}
+ */
+export const formatDateShort = (date) => {
+	if (!date) return "";
+	const dateObj = typeof date === "string" ? new Date(date) : date;
+	return dateObj
+		.toLocaleDateString("es-MX", {
+			day: "numeric",
+			month: "short",
+			year: "numeric",
+			timeZone: "America/Mazatlan",
+		})
+		.replace(/\./g, "");
+};

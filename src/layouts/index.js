@@ -1,31 +1,27 @@
 import React from "react"
-import Helmet from "react-helmet"
 
 import SEO from "../components/SEO"
-import Header from "../components/Header"
+import Header, { StationStrip } from "../components/Header"
 import Footer from "../components/footer"
+import { LiveProvider } from "../components/live"
 
-const IndexLayout = ({children, customSEO}) =>
-	<div data-testid="app-layout" className="min-h-screen bg-gray-50">
-		{!customSEO && <SEO />}
-		<Header />
-		<main className="container-modern py-8" data-testid="main-content">
-			{children}
-		</main>
-		<Footer />
-	</div>
+// `inlinePlayer`: the page renders its own <LivePlayer id="en-vivo">, so the
+// header's "Escuchar" button scrolls to it instead of opening the drawer.
+const IndexLayout = ({ children, customSEO, inlinePlayer = false }) => (
+	<LiveProvider inlinePlayer={inlinePlayer}>
+		<div data-testid="app-layout" className="site" id="top">
+			{!customSEO && <SEO />}
+			<a className="skip-link" href="#contenido">
+				Saltar al contenido
+			</a>
+			<Header />
+			<StationStrip />
+			<main id="contenido" className="site-main" data-testid="main-content">
+				{children}
+			</main>
+			<Footer />
+		</div>
+	</LiveProvider>
+)
 
 export default IndexLayout
-
-
-/*
-		{{
-		<Helmet
-			title="Radio Kashana - Tu radio de verdad"
-			meta={[
-				{name: "description", content: "Tu radio de verdad"},
-				{name: "keywords", content: "radio, kashana, santa rosal&iacute;a"},
-			]}
-		/>
-		}}
-*/
