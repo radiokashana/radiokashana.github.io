@@ -91,6 +91,7 @@ const SocialShare = ({ pathname, title }) => {
 	return (
 		<div className="social-share" data-testid="social-share">
 			<h3>Compartir esta noticia</h3>
+			<p className="social-share__hint">Mándala a tu familia y a tus vecinos.</p>
 			<div className="social-share__buttons">
 				{networks.map((network) => (
 					<a
@@ -103,6 +104,7 @@ const SocialShare = ({ pathname, title }) => {
 						aria-label={`Compartir en ${network.name}`}
 					>
 						{network.icon}
+						<span className="social-share__label">{network.name}</span>
 					</a>
 				))}
 				<button
@@ -113,6 +115,7 @@ const SocialShare = ({ pathname, title }) => {
 					aria-label={copied ? "Enlace copiado" : "Copiar enlace"}
 				>
 					{copied ? <CheckIcon /> : <CopyIcon />}
+					<span className="social-share__label">{copied ? "¡Copiado!" : "Copiar enlace"}</span>
 				</button>
 			</div>
 		</div>
