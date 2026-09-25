@@ -3,50 +3,40 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
-import Ads from "../components/ads"
-import Embed from "../components/embed"
-import NewThumbList from "../components/new-thumb-list"
-import NewThumb from "../components/new-thumb"
+import Rail from "../components/rail"
 import Pagination from "../components/pagination"
+import { StoryList, StoryRow, toStory } from "../components/stories"
 
+// Archive pages (/page/2, /page/3, ...): the same dense list as the front
+// page, headed by the page number.
 const IndexTemplate = ({ data, pageContext, location }) => {
 	const { currentPage, totalPages } = pageContext
-	const { edges } = data.allMdx
 	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
 
-	const news = edges
+	const news = data.allMdx.edges
 		.filter(edge => !!edge.node.frontmatter.date)
-
-	const newsCards = news.map(edge =>
-		<NewThumb
-			key={edge.node.id}
-			href={edge.node.fields.slug}
-			title={edge.node.frontmatter.title}
-			img={{ src: edge.node.frontmatter.image, alt: "" }}
-			excerpt={edge.node.excerpt} />
-	)
+		.map(toStory)
 
 	return (
 		<IndexLayout customSEO>
 			{/* Each listing page gets its own canonical URL and og:url instead of the homepage's */}
 			<SEO pathname={location.pathname} />
-			{/* Floating Facebook Live embed */}
-			<Embed html={facebookLiveEmbedHtml} />
-			
-			<section data-testid="homepage-content">
-				{/* Ads are the first thing shown on pages 2+ */}
-				<Ads/>
-				<Ads/>
-				<Ads/>
-				
-				<NewThumbList>
-					{newsCards}
-				</NewThumbList>
 
-				<Pagination 
-					currentPage={currentPage} 
-					totalPages={totalPages} 
-				/>
+			<section data-testid="homepage-content">
+				<header className="archive-head">
+					<p className="kicker">Archivo</p>
+					<h1 className="archive-head__title">Noticias anteriores</h1>
+				</header>
+
+				<div className="columns">
+					<div className="columns__main">
+						<StoryList title={`Página ${currentPage} de ${totalPages}`}>
+							{news.map(story => <StoryRow key={story.id} story={story} />)}
+						</StoryList>
+						<Pagination currentPage={currentPage} totalPages={totalPages} />
+					</div>
+					<Rail liveEmbedHtml={facebookLiveEmbedHtml} />
+				</div>
 			</section>
 		</IndexLayout>
 	)
@@ -70,6 +60,7 @@ export const pageQuery = graphql`
 						title
 						date
 						image
+						imagePosition
 					}
 				}
 			}
