@@ -1,4 +1,15 @@
+// Netlify builds skip the Gatsby cache. With a warm cache, webpack reuses the
+// old Tailwind output when a change adds utility classes without touching a
+// CSS file, and pages whose code didn't change keep the old CSS inlined, so
+// deploys could ship without the new styles (#163). Dropping the adapter's
+// cache hooks keeps .cache and public from being restored between builds.
+const netlifyAdapterWithoutCache = () => {
+	const { cache, ...adapter } = require("gatsby-adapter-netlify").default();
+	return adapter;
+};
+
 module.exports = {
+	adapter: process.env.NETLIFY ? netlifyAdapterWithoutCache() : undefined,
 	pathPrefix: "/",
 	siteMetadata: {
 		siteUrl: "https://www.radiokashana.org/",
