@@ -4,45 +4,13 @@ import { graphql } from "gatsby"
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
 import SocialShare from "../components/SocialShare"
-import { formatDateSpanish } from "../utils/dateUtils"
+import Story, { StoryImage, toStory } from "../components/Story"
+import { formatDateLong } from "../utils/dateUtils"
 
-// Function to convert imagePosition to CSS object-position value
-const getObjectPosition = (position = 'center') => {
-	// Handle all edge cases: undefined, null, empty string, invalid values
-	if (!position || typeof position !== 'string' || position.trim() === '') {
-		// Log in development for debugging
-		if (process.env.NODE_ENV === 'development' && position !== undefined) {
-			console.warn('Invalid imagePosition value:', position, '- defaulting to center')
-		}
-		return 'center center'
-	}
-
-	const normalizedPosition = position.toLowerCase().trim()
-
-	const positionMap = {
-		'center': 'center center',
-		'top': 'center top',
-		'bottom': 'center bottom',
-		'left': 'left center',
-		'right': 'right center',
-		'top-left': 'left top',
-		'top-right': 'right top',
-		'bottom-left': 'left bottom',
-		'bottom-right': 'right bottom'
-	}
-
-	// Check if position exists in map
-	const result = positionMap[normalizedPosition]
-	if (!result && process.env.NODE_ENV === 'development') {
-		console.warn('Unknown imagePosition value:', position, '- defaulting to center')
-	}
-
-	// Return mapped position or default to center
-	return result || 'center center'
-}
-
-const NewTemplate = ({data, location, children}) => {
+const NewTemplate = ({ data, location, children }) => {
 	const { frontmatter, excerpt } = data.mdx
+	const story = toStory(data.mdx)
+	const moreStories = data.more.nodes.map(toStory)
 
 	return (
 		<IndexLayout customSEO>
@@ -56,36 +24,48 @@ const NewTemplate = ({data, location, children}) => {
 				bannerHeight={frontmatter.imageHeight}
 				article
 			/>
-			<div className="max-w-4xl mx-auto px-4 py-8">
-				<article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-					{/* Article Header */}
-					<div className="relative">
-						<img
-							src={frontmatter.image}
-							alt={frontmatter.title}
-							className="w-full h-72 md:h-80 lg:h-96 object-cover"
-							style={{ objectPosition: getObjectPosition(frontmatter?.imagePosition) }}
-						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-							<time className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-								{formatDateSpanish(frontmatter.date)}
-							</time>
-							<h1 className="text-2xl md:text-4xl font-bold leading-tight">
-								{frontmatter.title}
-							</h1>
-						</div>
+			<article className="article" data-testid="article">
+				{/* Edge-to-edge photo with the headline set over it, as on the homepage lead */}
+				<header className="article-hero on-dark">
+					<div className="article-hero__media">
+						<StoryImage story={story} rendition="hero" sizes="100vw" eager />
 					</div>
+					<div className="story__shade" aria-hidden="true" />
+					<div className="article-hero__text">
+						<p className="story__meta">
+							<span className="kicker">Noticias</span>
+							<time dateTime={frontmatter.date}>{formatDateLong(frontmatter.date)}</time>
+						</p>
+						<h1 className="article-hero__title">{frontmatter.title}</h1>
+					</div>
+				</header>
 
-					{/* Article Content */}
-					<div className="p-6 md:p-8">
-						<div className="prose prose-gray max-w-none">
-							{children}
+				<div className="article-body">
+					<div className="prose">{children}</div>
+					<SocialShare pathname={location.pathname} title={frontmatter.title} />
+				</div>
+			</article>
+
+			{moreStories.length > 0 && (
+				<section className="more on-dark" aria-labelledby="sigue-leyendo">
+					<div className="wrap">
+						<header className="section-head">
+							<h2 id="sigue-leyendo">Sigue leyendo</h2>
+						</header>
+						<div className="more__grid">
+							{moreStories.map((item) => (
+								<Story
+									key={item.id}
+									story={item}
+									variant="overlay"
+									sizes="(min-width: 1320px) 410px, (min-width: 768px) 33vw, 100vw"
+									headingLevel={3}
+								/>
+							))}
 						</div>
-						<SocialShare pathname={location.pathname} title={frontmatter.title} />
 					</div>
-				</article>
-			</div>
+				</section>
+			)}
 		</IndexLayout>
 	)
 }
@@ -93,15 +73,15 @@ const NewTemplate = ({data, location, children}) => {
 export const pageQuery = graphql`
 	query NewById($id: String!) {
 		mdx(id: { eq: $id }) {
-			id
-			excerpt(pruneLength: 200)
+			...StoryFields
 			frontmatter {
-				title
-				date
-				image
 				imageWidth
 				imageHeight
-				imagePosition
+			}
+		}
+		more: allMdx(filter: { id: { ne: $id } }, sort: { frontmatter: { date: DESC } }, limit: 3) {
+			nodes {
+				...StoryFields
 			}
 		}
 	}

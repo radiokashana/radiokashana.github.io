@@ -19,3 +19,39 @@ export const formatDateSpanish = (date) => {
 	// Format the date using toLocaleDateString
 	return dateObj.toLocaleDateString("es-ES", options);
 };
+
+// Pinned to Baja California Sur's time zone so the server-rendered HTML and
+// the hydrated page always agree on the day, wherever the build runs.
+const STATION_TIME_ZONE = "America/Mazatlan";
+
+const toDate = (date) => (typeof date === "string" ? new Date(date) : date);
+
+/**
+ * Short date for story cards, e.g. "13 mar 2018".
+ * @param {string|Date} date - The date to format
+ * @returns {string}
+ */
+export const formatDateShort = (date) => {
+	if (!date) return "";
+	return toDate(date).toLocaleDateString("es-MX", {
+		day: "numeric",
+		month: "short",
+		year: "numeric",
+		timeZone: STATION_TIME_ZONE,
+	});
+};
+
+/**
+ * Long date for the article page, e.g. "13 de marzo de 2018".
+ * @param {string|Date} date - The date to format
+ * @returns {string}
+ */
+export const formatDateLong = (date) => {
+	if (!date) return "";
+	return toDate(date).toLocaleDateString("es-MX", {
+		day: "numeric",
+		month: "long",
+		year: "numeric",
+		timeZone: STATION_TIME_ZONE,
+	});
+};
