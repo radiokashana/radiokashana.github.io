@@ -7,6 +7,8 @@ module.exports = {
 		titleAlt: "RadioKashana.org",
 		description: "RadioKashana es tu Radio de Verdad.",
 		banner: "/img/banner_web.png",
+		bannerWidth: 1200,
+		bannerHeight: 282,
 		// logo: "/logos/logo-1024.png",
 		headline: "RadioKashana",
 		siteLanguage: "es",

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
+import SocialShare from "../components/SocialShare"
 import { formatDateSpanish } from "../utils/dateUtils"
 
 // Function to convert imagePosition to CSS object-position value
@@ -51,6 +52,8 @@ const NewTemplate = ({data, location, children}) => {
 				desc={excerpt}
 				node={data.mdx}
 				banner={frontmatter.image}
+				bannerWidth={frontmatter.imageWidth}
+				bannerHeight={frontmatter.imageHeight}
 				article
 			/>
 			<div className="max-w-4xl mx-auto px-4 py-8">
@@ -79,6 +82,7 @@ const NewTemplate = ({data, location, children}) => {
 						<div className="prose prose-gray max-w-none">
 							{children}
 						</div>
+						<SocialShare pathname={location.pathname} title={frontmatter.title} />
 					</div>
 				</article>
 			</div>
@@ -95,6 +99,8 @@ export const pageQuery = graphql`
 				title
 				date
 				image
+				imageWidth
+				imageHeight
 				imagePosition
 			}
 		}

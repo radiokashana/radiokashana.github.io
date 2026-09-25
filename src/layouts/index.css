@@ -554,3 +554,63 @@ header img:hover {
 .img-position-top-right { object-position: right top; }
 .img-position-bottom-left { object-position: left bottom; }
 .img-position-bottom-right { object-position: right bottom; }
+
+/* Share bar at the end of an article (src/components/SocialShare.js).
+   Plain CSS on purpose: this file is always rebuilt, whereas utility classes
+   that only appear in a new component were missing from a cached Netlify build. */
+.social-share {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--border-light);
+}
+
+.social-share h3 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	margin-bottom: 1rem;
+}
+
+.social-share__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.social-share__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 9999px;
+	background-color: var(--bg-accent);
+	color: var(--text-primary);
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-share__button svg {
+	width: 1.25rem;
+	height: 1.25rem;
+	fill: currentColor;
+}
+
+.social-share__button:hover,
+.social-share__button:focus-visible {
+	color: #ffffff;
+	background-color: var(--social-share-hover, var(--text-primary));
+	outline: none;
+}
+
+.social-share__button:focus-visible {
+	box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--border-medium);
+}
+
+.social-share__button--facebook { --social-share-hover: #1877f2; }
+.social-share__button--whatsapp { --social-share-hover: #25d366; }
+.social-share__button--x { --social-share-hover: #000000; }
+.social-share__button--telegram { --social-share-hover: #26a5e4; }
+.social-share__button--copy { --social-share-hover: #374151; }

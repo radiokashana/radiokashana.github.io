@@ -2,13 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
+import SEO from "../components/SEO"
 import Ads from "../components/ads"
 import Embed from "../components/embed"
 import NewThumbList from "../components/new-thumb-list"
 import NewThumb from "../components/new-thumb"
 import Pagination from "../components/pagination"
 
-const IndexTemplate = ({ data, pageContext }) => {
+const IndexTemplate = ({ data, pageContext, location }) => {
 	const { currentPage, totalPages } = pageContext
 	const { edges } = data.allMdx
 	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
@@ -26,7 +27,9 @@ const IndexTemplate = ({ data, pageContext }) => {
 	)
 
 	return (
-		<IndexLayout>
+		<IndexLayout customSEO>
+			{/* Each listing page gets its own canonical URL and og:url instead of the homepage's */}
+			<SEO pathname={location.pathname} />
 			{/* Floating Facebook Live embed */}
 			<Embed html={facebookLiveEmbedHtml} />
 			
