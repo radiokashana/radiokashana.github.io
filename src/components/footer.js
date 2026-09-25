@@ -1,19 +1,30 @@
 import React from "react"
 
-import FooterMenuItem from "./footer-menu-item"
+const links = [
+	["http://www.amarcmexico.org/", "AMARC México"],
+	["https://www.facebook.com/radiokashana/", "Facebook Radiokashana"],
+	["https://www.facebook.com/lavozdelpacificoradio/", "Facebook La Voz del Pacífico"],
+]
 
-const Footer = () =>
-	<footer className="text-white w-full text-center bg-gray-900 clear-both" data-testid="site-footer">
+const Footer = () => (
+	<footer className="site-footer" data-testid="site-footer">
+		<p data-testid="footer-frequency">
+			Transmitiendo en la 93.3 FM desde el punto más alto de Santa Rosalía, Baja California Sur.
+		</p>
+		<p data-testid="footer-contact">
+			Cel. <a href="tel:+526151558484">615 155 8484</a> ·{" "}
+			<a href="mailto:rafael@radiokashana.org">rafael@radiokashana.org</a>
+		</p>
 		<nav data-testid="footer-nav">
-			<ul className="inline-block list-none m-0 p-0 text-xs">
-				<FooterMenuItem href="http://www.amarcmexico.org/">AMARC M&eacute;xico</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/radiokashana/">Facebook Radiokashana</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/lavozdelpacificoradio/">Facebook La Voz del Pac&iacute;fico</FooterMenuItem>
+			<ul className="inline-list">
+				{links.map(([href, label]) => (
+					<li key={href}>
+						<a href={href}>{label}</a>
+					</li>
+				))}
 			</ul>
 		</nav>
-		<h3 className="m-0" data-testid="footer-frequency">Transmitiendo en la 93.3 FM desde el punto m&aacute;s alto de Santa Rosal&iacute;a, Baja California Sur</h3>
-		<h3 className="m-0" data-testid="footer-contact">Cel. 615 155 8484 rafael@radiokashana.org</h3>
 	</footer>
-
+)
 
 export default Footer

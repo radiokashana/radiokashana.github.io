@@ -3,50 +3,23 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
-import Ads from "../components/ads"
-import Embed from "../components/embed"
-import NewThumbList from "../components/new-thumb-list"
-import NewThumb from "../components/new-thumb"
+import NewsList from "../components/news-list"
 import Pagination from "../components/pagination"
 
 const IndexTemplate = ({ data, pageContext, location }) => {
 	const { currentPage, totalPages } = pageContext
-	const { edges } = data.allMdx
-	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
-
-	const news = edges
-		.filter(edge => !!edge.node.frontmatter.date)
-
-	const newsCards = news.map(edge =>
-		<NewThumb
-			key={edge.node.id}
-			href={edge.node.fields.slug}
-			title={edge.node.frontmatter.title}
-			img={{ src: edge.node.frontmatter.image, alt: "" }}
-			excerpt={edge.node.excerpt} />
-	)
+	const news = data.allMdx.nodes.filter((node) => !!node.frontmatter.date)
 
 	return (
 		<IndexLayout customSEO>
 			{/* Each listing page gets its own canonical URL and og:url instead of the homepage's */}
 			<SEO pathname={location.pathname} />
-			{/* Floating Facebook Live embed */}
-			<Embed html={facebookLiveEmbedHtml} />
-			
 			<section data-testid="homepage-content">
-				{/* Ads are the first thing shown on pages 2+ */}
-				<Ads/>
-				<Ads/>
-				<Ads/>
-				
-				<NewThumbList>
-					{newsCards}
-				</NewThumbList>
-
-				<Pagination 
-					currentPage={currentPage} 
-					totalPages={totalPages} 
-				/>
+				<h1 className="section-label meta">
+					Noticias · página {currentPage}
+				</h1>
+				<NewsList items={news} testId="news-articles" />
+				<Pagination currentPage={currentPage} totalPages={totalPages} />
 			</section>
 		</IndexLayout>
 	)
@@ -54,30 +27,16 @@ const IndexTemplate = ({ data, pageContext, location }) => {
 
 export const pageQuery = graphql`
 	query IndexTemplateQuery($skip: Int!, $limit: Int!) {
-		allMdx(
-			sort: { frontmatter: { date: DESC } }
-			skip: $skip
-			limit: $limit
-		) {
-			edges {
-				node {
-					id
-					excerpt(pruneLength: 200)
-					fields {
-						slug
-					}
-					frontmatter {
-						title
-						date
-						image
-					}
+		allMdx(sort: { frontmatter: { date: DESC } }, skip: $skip, limit: $limit) {
+			nodes {
+				id
+				excerpt(pruneLength: 180)
+				fields {
+					slug
 				}
-			}
-		}
-		allDataJson {
-			edges {
-				node {
-					facebookLiveEmbedHtml
+				frontmatter {
+					title
+					date
 				}
 			}
 		}

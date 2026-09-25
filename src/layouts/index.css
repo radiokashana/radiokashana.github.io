@@ -1,616 +1,398 @@
-@import "tailwindcss";
+/* RadioKashana: one typeface, one column, rules and spacing. Nothing else. */
 
 :root {
-	/* Modern color palette inspired by contemporary news sites */
-	--brand-primary: #D80125; /*#2563eb;*/
-	--brand-secondary: #2563eb; /*#dc2626; */
-	--brand-accent: #059669;
-	--text-primary: #111827;
-	--text-secondary: #6b7280;
-	--text-muted: #9ca3af;
-	--bg-primary: #ffffff;
-	--bg-secondary: #f9fafb;
-	--bg-accent: #f3f4f6;
-	--border-light: #e5e7eb;
-	--border-medium: #d1d5db;
-	--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-	--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	--red: #d80125;
+	--ink: #111;
+	--muted: #666;
+	--rule: #ddd;
+	--side: 8rem; /* date column on wide screens */
+	--gap: 2rem;
+	--font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans",
+		"Liberation Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-@theme {
-	--color-primary: var(--brand-primary);
-	--color-secondary: var(--brand-secondary);
-	--color-accent: var(--brand-accent);
-	--color-primary-light: color-mix(in srgb, var(--brand-primary) 80%, white);
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-@layer base {
-	html {
-		line-height: 1.6;
-		font-feature-settings:
-			"kern" 1,
-			"liga" 1;
-		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	body {
-		background-color: var(--bg-secondary);
-		color: var(--text-primary);
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-weight: 700;
-		line-height: 1.25;
-		letter-spacing: -0.025em;
-	}
-
-	h1 {
-		font-size: 2.25rem;
-		margin-bottom: 1rem;
-	}
-
-	h2 {
-		font-size: 1.875rem;
-		margin-bottom: 0.75rem;
-		color: var(--text-primary);
-	}
-
-	h3 {
-		font-size: 1.5rem;
-		margin-bottom: 0.75rem;
-	}
-
-	p {
-		margin-bottom: 1rem;
-		line-height: 1.7;
-		color: var(--text-secondary);
-	}
-
-	a {
-		transition: all 0.2s ease-in-out;
-	}
-
-	a:hover {
-		color: var(--brand-primary);
-	}
+html {
+	-webkit-text-size-adjust: 100%;
 }
 
-.bl--mid-gray {
-	border-left: 1px solid theme("colors.gray.500");
-}
-
-.br--near-black {
-	border-right: 1px solid theme("colors.gray.900");
-}
-
-/* Modern news section styling */
-#news article {
-	position: relative;
-	/*max-height: 400px;*/
-	overflow: hidden;
-	text-overflow: ellipsis;
-	background: var(--bg-primary);
-	border-radius: 0.75rem;
-	box-shadow: var(--shadow-sm);
-	transition: all 0.3s ease;
-	border: 1px solid var(--border-light);
-}
-
-#news article:hover {
-	box-shadow: var(--shadow-lg);
-	transform: translateY(-2px);
-}
-
-#news section:after {
-	content: "";
-	height: 200px;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background: linear-gradient(
-		rgba(255, 255, 255, 0) 50%,
-		var(--bg-primary) 100%
-	);
-	border-radius: 0 0 0.75rem 0.75rem;
-}
-
-/* Enhanced main news cards */
-#main-news article {
-	font-family:
-		system-ui,
-		-apple-system,
-		sans-serif;
-	padding: 1.5rem;
-	color: white;
-	background: linear-gradient(
-		135deg,
-		rgba(0, 0, 0, 0.7) 0%,
-		rgba(0, 0, 0, 0.4) 100%
-	);
-	border-radius: 0.75rem;
-	box-shadow: var(--shadow-md);
-	transition: all 0.3s ease;
-	min-height: 280px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	position: relative;
-	overflow: hidden;
-}
-
-#main-news article::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(
-		135deg,
-		var(--brand-primary) 0%,
-		var(--brand-secondary) 100%
-	);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-#main-news article:hover::before {
-	opacity: 0.1;
-}
-
-#main-news article:hover {
-	transform: translateY(-4px);
-	box-shadow: var(--shadow-lg);
-}
-
-#main-news h2 {
-	color: white;
-	margin-bottom: 0.5rem;
-	font-size: 1.5rem;
-	font-weight: 700;
-	line-height: 1.3;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-	position: relative;
-	z-index: 1;
-}
-
-#main-news p {
-	color: rgba(255, 255, 255, 0.9);
-	font-size: 0.875rem;
-	font-weight: 500;
+body {
 	margin: 0;
-	position: relative;
-	z-index: 1;
+	background: #fff;
+	color: var(--ink);
+	font: 1.125rem/1.55 var(--font);
+	-webkit-font-smoothing: antialiased;
 }
 
-.h-one-third-ar-16-9 {
-	height: calc(100vw / 3 * 9 / 16);
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+figure,
+blockquote {
+	margin: 0;
 }
 
-.h-one-third-ar-4-3 {
-	height: calc(100vw * 3 / 4);
+h1,
+h2,
+h3 {
+	font-size: inherit;
+	line-height: 1.2;
+	text-wrap: balance;
 }
 
-.z-999 {
-	z-index: 999;
+a {
+	color: var(--red);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
 }
 
-@media screen and (min-width: 30em) {
-	.h-one-third-ar-4-3 {
-		height: calc(100vw / 3 * 3 / 4);
-	}
+a:hover {
+	text-decoration-thickness: 2px;
 }
 
-.z--1 {
-	z-index: -1;
+:focus-visible {
+	outline: 2px solid var(--red);
+	outline-offset: 2px;
 }
 
-.bg-top-gray-bottom-near-black {
-	background: linear-gradient(
-		to bottom,
-		theme("colors.gray.500") 0%,
-		theme("colors.gray.900") 100%
-	);
-}
-
-.bg-left-dark-red-bottom-near-black {
-	background: linear-gradient(
-		to bottom,
-		theme("colors.gray.500") 0%,
-		theme("colors.gray.900") 100%
-	);
-}
-
-/* Modern news thumbnail cards */
-.news-thumb-card {
-	background: var(--bg-primary);
-	border-radius: 0.75rem;
-	overflow: hidden;
-	box-shadow: var(--shadow-sm);
-	border: 1px solid var(--border-light);
-	transition: all 0.3s ease;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.news-thumb-card:hover {
-	box-shadow: var(--shadow-md);
-	transform: translateY(-2px);
-	border-color: var(--brand-primary);
-}
-
-.news-thumb-card img {
-	width: 100%;
-	height: 280px; /* Increased from 240px to 280px */
-	object-fit: cover;
-	transition: transform 0.3s ease;
-}
-
-.news-thumb-card:hover img {
-	transform: scale(1.05);
-}
-
-.news-thumb-card .content {
-	padding: 1.25rem 1.5rem 1.5rem 1.5rem; /* Reduced top padding from 1.5rem to 1.25rem */
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	min-height: 180px; /* Increased from 160px to accommodate 4-line titles */
-}
-
-.news-thumb-card h2 {
-	font-size: 1.125rem;
-	font-weight: 700;
-	color: var(--text-primary);
-	margin-bottom: 0; /* Remove bottom margin since we have fixed height */
-	line-height: 1.4;
-	transition: color 0.2s ease;
-	height: 5.6rem; /* Fixed height for exactly 4 lines (1.4 line-height * 4) */
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 4; /* Changed from 3 to 4 lines */
-	-webkit-box-orient: vertical;
-}
-
-.news-thumb-card:hover h2 {
-	color: var(--brand-primary);
-}
-
-.news-thumb-card .excerpt {
-	color: var(--text-secondary);
-	font-size: 1rem; /* Increased from 0.9rem to 1rem */
-	line-height: 1.6;
-	flex-grow: 1;
-	margin-top: 0.75rem; /* Add space between title and excerpt */
-}
-
-.news-thumb-card .excerpt p {
-	margin-bottom: 0.5rem;
-}
-
-/* Facebook Live container styling */
-#liveContent {
-	width: 100%;
-	background-color: theme("colors.white");
-}
-
-#liveContent iframe {
-	width: 100%;
-	height: 200px; /* Adjusted for smaller width */
-	border: none;
-	display: block;
-}
-
-@media screen and (max-width: 30em) {
-	#liveContent iframe {
-		height: 170px; /* Smaller on mobile */
-	}
-}
-
-iframe {
-	height: 225px;
-	width: 100%;
-}
-
-
-/* Enhanced Facebook Live embed styling */
-/* #liveContent {
-	background: var(--bg-primary);
-	border-radius: 0.75rem;
-	box-shadow: var(--shadow-md);
-	border: 1px solid var(--border-light);
-	overflow: hidden;
-	position: fixed;
-	top: 100px;
-	right: 20px;
-	z-index: 1000;
-	max-width: 320px;
-}
-
-#liveContent .header {
-	background: var(--brand-primary);
-	color: white;
-	padding: 0.75rem 1rem;
-	font-weight: 600;
-	font-size: 0.875rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-#liveContent iframe {
-	width: 100%;
-	height: 200px;
-	border: none;
-	display: block;
-}
-
-@media screen and (max-width: 768px) {
-	#liveContent {
-		position: relative;
-		top: auto;
-		right: auto;
-		max-width: 100%;
-		margin: 1rem 0;
-	}
-
-	#liveContent iframe {
-		height: 170px;
-	}
-} */
-
-/* Utility classes for modern design */
-.container-modern {
-	max-width: 1200px;
+.wrap {
+	max-width: 46rem;
 	margin: 0 auto;
-	padding: 0 1.5rem;
+	padding: 0 1.25rem;
 }
 
-.section-spacing {
-	padding: 3rem 0;
+.meta {
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--muted);
 }
 
-.card-modern {
-	background: var(--bg-primary);
-	border-radius: 0.75rem;
-	box-shadow: var(--shadow-sm);
-	border: 1px solid var(--border-light);
-	transition: all 0.3s ease;
-}
-
-.card-modern:hover {
-	box-shadow: var(--shadow-md);
-	transform: translateY(-2px);
-}
-
-.text-gradient {
-	background: linear-gradient(
-		135deg,
-		var(--brand-primary) 0%,
-		var(--brand-secondary) 100%
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.btn-primary {
-	background: linear-gradient(
-		135deg,
-		var(--brand-primary) 0%,
-		var(--brand-secondary) 100%
-	);
-	color: white;
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.5rem;
-	font-weight: 600;
-	text-decoration: none;
-	display: inline-block;
-	transition: all 0.3s ease;
-	border: none;
-	cursor: pointer;
-}
-
-.btn-primary:hover {
-	transform: translateY(-2px);
-	box-shadow: var(--shadow-lg);
-	color: white;
-}
-
-/* Enhanced footer styling */
-footer {
-	background: linear-gradient(135deg, var(--text-primary) 0%, #374151 100%);
-	color: white;
-	padding: 2rem 0;
-	margin-top: 4rem;
-}
-
-footer a {
-	color: rgba(255, 255, 255, 0.8);
-	transition: color 0.2s ease;
-}
-
-footer a:hover {
-	color: white;
-}
-
-footer h3 {
-	color: rgba(255, 255, 255, 0.9);
-	font-size: 0.875rem;
-	font-weight: 500;
-}
-
-header {
-	background: var(--bg-primary);
-	box-shadow: var(--shadow-sm);
-	border-bottom: 1px solid var(--border-light);
-	position: sticky;
-	/*top: 0;
-	z-index: 100;*/
-}
-
-header img {
-	transition: transform 0.3s ease;
-}
-
-header img:hover {
-	transform: scale(1.02);
-}
-
-/* Article content styling to ensure proper paragraph spacing */
-.article-content p {
-	margin-bottom: 1rem;
-	line-height: 1.7;
-}
-
-.article-content h1 {
-	font-size: 1.875rem;
-	font-weight: 700;
-	color: var(--text-primary);
-	margin-bottom: 1.5rem;
-	margin-top: 2rem;
-	line-height: 1.25;
-}
-
-.article-content h2 {
-	font-size: 1.5rem;
-	font-weight: 700;
-	color: var(--text-primary);
-	margin-bottom: 1rem;
-	margin-top: 1.5rem;
-	line-height: 1.25;
-}
-
-.article-content h3 {
-	font-size: 1.25rem;
-	font-weight: 600;
-	color: var(--text-primary);
-	margin-bottom: 0.75rem;
-	margin-top: 1.25rem;
-	line-height: 1.25;
-}
-
-.article-content ul,
-.article-content ol {
-	margin-bottom: 1rem;
-	padding-left: 1.5rem;
-}
-
-.article-content li {
-	margin-bottom: 0.5rem;
-	line-height: 1.7;
-}
-
-.article-content blockquote {
-	border-left: 4px solid var(--brand-primary);
-	padding-left: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	margin-bottom: 1rem;
-	font-style: italic;
-	color: var(--text-secondary);
-	background-color: var(--bg-accent);
-	border-radius: 0 0.25rem 0.25rem 0;
-}
-
-.article-content strong {
-	font-weight: 600;
-	color: var(--text-primary);
-}
-
-.article-content em {
-	font-style: italic;
-	color: var(--text-secondary);
-}
-
-.article-content a {
-	color: var(--brand-primary);
-	text-decoration: underline;
-	transition: color 0.2s ease;
-}
-
-.article-content a:hover {
-	color: var(--brand-secondary);
-}
-
-/* Image positioning utility classes */
-.img-position-center { object-position: center center; }
-.img-position-top { object-position: center top; }
-.img-position-bottom { object-position: center bottom; }
-.img-position-left { object-position: left center; }
-.img-position-right { object-position: right center; }
-.img-position-top-left { object-position: left top; }
-.img-position-top-right { object-position: right top; }
-.img-position-bottom-left { object-position: left bottom; }
-.img-position-bottom-right { object-position: right bottom; }
-
-/* Share bar at the end of an article (src/components/SocialShare.js).
-   Plain CSS on purpose: this file is always rebuilt, whereas utility classes
-   that only appear in a new component were missing from a cached Netlify build. */
-.social-share {
-	margin-top: 2rem;
-	padding-top: 1.5rem;
-	border-top: 1px solid var(--border-light);
-}
-
-.social-share h3 {
-	font-size: 1.125rem;
-	font-weight: 600;
-	color: var(--text-primary);
-	margin-bottom: 1rem;
-}
-
-.social-share__buttons {
+.inline-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.75rem;
-}
-
-.social-share__button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 2.75rem;
-	height: 2.75rem;
-	border-radius: 9999px;
-	background-color: var(--bg-accent);
-	color: var(--text-primary);
-	border: 0;
+	gap: 0.25em 1.25em;
 	padding: 0;
+	list-style: none;
+}
+
+/* Masthead */
+
+.masthead {
+	padding-top: 1.5rem;
+}
+
+.masthead__row {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.masthead__name {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	color: var(--red);
+	text-decoration: none;
+}
+
+.masthead__live {
+	font-size: 0.8125rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+.masthead__live::before {
+	content: "●";
+	margin-right: 0.4em;
+	color: var(--red);
+}
+
+.masthead__tag span {
+	white-space: nowrap;
+}
+
+.masthead__tag {
+	margin-top: 0.4rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid var(--ink);
+}
+
+.live {
+	padding: 1.5rem 0;
+	border-bottom: 1px solid var(--rule);
+}
+
+.live iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	border: 0;
+}
+
+main.wrap {
+	padding-top: 2rem;
+}
+
+/* Headline lists */
+
+.news {
+	padding: 0;
+	list-style: none;
+}
+
+.news__item {
+	padding: 1.25rem 0;
+	border-top: 1px solid var(--rule);
+}
+
+.news__item:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+
+.news__title {
+	margin-top: 0.25rem;
+	line-height: 1.3;
+}
+
+.news__title a {
+	color: var(--ink);
+	text-decoration: none;
+}
+
+.news__title a:hover {
+	color: var(--red);
+}
+
+.news__excerpt {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	margin-top: 0.3rem;
+	font-size: 1rem;
+	line-height: 1.45;
+	color: var(--muted);
+}
+
+.news--lead .news__item {
+	padding: 0 0 2rem;
+	border: 0;
+}
+
+.news--lead .news__title {
+	font-size: 1.25rem;
+}
+
+.news--lead .news__item:first-child .news__title,
+.story__head h1 {
+	font-size: 1.625rem;
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+}
+
+.news--lead .news__excerpt {
+	font-size: 1.125rem;
+}
+
+.news--lead .news__item:first-child .news__excerpt {
+	-webkit-line-clamp: 3;
+}
+
+.section-label {
+	margin: 0.5rem 0 1.25rem;
+	padding-top: 0.75rem;
+	border-top: 2px solid var(--ink);
+}
+
+.section-label:first-child {
+	margin-top: 0;
+	padding-top: 0;
+	border: 0;
+}
+
+.pager {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: baseline;
+	gap: 1rem;
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+	font-size: 1rem;
+}
+
+.pager span:last-child {
+	text-align: right;
+}
+
+/* Article */
+
+.story__head h1 {
+	margin-top: 0.5rem;
+}
+
+.story__image {
+	display: block;
+	height: auto;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	width: calc(100% + 2.5rem);
+	max-width: none;
+	margin: 1.5rem -1.25rem 0;
+	background: #f2f2f2;
+}
+
+.story__body {
+	margin-top: 1.5rem;
+	line-height: 1.6;
+	text-wrap: pretty;
+}
+
+.story__body > * + * {
+	margin-top: 1.1em;
+}
+
+.story__body h2,
+.story__body h3 {
+	margin-top: 2em;
+	font-size: 1.375rem;
+}
+
+.story__body h3 {
+	font-size: 1.125rem;
+}
+
+.story__body ul,
+.story__body ol {
+	padding-left: 1.25em;
+}
+
+.story__body li + li {
+	margin-top: 0.4em;
+}
+
+.story__body blockquote {
+	padding-left: 1.25rem;
+	border-left: 2px solid var(--ink);
+	font-style: italic;
+}
+
+.story__body img,
+.story__body video,
+.story__body iframe {
+	max-width: 100%;
+	border: 0;
+}
+
+.story__body img {
+	display: block;
+	height: auto;
+}
+
+.story__body hr {
+	border: 0;
+	border-top: 1px solid var(--rule);
+}
+
+.social-share {
+	margin-top: 3rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+}
+
+.social-share .inline-list {
+	margin-top: 0.4rem;
+}
+
+.social-share button {
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: var(--red);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
 	cursor: pointer;
-	transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.social-share__button svg {
-	width: 1.25rem;
-	height: 1.25rem;
-	fill: currentColor;
+/* Footer */
+
+/* Same measure as .wrap, but the rule stops at the text edge */
+.site-footer {
+	margin: 4rem max(1.25rem, 50% - 21.75rem) 0;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	border-top: 2px solid var(--ink);
+	font-size: 1rem;
+	color: var(--muted);
 }
 
-.social-share__button:hover,
-.social-share__button:focus-visible {
-	color: #ffffff;
-	background-color: var(--social-share-hover, var(--text-primary));
-	outline: none;
+.site-footer > * + * {
+	margin-top: 0.35rem;
 }
 
-.social-share__button:focus-visible {
-	box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--border-medium);
-}
+/* Wide screens: dates hang in a left column, text sits in a reading measure */
 
-.social-share__button--facebook { --social-share-hover: #1877f2; }
-.social-share__button--whatsapp { --social-share-hover: #25d366; }
-.social-share__button--x { --social-share-hover: #000000; }
-.social-share__button--telegram { --social-share-hover: #26a5e4; }
-.social-share__button--copy { --social-share-hover: #374151; }
+@media (min-width: 45em) {
+	.news__item,
+	.story__head {
+		display: grid;
+		grid-template-columns: var(--side) 1fr;
+		column-gap: var(--gap);
+		align-items: baseline;
+	}
+
+	.news__title,
+	.story__head h1 {
+		margin-top: 0;
+	}
+
+	.news__excerpt {
+		-webkit-line-clamp: 1;
+	}
+
+	.news--lead .news__title {
+		font-size: 1.375rem;
+	}
+
+	.story__image {
+		width: 100%;
+		margin: 2rem 0 0;
+	}
+
+	.story__body {
+		margin-top: 2rem;
+	}
+
+	.story__body,
+	.social-share {
+		margin-left: calc(var(--side) + var(--gap));
+	}
+
+	.masthead {
+		padding-top: 2.5rem;
+	}
+
+	.news--lead .news__item:first-child .news__title,
+	.story__head h1 {
+		font-size: 2rem;
+	}
+}
