@@ -189,3 +189,54 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
 };
+// A warm .cache can ship stale CSS (#163): webpack may reuse the old Tailwind
+// output when a change adds utility classes without touching a CSS file, and
+// pages whose code didn't change keep the previous stylesheet inlined. Fail
+// the build instead of deploying unstyled pages.
+const listHtmlFiles = (dir) =>
+  fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) return listHtmlFiles(file);
+    return entry.name.endsWith(".html") ? [file] : [];
+  });
+
+exports.onPostBuild = async ({ reporter }) => {
+  const publicDir = path.join(__dirname, "public");
+  const stats = require(path.join(publicDir, "webpack.stats.json"));
+  const stylesheets = [].concat(stats.assetsByChunkName.app || []).filter((file) => file.endsWith(".css"));
+  const emittedCss = stylesheets.map((file) => fs.readFileSync(path.join(publicDir, file), "utf8")).join("\n");
+  const problems = [];
+
+  // Every class a fresh Tailwind compile generates must be in the emitted CSS.
+  const postcss = require("postcss");
+  const tailwind = require("@tailwindcss/postcss");
+  const from = path.join(__dirname, "src", "layouts", "index.css");
+  const fresh = await postcss([tailwind()]).process(fs.readFileSync(from, "utf8"), { from });
+  const missingClasses = new Set();
+  fresh.root.walkRules((rule) => {
+    if (rule.parent.type === "atrule" && rule.parent.name.endsWith("keyframes")) return;
+    for (const [, className] of rule.selector.matchAll(/\.((?:\\.|[\w-])+)/g)) {
+      if (!emittedCss.includes(`.${className}`)) missingClasses.add(className);
+    }
+  });
+  if (missingClasses.size > 0) {
+    const sample = [...missingClasses].slice(0, 5).join(", ");
+    problems.push(`${missingClasses.size} classes are missing from ${stylesheets.join(", ")} (e.g. ${sample})`);
+  }
+
+  // Every page must inline the stylesheet from this build.
+  const stalePages = listHtmlFiles(publicDir).filter((file) => {
+    const inlined = fs.readFileSync(file, "utf8").match(/data-href="\/(styles\.[^"]+\.css)"/);
+    return inlined && !stylesheets.includes(inlined[1]);
+  });
+  if (stalePages.length > 0) {
+    const sample = path.relative(publicDir, stalePages[0]);
+    problems.push(`${stalePages.length} pages inline a stylesheet from an earlier build (e.g. ${sample})`);
+  }
+
+  if (problems.length > 0) {
+    reporter.panicOnBuild(
+      `The build produced stale CSS, most likely from a warm Gatsby cache:\n- ${problems.join("\n- ")}\nRun "yarn clean" and build again.`
+    );
+  }
+};
