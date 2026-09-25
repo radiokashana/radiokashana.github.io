@@ -68,9 +68,18 @@ export default defineConfig({
 
 	/* Configure visual testing */
 	expect: {
-		// Threshold for pixel difference
-		threshold: 0.2,
-		// Animation handling
-		animations: "disabled",
+		// These options only take effect under toHaveScreenshot; at the top
+		// level of `expect` Playwright ignores them.
+		toHaveScreenshot: {
+			// Per-pixel colour distance (0-1) before a pixel counts as different
+			threshold: 0.2,
+			// Baselines are generated from the Netlify preview but compared
+			// against the local dev server in CI, which renders about 1% of
+			// pixels differently (anti-aliasing, image decoding). Allow 2%;
+			// real layout regressions have measured 30% or more.
+			maxDiffPixelRatio: 0.02,
+			// Animation handling
+			animations: "disabled",
+		},
 	},
 });
