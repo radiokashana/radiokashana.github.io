@@ -5,10 +5,51 @@
  */
 
 const path = require("path");
+const fs = require("fs");
 const { createFilePath } = require("gatsby-source-filesystem");
 
+// Frontmatter images live in static/img and are referenced as "/img/foo.jpg".
+// We measure them at build time so the SEO component can emit
+// og:image:width / og:image:height, which lets Facebook render the preview
+// image on the very first share instead of after an async re-crawl.
+const imageDimensionsCache = new Map();
+
+const getImageDimensions = (imagePath, reporter) => {
+  if (!imagePath || typeof imagePath !== "string") return null;
+  if (imageDimensionsCache.has(imagePath)) return imageDimensionsCache.get(imagePath);
+
+  let dimensions = null;
+  try {
+    const decoded = decodeURI(imagePath.trim().replace(/^\/+/, ""));
+    const file = path.resolve(__dirname, "static", decoded);
+    if (fs.existsSync(file)) {
+      // sharp ships with gatsby-plugin-sharp, so it is always installed here.
+      const sharp = require("sharp");
+      dimensions = sharp(file).metadata();
+    } else if (reporter) {
+      reporter.warn(`Frontmatter image not found in static/: ${imagePath}`);
+    }
+  } catch (err) {
+    if (reporter) reporter.warn(`Could not read image ${imagePath}: ${err.message}`);
+  }
+
+  const result = Promise.resolve(dimensions)
+    .then((meta) => {
+      if (!meta || !meta.width || !meta.height) return null;
+      // EXIF orientation 5-8 means the stored pixels are rotated 90°
+      const rotated = meta.orientation && meta.orientation >= 5;
+      return rotated
+        ? { width: meta.height, height: meta.width }
+        : { width: meta.width, height: meta.height };
+    })
+    .catch(() => null);
+
+  imageDimensionsCache.set(imagePath, result);
+  return result;
+};
+
 // Schema customization for Gatsby v5
-exports.createSchemaCustomization = ({ actions, schema }) => {
+exports.createSchemaCustomization = ({ actions, schema, reporter }) => {
   const { createTypes } = actions;
 
   // Define the Date type with formatString and locale directives
@@ -31,6 +72,20 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           },
         },
         image: "String",
+        imageWidth: {
+          type: "Int",
+          resolve: async (source) => {
+            const dims = await getImageDimensions(source.image, reporter);
+            return dims ? dims.width : null;
+          },
+        },
+        imageHeight: {
+          type: "Int",
+          resolve: async (source) => {
+            const dims = await getImageDimensions(source.image, reporter);
+            return dims ? dims.height : null;
+          },
+        },
         imagePosition: {
           type: "String",
           resolve: (source) => source.imagePosition || "center",

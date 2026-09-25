@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Facebook from './Facebook'
 import Twitter from './Twitter'
+import { absoluteUrl } from '../../utils/urlUtils'
 
 // Complete tutorial: https://www.gatsbyjs.org/docs/add-seo-component/
 
-const SEO = ({ title, desc, banner, pathname, article, node }) => {
+const SEO = ({ title, desc, banner, bannerWidth, bannerHeight, pathname, article, node }) => {
 	const { site } = useStaticQuery(query)
 
 	const {
@@ -17,6 +18,8 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 			defaultTitle,
 			defaultDescription,
 			defaultBanner,
+			defaultBannerWidth,
+			defaultBannerHeight,
 			headline,
 			siteLanguage,
 			ogLanguage,
@@ -26,12 +29,18 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		},
 	} = site
 
+	const usingDefaultBanner = !banner
 	const seo = {
 		title: title || defaultTitle,
 		description: desc || defaultDescription,
-		image: `${siteUrl}${banner || defaultBanner}`,
-		url: `${siteUrl}${pathname || ''}`,
+		image: absoluteUrl(siteUrl, banner || defaultBanner),
+		imageWidth: usingDefaultBanner ? defaultBannerWidth : bannerWidth,
+		imageHeight: usingDefaultBanner ? defaultBannerHeight : bannerHeight,
+		url: absoluteUrl(siteUrl, pathname),
 	}
+	const homeUrl = absoluteUrl(siteUrl)
+	const logoUrl = absoluteUrl(siteUrl, defaultBanner)
+	const publishedTime = article && node && node.frontmatter ? node.frontmatter.date : null
 
 	// schema.org in JSONLD format
 	// https://developers.google.com/search/docs/guides/intro-structured-data
@@ -40,10 +49,10 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 	const schemaOrgWebPage = {
 		'@context': 'http://schema.org',
 		'@type': 'WebPage',
-		url: siteUrl,
+		url: seo.url,
 		headline,
 		inLanguage: siteLanguage,
-		mainEntityOfPage: siteUrl,
+		mainEntityOfPage: seo.url,
 		description: defaultDescription,
 		name: defaultTitle,
 		author: {
@@ -67,7 +76,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		dateModified: buildTime,
 		image: {
 			'@type': 'ImageObject',
-			url: `${siteUrl}${defaultBanner}`,
+			url: logoUrl,
 		},
 	}
 
@@ -77,7 +86,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		{
 			'@type': 'ListItem',
 			item: {
-				'@id': siteUrl,
+				'@id': homeUrl,
 				name: 'Homepage',
 			},
 			position: 1,
@@ -108,13 +117,11 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 				name: author,
 				logo: {
 					'@type': 'ImageObject',
-					url: `${siteUrl}${defaultBanner}`,
+					url: logoUrl,
 				},
 			},
-			//datePublished: node.first_publication_date,
-			//dateModified: node.last_publication_date,
-			datePublished: node.date,
-			dateModified: node.date,
+			datePublished: publishedTime,
+			dateModified: publishedTime,
 			description: seo.description,
 			headline: seo.title,
 			inLanguage: siteLanguage,
@@ -149,9 +156,9 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 		<>
 			<Helmet title={seo.title}>
 				<html lang={siteLanguage} />
+				<link rel="canonical" href={seo.url} />
 				<meta name="description" content={seo.description} />
 				<meta name="image" content={seo.image} />
-		    {/* <meta name="gatsby-starter" content="Gatsby Starter Prismic" /> */}
 				{/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
 				{!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
 				{article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
@@ -160,11 +167,15 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 			<Facebook
 				desc={seo.description}
 				image={seo.image}
+				imageWidth={seo.imageWidth}
+				imageHeight={seo.imageHeight}
 				title={seo.title}
 				type={article ? 'article' : 'website'}
 				url={seo.url}
 				locale={ogLanguage}
-				name={facebook}
+				name={headline}
+				publisher={facebook}
+				publishedTime={publishedTime}
 			/>
 			<Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
 		</>
@@ -177,6 +188,8 @@ SEO.propTypes = {
 	title: PropTypes.string,
 	desc: PropTypes.string,
 	banner: PropTypes.string,
+	bannerWidth: PropTypes.number,
+	bannerHeight: PropTypes.number,
 	pathname: PropTypes.string,
 	article: PropTypes.bool,
 	node: PropTypes.object,
@@ -186,6 +199,8 @@ SEO.defaultProps = {
 	title: null,
 	desc: null,
 	banner: null,
+	bannerWidth: null,
+	bannerHeight: null,
 	pathname: null,
 	article: false,
 	node: null,
@@ -200,6 +215,8 @@ const query = graphql`
 				defaultTitle: title
 				defaultDescription: description
 				defaultBanner: banner
+				defaultBannerWidth: bannerWidth
+				defaultBannerHeight: bannerHeight
 				headline
 				siteLanguage
 				ogLanguage
