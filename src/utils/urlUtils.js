@@ -25,5 +25,9 @@ export const absoluteUrl = (siteUrl, path) => {
 	} catch (e) {
 		// Malformed escape sequence: keep the raw value
 	}
-	return `${base}/${encodeURI(decoded)}`
+	// decodeURI leaves reserved escapes such as %2F or %3F in place, and
+	// encodeURI would then turn their "%" into "%25". Restore those so an
+	// already-encoded reserved character is not double-encoded.
+	const encoded = encodeURI(decoded).replace(/%25([0-9A-Fa-f]{2})/g, "%$1")
+	return `${base}/${encoded}`
 }
