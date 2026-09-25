@@ -41,7 +41,7 @@ const getObjectPosition = (position = 'center') => {
 	return result || 'center center'
 }
 
-const NewTemplate = ({data, location, children}) => {
+const NewTemplate = ({ data, location, children }) => {
 	const { frontmatter, excerpt } = data.mdx
 
 	return (
@@ -56,36 +56,27 @@ const NewTemplate = ({data, location, children}) => {
 				bannerHeight={frontmatter.imageHeight}
 				article
 			/>
-			<div className="max-w-4xl mx-auto px-4 py-8">
-				<article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-					{/* Article Header */}
-					<div className="relative">
-						<img
-							src={frontmatter.image}
-							alt={frontmatter.title}
-							className="w-full h-72 md:h-80 lg:h-96 object-cover"
-							style={{ objectPosition: getObjectPosition(frontmatter?.imagePosition) }}
-						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-							<time className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-								{formatDateSpanish(frontmatter.date)}
-							</time>
-							<h1 className="text-2xl md:text-4xl font-bold leading-tight">
-								{frontmatter.title}
-							</h1>
-						</div>
-					</div>
-
-					{/* Article Content */}
-					<div className="p-6 md:p-8">
-						<div className="prose prose-gray max-w-none">
-							{children}
-						</div>
-						<SocialShare pathname={location.pathname} title={frontmatter.title} />
-					</div>
-				</article>
-			</div>
+			<article className="story">
+				<header className="story__head">
+					<time className="meta" dateTime={frontmatter.date}>
+						{formatDateSpanish(frontmatter.date)}
+					</time>
+					<h1>{frontmatter.title}</h1>
+				</header>
+				{frontmatter.image && (
+					<img
+						className="story__image"
+						src={frontmatter.image}
+						alt=""
+						width={frontmatter.imageWidth || undefined}
+						height={frontmatter.imageHeight || undefined}
+						fetchpriority="high"
+						style={{ objectPosition: getObjectPosition(frontmatter.imagePosition) }}
+					/>
+				)}
+				<div className="story__body">{children}</div>
+				<SocialShare pathname={location.pathname} title={frontmatter.title} />
+			</article>
 		</IndexLayout>
 	)
 }
