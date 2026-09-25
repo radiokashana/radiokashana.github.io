@@ -4,74 +4,65 @@ import { graphql } from "gatsby"
 import IndexLayout from "../layouts/index"
 import MainNews from "../components/main-news"
 import MainNew from "../components/main-new"
-import Ads from "../components/ads"
-import Embed from "../components/embed"
+import StationAside from "../components/station-aside"
 import NewThumbList from "../components/new-thumb-list"
 import NewThumb from "../components/new-thumb"
 import Pagination from "../components/pagination"
-import { formatDateSpanish } from "../utils/dateUtils"
+import { formatDateShort } from "../utils/dateUtils"
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = ({ data }) => {
 	const { edges } = data.allMdx
 	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
 
-	const news = edges
-		.filter(edge => !!edge.node.frontmatter.date)
+	const news = edges.filter(edge => !!edge.node.frontmatter.date)
 
 	// Configuration for pagination
 	const mainNewsCount = 4
 	const postsPerPage = 12
-	
+
 	// Calculate pagination info
 	const remainingPosts = news.length - mainNewsCount
 	const totalPages = Math.ceil(remainingPosts / postsPerPage) + 1 // +1 for the first page
 
-	const mainNews = news
-		.slice(0, mainNewsCount)
-		.map(edge =>
-			<MainNew
-				key={edge.node.id}
-				href={edge.node.fields.slug}
-				title={edge.node.frontmatter.title}
-				date={formatDateSpanish(edge.node.frontmatter.date)}
-				img={{ src: edge.node.frontmatter.image, alt: "" }} />
-		)
+	const mainNews = news.slice(0, mainNewsCount).map((edge, i) => (
+		<MainNew
+			key={edge.node.id}
+			featured={i === 0}
+			href={edge.node.fields.slug}
+			title={edge.node.frontmatter.title}
+			date={formatDateShort(edge.node.frontmatter.date)}
+			dateTime={edge.node.frontmatter.date}
+			img={{ src: edge.node.frontmatter.image, alt: "" }}
+		/>
+	))
 
 	// For page 1, show the first 12 articles after main news
-	const oldNews = news
-		.slice(mainNewsCount, mainNewsCount + postsPerPage)
-		.map(edge =>
-			<NewThumb
-				key={edge.node.id}
-				href={edge.node.fields.slug}
-				title={edge.node.frontmatter.title}
-				img={{ src: edge.node.frontmatter.image, alt: "" }}
-				excerpt={edge.node.excerpt} />
-		)
+	const oldNews = news.slice(mainNewsCount, mainNewsCount + postsPerPage).map(edge => (
+		<NewThumb
+			key={edge.node.id}
+			href={edge.node.fields.slug}
+			title={edge.node.frontmatter.title}
+			date={formatDateShort(edge.node.frontmatter.date)}
+			dateTime={edge.node.frontmatter.date}
+			img={{ src: edge.node.frontmatter.image, alt: "" }}
+			excerpt={edge.node.excerpt}
+		/>
+	))
 
 	return (
 		<IndexLayout>
-			{/* Floating Facebook Live embed - now positioned closer to top and bottom-right */}
-			<Embed html={facebookLiveEmbedHtml} />
-			
-			<section data-testid="homepage-content">
-				<MainNews>
-					{mainNews}
-				</MainNews>
-				<Ads/>
-				<Ads/>
-				<Ads/>
-				<NewThumbList>
-					{oldNews}
-				</NewThumbList>
-				
-				{totalPages > 1 && (
-					<Pagination 
-						currentPage={1} 
-						totalPages={totalPages} 
-					/>
-				)}
-			</section>
+			<div className="wrap board" data-testid="homepage-content">
+				<div className="board__lead">
+					<MainNews>{mainNews}</MainNews>
+				</div>
+				<div className="board__aside">
+					<StationAside liveHtml={facebookLiveEmbedHtml} />
+				</div>
+				<div className="board__feed">
+					<NewThumbList>{oldNews}</NewThumbList>
+					{totalPages > 1 && <Pagination currentPage={1} totalPages={totalPages} />}
+				</div>
+			</div>
 		</IndexLayout>
 	)
 }

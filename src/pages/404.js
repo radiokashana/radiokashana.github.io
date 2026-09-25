@@ -1,54 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import IndexLayout from "../layouts/index"
+import SEO from "../components/SEO"
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+const NotFoundPage = ({ location }) => (
+	<IndexLayout customSEO>
+		<SEO title="Página no encontrada - RadioKashana" pathname={location && location.pathname} />
+		<section className="lost">
+			<p className="lost__code">404</p>
+			<h1 className="lost__title">Esta página se la llevó la marea</h1>
+			<p className="lost__text">
+				No encontramos lo que buscabas. Puede que la dirección esté mal escrita o que la noticia se haya movido.
+			</p>
+			<Link to="/" className="button">
+				Volver a las noticias
+			</Link>
+		</section>
+	</IndexLayout>
+)
 
 export default NotFoundPage

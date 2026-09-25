@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
 import SocialShare from "../components/SocialShare"
-import { formatDateSpanish } from "../utils/dateUtils"
+import { formatDateLong } from "../utils/dateUtils"
+import { STATION } from "../utils/station"
 
 // Function to convert imagePosition to CSS object-position value
 const getObjectPosition = (position = 'center') => {
@@ -41,7 +42,7 @@ const getObjectPosition = (position = 'center') => {
 	return result || 'center center'
 }
 
-const NewTemplate = ({data, location, children}) => {
+const NewTemplate = ({ data, location, children }) => {
 	const { frontmatter, excerpt } = data.mdx
 
 	return (
@@ -56,36 +57,55 @@ const NewTemplate = ({data, location, children}) => {
 				bannerHeight={frontmatter.imageHeight}
 				article
 			/>
-			<div className="max-w-4xl mx-auto px-4 py-8">
-				<article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-					{/* Article Header */}
-					<div className="relative">
+			<article className="story">
+				<header className="story__head">
+					<Link to="/" className="story__back">
+						← Todas las noticias
+					</Link>
+					<p className="story__kicker">RadioKashana · 93.3 FM</p>
+					<h1 className="story__title">{frontmatter.title}</h1>
+					<p className="story__meta">
+						<time dateTime={frontmatter.date}>{formatDateLong(frontmatter.date)}</time>
+					</p>
+				</header>
+
+				{frontmatter.image && (
+					<figure className="story__figure">
 						<img
 							src={frontmatter.image}
 							alt={frontmatter.title}
-							className="w-full h-72 md:h-80 lg:h-96 object-cover"
+							width={frontmatter.imageWidth || undefined}
+							height={frontmatter.imageHeight || undefined}
 							style={{ objectPosition: getObjectPosition(frontmatter?.imagePosition) }}
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-						<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-							<time className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-								{formatDateSpanish(frontmatter.date)}
-							</time>
-							<h1 className="text-2xl md:text-4xl font-bold leading-tight">
-								{frontmatter.title}
-							</h1>
-						</div>
-					</div>
+					</figure>
+				)}
 
-					{/* Article Content */}
-					<div className="p-6 md:p-8">
-						<div className="prose prose-gray max-w-none">
-							{children}
+				<div className="story__body article-content">{children}</div>
+
+				<div className="story__share">
+					<SocialShare pathname={location.pathname} title={frontmatter.title} />
+				</div>
+
+				<aside className="signoff" aria-label="Escúchanos">
+					<div className="signoff__card">
+						<svg className="signoff__waves" viewBox="0 0 48 48" aria-hidden="true">
+							<circle cx="12" cy="36" r="4" />
+							<path d="M12 22a14 14 0 0114 14M12 12a24 24 0 0124 24M12 2a34 34 0 0134 34" />
+						</svg>
+						<div className="signoff__text">
+							<p className="signoff__title">Escúchanos en el 93.3 FM</p>
+							<p>
+								Transmitimos desde el punto más alto de Santa Rosalía. ¿Tienes algo que contar? Llama a cabina al{" "}
+								<a href={STATION.phoneHref}>{STATION.phone}</a>.
+							</p>
+							<a className="signoff__cta" href="/#en-vivo">
+								<span className="live-dot" aria-hidden="true" /> Ver la transmisión en vivo
+							</a>
 						</div>
-						<SocialShare pathname={location.pathname} title={frontmatter.title} />
 					</div>
-				</article>
-			</div>
+				</aside>
+			</article>
 		</IndexLayout>
 	)
 }

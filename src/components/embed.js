@@ -1,44 +1,32 @@
 import React from "react"
 
+// The Facebook Live player, set in the page as the station's "on air" card
+// instead of floating over the news. The iframe HTML comes from the CMS
+// (_data/settings.json); we only add a title and lazy loading to it.
+const withIframeExtras = (html = "") =>
+	html.replace(
+		/<iframe(?![^>]*\btitle=)/i,
+		'<iframe title="Transmisión en vivo de RadioKashana en Facebook" loading="lazy"'
+	)
+
 const Embed = ({ html }) => (
-  <div
-    className="fixed bottom-4 right-4 z-[999]"
-    data-testid="live-embed"
-    style={{
-      maxWidth: "320px",
-      borderRadius: "12px",
-      overflow: "hidden",
-      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)"
-    }}
-  >
-    <div
-      className="bg-gradient-to-r from-red-600 to-red-700 text-white p-3 flex justify-between items-center"
-      data-testid="live-embed-header"
-    >
-      <span className="text-sm font-semibold">Radio Kashana - En vivo</span>
-      <button
-        id="toggleLiveBtn"
-        className="border-none bg-white/20 hover:bg-white/30 text-white cursor-pointer text-sm px-2 py-1 rounded transition-colors"
-        data-testid="live-embed-toggle"
-        onClick={() => {
-          const content = document.getElementById('liveContent');
-          const btn = document.getElementById('toggleLiveBtn');
-          if (content.style.display === 'none') {
-            content.style.display = 'block';
-            btn.innerHTML = '−';
-          } else {
-            content.style.display = 'none';
-            btn.innerHTML = '+';
-          }
-        }}
-      >
-        −
-      </button>
-    </div>
-    <div id="liveContent" className="bg-white" data-testid="live-embed-content">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  </div>
+	<section className="onair" id="en-vivo" data-testid="live-embed" aria-labelledby="onair-title">
+		<header className="onair__head" data-testid="live-embed-header">
+			<p className="onair__label">
+				<span className="live-dot" aria-hidden="true" /> Al aire
+			</p>
+			<h2 className="onair__title" id="onair-title">
+				93.3 <span>FM</span>
+			</h2>
+			<p className="onair__sub">Escúchanos en la radio o mira la transmisión en vivo.</p>
+		</header>
+		<div className="onair__player" id="liveContent" data-testid="live-embed-content">
+			<div dangerouslySetInnerHTML={{ __html: withIframeExtras(html) }} />
+		</div>
+		<a className="onair__fallback" href="https://www.facebook.com/radiokashana/live/">
+			¿No carga? Ábrelo en Facebook
+		</a>
+	</section>
 )
 
 export default Embed
