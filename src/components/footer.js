@@ -1,19 +1,66 @@
 import React from "react"
 
-import FooterMenuItem from "./footer-menu-item"
+import { ListenButton } from "./live"
+import { Emblem, FrequencyDial, STATION, STATION_LINKS } from "./station"
 
-const Footer = () =>
-	<footer className="text-white w-full text-center bg-gray-900 clear-both" data-testid="site-footer">
-		<nav data-testid="footer-nav">
-			<ul className="inline-block list-none m-0 p-0 text-xs">
-				<FooterMenuItem href="http://www.amarcmexico.org/">AMARC M&eacute;xico</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/radiokashana/">Facebook Radiokashana</FooterMenuItem>
-				<FooterMenuItem href="https://www.facebook.com/lavozdelpacificoradio/">Facebook La Voz del Pac&iacute;fico</FooterMenuItem>
-			</ul>
-		</nav>
-		<h3 className="m-0" data-testid="footer-frequency">Transmitiendo en la 93.3 FM desde el punto m&aacute;s alto de Santa Rosal&iacute;a, Baja California Sur</h3>
-		<h3 className="m-0" data-testid="footer-contact">Cel. 615 155 8484 rafael@radiokashana.org</h3>
+const Footer = () => (
+	<footer className="site-footer" data-testid="site-footer">
+		<div className="shell site-footer__signoff">
+			<div className="site-footer__brand">
+				<Emblem className="emblem--light site-footer__emblem" />
+				<div>
+					<p className="site-footer__word">
+						Radio<b>Kashana</b>
+					</p>
+					<p className="site-footer__slogan">{STATION.slogan}</p>
+				</div>
+			</div>
+			<div className="site-footer__dial">
+				<p className="site-footer__freq">
+					{STATION.frequency}
+					<small>{STATION.band}</small>
+				</p>
+				<FrequencyDial className="dial--footer" />
+			</div>
+		</div>
+
+		<div className="shell site-footer__grid">
+			<div>
+				<h3>La estación</h3>
+				<p data-testid="footer-frequency">{STATION.coverage}.</p>
+				<ListenButton className="listen-btn--ghost" />
+			</div>
+			<div>
+				<h3>Cabina</h3>
+				<p data-testid="footer-contact">
+					Cel. <a href={STATION.phoneHref}>{STATION.phone}</a>
+					<br />
+					<a href={`mailto:${STATION.email}`}>{STATION.email}</a>
+				</p>
+			</div>
+			<nav data-testid="footer-nav" aria-label="Enlaces de la estación">
+				<h3>Síguenos</h3>
+				<ul>
+					{STATION_LINKS.map(link => (
+						<li key={link.href}>
+							<a href={link.href} target="_blank" rel="noopener noreferrer">
+								{link.label}
+							</a>
+						</li>
+					))}
+				</ul>
+			</nav>
+		</div>
+
+		<div className="shell site-footer__base">
+			<span>
+				© {STATION.name} · Radio comunitaria · {STATION.place}
+			</span>
+			<a className="site-footer__top" href="#top">
+				Volver arriba <span aria-hidden="true">↑</span>
+			</a>
+		</div>
 	</footer>
-
+)
 
 export default Footer

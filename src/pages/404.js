@@ -1,54 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import IndexLayout from "../layouts/index"
+import SEO from "../components/SEO"
+import { FrequencyDial, STATION } from "../components/station"
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+const NotFoundPage = ({ location }) => (
+	<IndexLayout customSEO>
+		<SEO title={`Página no encontrada - ${STATION.name}`} pathname={location ? location.pathname : undefined} />
+		<section className="page-band page-band--static">
+			<div className="shell page-band__inner not-found">
+				<p className="eyebrow eyebrow--light">Error 404 · Sin señal</p>
+				<h1 className="page-band__title">Esta página no está al aire</h1>
+				<p className="page-band__meta">
+					Movimos el dial y no encontramos nada en esta frecuencia. La noticia que buscas pudo cambiar de dirección.
+				</p>
+				<FrequencyDial className="not-found__dial" />
+				<div className="hero__actions">
+					<Link className="btn btn--light" to="/">
+						Volver a la portada
+					</Link>
+					<Link className="btn btn--outline" to="/#noticias">
+						Ver las noticias
+					</Link>
+				</div>
+			</div>
+		</section>
+	</IndexLayout>
+)
 
 export default NotFoundPage

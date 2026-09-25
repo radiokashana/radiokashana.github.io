@@ -3,62 +3,52 @@ import { graphql } from "gatsby"
 
 import IndexLayout from "../layouts/index"
 import SEO from "../components/SEO"
-import Ads from "../components/ads"
-import Embed from "../components/embed"
-import NewThumbList from "../components/new-thumb-list"
-import NewThumb from "../components/new-thumb"
+import StationCard from "../components/StationCard"
+import { NewsFeed, toStory } from "../components/news"
 import Pagination from "../components/pagination"
+import { LiveDot, STATION } from "../components/station"
 
 const IndexTemplate = ({ data, pageContext, location }) => {
 	const { currentPage, totalPages } = pageContext
-	const { edges } = data.allMdx
-	const facebookLiveEmbedHtml = data.allDataJson.edges[0].node.facebookLiveEmbedHtml
-
-	const news = edges
-		.filter(edge => !!edge.node.frontmatter.date)
-
-	const newsCards = news.map(edge =>
-		<NewThumb
-			key={edge.node.id}
-			href={edge.node.fields.slug}
-			title={edge.node.frontmatter.title}
-			img={{ src: edge.node.frontmatter.image, alt: "" }}
-			excerpt={edge.node.excerpt} />
-	)
+	const news = data.allMdx.edges.filter(edge => !!edge.node.frontmatter.date).map(toStory)
 
 	return (
 		<IndexLayout customSEO>
 			{/* Each listing page gets its own canonical URL and og:url instead of the homepage's */}
 			<SEO pathname={location.pathname} />
-			{/* Floating Facebook Live embed */}
-			<Embed html={facebookLiveEmbedHtml} />
-			
-			<section data-testid="homepage-content">
-				{/* Ads are the first thing shown on pages 2+ */}
-				<Ads/>
-				<Ads/>
-				<Ads/>
-				
-				<NewThumbList>
-					{newsCards}
-				</NewThumbList>
 
-				<Pagination 
-					currentPage={currentPage} 
-					totalPages={totalPages} 
-				/>
+			<section className="page-band" aria-labelledby="archive-title">
+				<div className="shell page-band__inner">
+					<p className="eyebrow eyebrow--light">
+						<LiveDot /> {STATION.name} · {STATION.frequency} {STATION.band}
+					</p>
+					<h1 id="archive-title" className="page-band__title">
+						Lo que dice la estación
+					</h1>
+					<p className="page-band__meta">
+						Archivo de noticias · Página {currentPage} de {totalPages}
+					</p>
+				</div>
 			</section>
+
+			<div className="news-page" data-testid="homepage-content">
+				<div className="shell news-columns">
+					<div className="news-columns__main">
+						<NewsFeed stories={news} eyebrow={`Página ${currentPage}`} title="Noticias anteriores" />
+						<Pagination currentPage={currentPage} totalPages={totalPages} />
+					</div>
+					<div className="news-columns__aside">
+						<StationCard />
+					</div>
+				</div>
+			</div>
 		</IndexLayout>
 	)
 }
 
 export const pageQuery = graphql`
 	query IndexTemplateQuery($skip: Int!, $limit: Int!) {
-		allMdx(
-			sort: { frontmatter: { date: DESC } }
-			skip: $skip
-			limit: $limit
-		) {
+		allMdx(sort: { frontmatter: { date: DESC } }, skip: $skip, limit: $limit) {
 			edges {
 				node {
 					id
@@ -70,14 +60,8 @@ export const pageQuery = graphql`
 						title
 						date
 						image
+						imagePosition
 					}
-				}
-			}
-		}
-		allDataJson {
-			edges {
-				node {
-					facebookLiveEmbedHtml
 				}
 			}
 		}
